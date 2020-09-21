@@ -1,7 +1,9 @@
 import re
+from collections import Counter
 
 import numpy as np
-
+from keras_preprocessing.text import Tokenizer
+from keras.utils import np_utils as npu
 
 def read_text(path, window):
     temp = []
@@ -9,9 +11,11 @@ def read_text(path, window):
     d = dict()
     file = open(path)
     words = file.read().lower()
+    print(words)
     words = re.sub(r'[^\w\s]', '', words)
     words = words.replace('_', '')
     words = words.split()
+    print(words)
     hot_index = 0
     for i in words:
         if i not in temp:
@@ -43,7 +47,59 @@ def read_text(path, window):
     return d, ts
 
 
+def tokenize(corpus):
+    """
+    src: http://www.claudiobellei.com/2018/01/07/backprop-word2vec-python/
+
+    Tokenize the corpus text.
+
+        :param corpus: list containing a string of text (example: ["I like playing football with my friends"])
+        :return corpus_tokenized: indexed list of words in the corpus, in the same order as the original corpus (the example above would return [[1, 2, 3, 4]])
+        :return V: size of vocabulary
+    """
+
+    tokenizer = Tokenizer()
+    tokenizer.fit_on_texts(corpus)
+    corpus_tokenized = tokenizer.texts_to_sequences(corpus)
+    V = len(tokenizer.word_index)
+    return corpus_tokenized, V
+
+
+def corpus2io(corpus_tokenized, V, window_size=10):
+    """
+    src: http://www.claudiobellei.com/2018/01/07/backprop-word2vec-python/
+
+    Converts corpus text into context and center words.
+
+        :param corpus_tokenized: corpus text
+        :param window_size: size of context window
+        :return: context and center words (arrays)
+    """
+    train_set = []
+    for words in corpus_tokenized:
+        L = len(words)
+
+        for index, word in enumerate(words):
+            s = index - window_size
+            e = index + window_size + 1
+            contexts = [words[i]-1 for i in range(s, e) if 0 <= i < L and i != index]
+            labels = list()
+            # contexts.append([words[i]-1 for i in range(s, e) if 0 <= i < L and i != index])
+            labels.append(word-1)
+            x = npu.to_categorical(contexts, V)
+            # print(x)
+            y = npu.to_categorical(labels, V)
+            train_set.append([np.sum(x, axis=0), y.ravel()])
+            # print(train_set)
+            # yield (x, y.ravel())
+    return train_set
+
 def read_from_file(path):
+    """
+    Read a matrix from file into an array
+    :param path:
+    :return:
+    """
     file = open(path, mode='r')
 
     for line in file.readlines():
@@ -51,6 +107,12 @@ def read_from_file(path):
 
 
 def cosine_sim(A, B):
+    """
+    Return the cosine similarity between two vectors.
+    :param A:
+    :param B:
+    :return:
+    """
     dot_prod = np.dot(A, B)
     mag_A = np.sqrt(np.dot(A, A))
     mag_B = np.sqrt(np.dot(B, B))
@@ -60,6 +122,13 @@ def cosine_sim(A, B):
 
 
 def fill_dict(arr_lab, arr_val):
+    """
+    Create a dictionary with keys from arr_lab and values from arr_val
+
+    :param arr_lab:
+    :param arr_val:
+    :return:
+    """
     d = {}
     i = 0
     for s in arr_lab:
@@ -69,6 +138,13 @@ def fill_dict(arr_lab, arr_val):
 
 
 def create_training_arrays(training_set, dictionary):
+    """
+    Create the training array
+
+    :param training_set:
+    :param dictionary:
+    :return:
+    """
     train_x = []
     train_y = []
     for item in training_set:
@@ -78,3 +154,90 @@ def create_training_arrays(training_set, dictionary):
 
     return np.array(train_x), np.array(train_y)
     # print(train_x, train_y)
+
+
+# Glove utils
+def cooccur_mat(vocab, corpus, window_size=10, min_count=None):
+    """
+    Create Co-Occurrence matrix
+
+    :param vocab: an array of the vocabulary
+    :param corpus: the text
+    :param window_size: the size of the context window
+    :param min_count: gives a minimal count of word occurrence
+    :return: an array of tuples in the form of (i_main, i_context, co-occurrence)
+    """
+    vocab_size = len(vocab)
+    mat = np.zeros(shape=(vocab_size, vocab_size))
+    for line in corpus:
+        words = line.lower().strip().split(' ')
+        print(words)
+        for ind, w in enumerate(words):
+            w = re.sub(r'[^\s\w]', '', w)
+            (w_ind, _) = vocab[w]
+            for l in range(max(0, ind - window_size), ind):
+                co_word = re.sub(r'[^\s\w]', '', words[l])
+                l_ind, _ = vocab[co_word]
+                mat[w_ind][l_ind] += 1
+
+            for r in range(ind + 1, min(ind + window_size + 1, len(words))):
+                right_word = re.sub(r'[^\s\w]', '', words[r])
+                r_ind, _ = vocab[right_word]
+                mat[w_ind][r_ind] += 1
+    return mat
+
+
+
+def build_vocab_Glove(corpus):
+    """
+    Build the vocabulary for Glove
+    src:
+
+    :param corpus: the path for the file
+    :return: dictionary with id and occurrence in the corpus for the word
+    """
+    vocab = Counter()
+    # corpus = open(corpus, 'r')
+    for line in corpus:
+        print(line)
+        tokens = line.lower().strip().split(' ')
+        vocab.update(tokens)
+    dic = {re.sub(r'[^\s\w]', '', word): (i, freq)
+           for i, (word, freq) in enumerate(vocab.items())}
+    return dic
+
+corpus = "/home/bachvarv/Abschlussarbeit/Corpus/corpus_small2.txt"
+# corpus2 = "/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt"
+file = open(corpus, 'r')
+text = file.readlines()
+file.close()
+window_size = 2
+#
+dictionary = build_vocab_Glove(text)
+# print(dictionary)
+#
+matrix = cooccur_mat(dictionary, text, window_size)
+#
+# print(matrix)
+
+
+    # print(x,y,s)
+# corpus_tokenized, V = tokenize(text)
+# # print(corpus_tokenized, V)
+#
+# training_set = corpus2io(corpus_tokenized, V, window_size)
+# print(training_set)
+
+# print(training_set[5])
+
+# for i, (x, y) in enumerate(corpus2io(corpus_tokenized, V, window_size)):
+#     print(i, "\n center word =", y, "\n context words =\n",x)
+
+# print()
+# dictionary = read_text(corpus,1)
+# print(file.readlines())
+# print(tokenize(file.readlines()))
+# dictionary = build_vocab_Glove()
+# print(dictionary)
+
+

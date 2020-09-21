@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 from tensorflow import keras
 
-class EmbeddingLayer(keras.Model):
+class EmbeddingLayer(keras.layers.Layer):
     def __init__(self, corpus_size, prop_size, ind):
         super(EmbeddingLayer, self).__init__()
         w_init = tf.random_normal_initializer()
@@ -14,8 +14,9 @@ class EmbeddingLayer(keras.Model):
                              trainable=True, name="b" + ind)
 
     def call(self, input):
-        result = tf.multiply(self.w, input) + self.b
-        return tf.reduce_sum(result, axis=0, keepdims=True)
+        # result = tf.tensordot(input, self.w, axes=0) + self.b
+        # return tf.reduce_sum(result, axis=0, keepdims=True)
+        return tf.tensordot(input, self.w, axes=1) + self.b
 
 
 # x = np.array([[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]])

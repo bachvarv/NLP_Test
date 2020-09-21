@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-from data.EmbeddingLayer import EmbeddingLayer
+from word2vec.model_data.EmbeddingLayer import EmbeddingLayer
 
 
 class Word2VecModel(keras.Model):
@@ -12,7 +12,7 @@ class Word2VecModel(keras.Model):
         super(Word2VecModel, self).__init__()
         # self.input_tensor = keras.Input(shape=(None, corpus_size), name='word')
         #
-        self.input_layer = keras.layers.Dense(corpus_size)
+        # self.input_layer = keras.layers.Dense(corpus_size)
         self.embed_layer = EmbeddingLayer(corpus_size, prop_size, "0")
         self.outp_layer = EmbeddingLayer(prop_size, corpus_size, "1")
 
@@ -28,9 +28,9 @@ class Word2VecModel(keras.Model):
 
     def call(self, input_x):
         # x = self.input_tensor(input_x)
-        # x = self.input_layer(x)
+        # x = self.input_layer(input_x)
         x = self.embed_layer(input_x)
-        x = tf.transpose(x)
+        # x = tf.transpose(x)
         x = self.outp_layer(x)
         x = tf.nn.softmax(x)
         # x = tf.reduce_sum(tf.subtract(x, input_y), axis=0)
@@ -39,8 +39,8 @@ class Word2VecModel(keras.Model):
     def loss(self, y_pred, y):
         # y_ = self.call(x)
         # return tf.subtract(y_pred, y)
-        # return keras.losses.binary_crossentropy(y_true=y, y_pred=y_pred)
-        return keras.losses.mean_squared_error(y_true=y, y_pred=y_pred)
+        return keras.losses.binary_crossentropy(y_true=y, y_pred=y_pred)
+        # return keras.losses.mean_squared_error(y_true=y, y_pred=y_pred)
 
     def grad(self, y_pred, y):
         with tf.GradientTape() as tape:
@@ -50,18 +50,25 @@ class Word2VecModel(keras.Model):
     @tf.function
     def train(self, input, label):
         with tf.GradientTape() as tape:
-            current_loss = self.loss(self.call(input), label)
+            prediction = self.call(input)
+            # tf.print('Y_Pred: ')
+            # tf.print(prediction)
+            current_loss = self.loss(prediction, label)
+            # tf.print('Loss: ')
+            # tf.print(current_loss)
             grads = tape.gradient(current_loss, self.trainable_variables)
 
             self.optimizer.apply_gradients(zip(grads, self.trainable_variables))
-            return grads
+        return grads
 
     def train_loop(self, input, label, r):
         start = timer()
         train_size = len(input)
         for _ in range(r):
             for i in np.random.permutation(train_size):
-                self.train(input[i].transpose(), label[i])
+
+                self.train(input[i], label[i])
+            # print()
 
         np.savetxt('test.out', self.embed_layer.w.numpy())
         end = timer()
