@@ -1,7 +1,5 @@
 import os
 
-import numpy as np
-import tensorflow as tf
 
 from data.Dictionary import Dictionary
 from glove.GloVeModel import GloVeModel
@@ -14,8 +12,9 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 
 
 # dictionary, training_set = read_text("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt", 2)
-window = 2
-file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small2.txt", 'r')
+window = 3
+# file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small2.txt", 'r')
+file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt", 'r')
 text = file.readlines()
 
 ''' 
@@ -34,20 +33,51 @@ text = file.readlines()
     GloVe Corpus prep
 '''
 
-EPOCHS = 1
+EPOCHS = 100
 dictionary = build_vocab_Glove(text)
 matrix = cooccur_mat(dictionary, text, window)
 V = len(dictionary)
 
 # w2v = Word2VecModel(V, 300)
-# glove = GloVeModel(V, 10)
+glove = GloVeModel(V, 300)
 #
-# msg = glove.compile(optimizer='SGD',
-#               loss=glove.loss,
-#               metrics=['accuracy'])
+glove.compile(optimizer='SGD',
+              loss=glove.loss,
+              metrics=['accuracy'])
 # # print('the Message', msg)
 # x, loss = glove(np.array([1, 1, 2]))
 # print(x)
+
+# print(glove.embedding_layer.w)
+# print(glove.embedding_layer.b)
+#
+# grads = glove.train(np.array([1, 2, 2]))
+# grads = glove.train(np.array([1, 2, 2]))
+# grads = glove.train(np.array([1, 2, 2]))
+#
+
+w, b = glove.trainLoop(EPOCHS, matrix)
+
+# print(w)
+# print(b)
+
+# print(dictionary)
+
+lookup_table = fill_dict(dictionary.keys(), w)
+# print(lookup_table)
+
+test_dic = Dictionary(lookup_table)
+
+test_dic.save("Win_2_Glove_10_Epoch")
+
+# print(matrix)
+
+            # print(row, column, matrix[row, column])
+#
+# print(glove.embedding_layer.w)
+# print(glove.embedding_layer.b)
+
+
 
 # print("Loss function returns", loss)
 
@@ -141,13 +171,15 @@ V = len(dictionary)
 GloveModel with multiple Inputs
 '''
 
-glove = GloVeModelMultiInput(V, 10)
+# glove = GloVeModelMultiInput(V, 10)
+#
+# msg = glove.compile(optimizer='SGD',
+#               loss=glove.loss,
+#               metrics=['accuracy'])
 
-msg = glove.compile(optimizer='SGD',
-              loss=glove.loss,
-              metrics=['accuracy'])
+# glove.fit([1,1,2], y=2, batch_size=1)
+
 # print('the Message', msg)
 # x = glove(np.array([1, 1, 2]))
 
-x = glove.fit([1.0, 1.0, 2.0], batch=1)
-print(x)
+# x = glove.fit([1, 1, 2], batch_size=1)

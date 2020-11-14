@@ -16,11 +16,11 @@ class GloveEmbeddingLayer(keras.layers.Layer):
         self.w = tf.Variable(initial_value=w_init(shape=(corpus_size, prop_size)),
                              trainable=True, name="W", )
         b_init = tf.zeros_initializer()
-        self.b = tf.Variable(initial_value=b_init(shape=(corpus_size)),
+        self.b = tf.Variable(initial_value=b_init(shape=([corpus_size])),
                              trainable=True, name="b")
 
     def call(self, i, j, **kwargs):
-        print(i, j)
+        # print(i, j)
         w_i = tf.nn.embedding_lookup(self.w, i, name="w_0")
         w_j = tf.nn.embedding_lookup(self.w, j, name="w_1")
         b_i = tf.nn.embedding_lookup(self.b, i, name="b_0")
