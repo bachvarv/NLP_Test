@@ -11,11 +11,11 @@ def read_text(path, window):
     d = dict()
     file = open(path)
     words = file.read().lower()
-    print(words)
+    # print(words)
     words = re.sub(r'[^\w\s]', '', words)
     words = words.replace('_', '')
     words = words.split()
-    print(words)
+    # print(words)
     hot_index = 0
     for i in words:
         if i not in temp:
@@ -148,7 +148,7 @@ def create_training_arrays(training_set, dictionary):
     train_x = []
     train_y = []
     for item in training_set:
-        print(item)
+        # print(item)
         train_x.append([dictionary[x] for x in item[0]])
         train_y.append([dictionary[y] for y in item[1]])
 
@@ -199,45 +199,22 @@ def build_vocab_Glove(corpus):
     vocab = Counter()
     # corpus = open(corpus, 'r')
     for line in corpus:
-        print(line)
+        # print(line)
         tokens = line.lower().strip().split(' ')
         vocab.update(tokens)
-    dic = {re.sub(r'[^\s\w]', '', word): (i, freq)
-           for i, (word, freq) in enumerate(vocab.items())}
+    index = 0
+    dic = dict()
+    for word, freq in vocab.items():
+        dic.__setitem__(re.sub(r'[^\s\w]', '', word), (index, freq))
+
+    dic = {word: (i, freq) for i, (word, (_, freq)) in enumerate(dic.items())}
     return dic
 
-corpus = "/home/bachvarv/Abschlussarbeit/Corpus/corpus_small2.txt"
-# corpus2 = "/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt"
-file = open(corpus, 'r')
-text = file.readlines()
-file.close()
-window_size = 2
-#
-dictionary = build_vocab_Glove(text)
-# print(dictionary)
-#
-matrix = cooccur_mat(dictionary, text, window_size)
-#
-# print(matrix)
 
+def one_hot(i, size):
+    vec = np.zeros(size)
+    vec[i] = 1
+    return vec
 
-    # print(x,y,s)
-# corpus_tokenized, V = tokenize(text)
-# # print(corpus_tokenized, V)
-#
-# training_set = corpus2io(corpus_tokenized, V, window_size)
-# print(training_set)
-
-# print(training_set[5])
-
-# for i, (x, y) in enumerate(corpus2io(corpus_tokenized, V, window_size)):
-#     print(i, "\n center word =", y, "\n context words =\n",x)
-
-# print()
-# dictionary = read_text(corpus,1)
-# print(file.readlines())
-# print(tokenize(file.readlines()))
-# dictionary = build_vocab_Glove()
-# print(dictionary)
 
 
