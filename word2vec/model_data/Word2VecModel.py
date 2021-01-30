@@ -70,6 +70,6 @@ class Word2VecModel(keras.Model):
                 self.train(input[i], label[i])
             # print()
 
-        np.savetxt('test.out', self.embed_layer.w.numpy())
         end = timer()
         print('Training Time: {}'.format(end - start))
+        return self.embed_layer.w.numpy()

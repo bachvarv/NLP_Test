@@ -36,6 +36,3 @@ class GloveEmbeddingLayer(keras.layers.Layer):
 emb = GloveEmbeddingLayer(5, 5)
 # [(w_i, w_j), (b_i, b_j)] = emb([1, 2])
 x = emb(tf.constant(1), tf.constant(2))
-
-
-print(x[0])

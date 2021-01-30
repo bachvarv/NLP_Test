@@ -1,0 +1,15 @@
+import numpy as np
+
+from glove.data.GloveEmbeddingLayer import GloveEmbeddingLayer
+
+x = np.array([[0.0, 1.0, 0.0]])
+
+i = GloveEmbeddingLayer(len(x[0]), 10, 'second')
+
+print(i.w)
+
+result = i(x)
+
+print(result)
+# result = i(np.array([[0, 1, 0]]).transpose())
+# print(result)

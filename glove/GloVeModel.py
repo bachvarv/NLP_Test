@@ -15,6 +15,7 @@ class GloVeModel(tf.keras.Model):
         self.w_i = keras.Input(shape=(1,), dtype=tf.int32)
         self.w_j = keras.Input(shape=(1,), dtype=tf.int32)
         self.y_true = keras.Input(shape=(1,))
+        self.optimizer = tf.keras.optimizers.SGD()
 
         self.embedding_layer = GloveEmbeddingLayer(corpus_size, property_size)
         self.dot = keras.layers.Dot(axes=-1)
