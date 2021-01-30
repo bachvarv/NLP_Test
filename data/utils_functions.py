@@ -132,6 +132,7 @@ def fill_dict(arr_lab, arr_val):
     d = {}
     i = 0
     for s in arr_lab:
+
         d[s] = arr_val[i]
         i += 1
     return d
