@@ -19,13 +19,15 @@ FILEG500 = '../glove/training/Win10_Glove300_Epoch500.csv'
 FILE41 = '../word2vec/training/Win10_W2VCBOW300_Epoch10.csv'
 FILEC500 = '../word2vec/training/Win10_W2VSCBOW200_Epoch500.csv'
 
+FILESKIPNS = "../word2vec/training_data/SKIPNS_10EPOCHS_200VECTORSIZE.csv"
+
 my_dict={}
 
 ''' Glove'''
 # dictionary = Dictionary()
 # dictionary.open_file(FILE1)
 skip_dic = Dictionary()
-skip_dic.open_file(FILES500)
+skip_dic.open_file(FILESKIPNS)
 
 cbow_dic = Dictionary()
 cbow_dic.open_file(FILEC500)

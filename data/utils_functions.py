@@ -4,6 +4,7 @@ from collections import Counter
 import numpy as np
 from keras_preprocessing.text import Tokenizer
 from keras.utils import np_utils as npu
+import tensorflow as tf
 
 def read_text(path, window):
     temp = []
@@ -62,7 +63,7 @@ def tokenize(corpus):
     tokenizer.fit_on_texts(corpus)
     corpus_tokenized = tokenizer.texts_to_sequences(corpus)
     V = len(tokenizer.word_index)
-    return corpus_tokenized, V
+    return corpus_tokenized, V, tokenizer.word_index
 
 
 def corpus2io(corpus_tokenized, V, window_size=10):
@@ -217,5 +218,48 @@ def one_hot(i, size):
     vec[i] = 1
     return vec
 
+
+def create_skip_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed):
+
+    targets, contexts, labels = [], [], []
+
+    # sampling_table = tf.keras.preprocessing.sequence.make_sampling_table(size=(corpus_size + 1))
+    # print(sampling_table)
+
+    for sequence in corpus_tokenized:
+        print(sequence)
+        positive_skip_grams, _ = tf.keras.preprocessing.sequence.skipgrams(
+          sequence,
+          vocabulary_size=corpus_size,
+          window_size=window_size,
+          negative_samples=0)
+
+        print(positive_skip_grams)
+        for target_word, context_word in positive_skip_grams:
+
+            context_class = tf.expand_dims(
+                tf.constant([context_word], dtype="int64"), 1)
+
+            negative_sampling_candidates, _, _ = tf.random.log_uniform_candidate_sampler(
+                    true_classes=context_class,
+                    num_true=1,
+                    num_sampled=num_ns,
+                    unique=True,
+                    range_max=corpus_size,
+                    seed=seed,
+                    name="negative_sampling"
+                )
+
+            negative_sampling_candidates = tf.expand_dims(negative_sampling_candidates, 1)
+
+            context = tf.concat([context_class, negative_sampling_candidates], 0)
+            label = tf.constant([1] + [0] * num_ns, dtype="int64")
+
+            targets.append(target_word)
+            contexts.append(context)
+            labels.append(label)
+
+
+        return targets, contexts, labels
 
 

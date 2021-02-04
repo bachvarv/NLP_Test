@@ -1,15 +1,26 @@
-import numpy as np
+import tensorflow as tf
 
-from glove.data.GloveEmbeddingLayer import GloveEmbeddingLayer
+from word2vec.new_skip.SkipModelNS import SkipModelNS
 
-x = np.array([[0.0, 1.0, 0.0]])
+# print(dataset)
+FILE_PATH = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small2.txt", 'r')
+# file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt", 'r')
 
-i = GloveEmbeddingLayer(len(x[0]), 10, 'second')
 
-print(i.w)
+model = SkipModelNS(10, 10)
+model.compile(optimizer="adam",
+              loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
 
-result = i(x)
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="logs")
 
-print(result)
-# result = i(np.array([[0, 1, 0]]).transpose())
+# model.fit(dataset, epochs=1, callbacks=[tensorboard_callback])
+
+weights = model.get_layer('glove_embedding').get_weights()
+
+# print(weights)
+
+# print(dataset[0])
+# result = model(dataset[0])
+
 # print(result)

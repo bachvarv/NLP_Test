@@ -186,11 +186,10 @@ class Dictionary:
 
         # print(neww_X.shape)
 
-        plt.figure(figsize=(16, 16))
+        plt.figure(figsize=(30, 30))
         plt.scatter(neww_X[:, 0], neww_X[:, 1])#, linewidths=10, color='blue')
 
         # print(vectors[-1, 0])
-        plt.plot(new_vectors[0],  new_vectors[1], color='red', marker='o')
         plt.xlabel("PC1", size=15)
         plt.ylabel("PC2", size=15)
         plt.title("Word Embedding Space", size=20)
