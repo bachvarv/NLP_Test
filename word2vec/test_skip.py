@@ -102,9 +102,6 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="logs")
 
 model.fit(dataset, epochs=10, callbacks=[tensorboard_callback])
 
-# weights = model.get_layer('glove_embedding').get_weights()
-# print(weights)
-
 matrix = model.get_embedding_matrix()
 print(matrix.shape)
 
