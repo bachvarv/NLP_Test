@@ -21,6 +21,8 @@ FILEC500 = '../word2vec/training/Win10_W2VSCBOW200_Epoch500.csv'
 
 FILESKIPNS = "../word2vec/training_data/SKIPNS_10EPOCHS_200VECTORSIZE.csv"
 
+FILECBOWNS = "../word2vec/training_data/CBOWNS_10EPOCHS_200VECTORSIZE.csv"
+
 my_dict={}
 
 ''' Glove'''
@@ -41,8 +43,9 @@ glove_dic.open_file(FILEG500)
 
 # glove_dic.plotWords()
 # cbow_dic.plotWords()
-skip_dic.plotWords()
+# skip_dic.plotWords()
 
+print('skip ')
 # print('glove bulgaria:', glove_dic.get_sim_by_key('bulgaria', 5))
 # print('skip bulgaria:', skip_dic.get_sim_by_key('bulgaria', 5))
 # print('cbow bulgaria:', cbow_dic.get_sim_by_key('bulgaria', 5))
@@ -75,3 +78,11 @@ skip_dic.plotWords()
 # print(dictionary.get_similar(
 #     dictionary.sum_of_values(dictionary.sum_of_values('natural', 'language'),
 #                               dictionary.sub_of_values('fun', 'exciting')),2))
+
+# print(skip_dic.get_similar(skip_dic.get('south') + skip_dic.get('east') - skip_dic.get('west'), 5))
+print(skip_dic.get_sim_by_key('south',5))
+print(skip_dic.get_sim_by_key('west',5))
+print(skip_dic.get_sim_by_key('east',5))
+print(skip_dic.get_sim_by_key('north',5))
+print(skip_dic.get_sim_by_key('sea',5))
+# print(skip_dic.get_similar(skip_dic.get("south")))

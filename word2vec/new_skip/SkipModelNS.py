@@ -21,10 +21,10 @@ class SkipModelNS(Model):
 
     def call(self, input, **kwargs):
         target, context = input
-        # print(target)
-        # print(context)
+        print(target)
+        print(context)
         targets = self.target_embedding(target)
-        contexts = self.target_embedding(context)
+        contexts = self.context_embedding(context)
         d = self.dots([contexts, targets])
         fl = self.flatten(d)
         return fl
