@@ -86,6 +86,10 @@ num_ns = 4
 targets, contexts, labels = create_skip_dataset(corpus_tokenized, V, window, num_ns, SEED)
 # Training
 
+print(targets[0])
+print(contexts[0])
+print(labels[0])
+
 dataset = tf.data.Dataset.from_tensor_slices(((targets, contexts), labels))
 
 print(dataset)
@@ -102,11 +106,8 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="logs")
 
 model.fit(dataset, epochs=10, callbacks=[tensorboard_callback])
 
-# weights = model.get_layer('glove_embedding').get_weights()
-# print(weights)
-
 matrix = model.get_embedding_matrix()
-print(matrix.shape)
+# print(matrix.shape)
 
 lookup_table = fill_dict(dic.keys(), matrix[0][1:])
 dic = Dictionary(lookup_table)

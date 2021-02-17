@@ -227,14 +227,14 @@ def create_skip_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed
     # print(sampling_table)
 
     for sequence in corpus_tokenized:
-        print(sequence)
+        # print(sequence)
         positive_skip_grams, _ = tf.keras.preprocessing.sequence.skipgrams(
           sequence,
           vocabulary_size=corpus_size,
           window_size=window_size,
           negative_samples=0)
 
-        print(positive_skip_grams)
+        # print(positive_skip_grams)
         for target_word, context_word in positive_skip_grams:
 
             context_class = tf.expand_dims(
@@ -259,7 +259,73 @@ def create_skip_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed
             contexts.append(context)
             labels.append(label)
 
+        return targets, contexts, labels
 
+
+def create_cbow_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed):
+    targets, contexts, labels = [], [], []
+
+    print(corpus_tokenized)
+
+    # sampling_table = tf.keras.preprocessing.sequence.make_sampling_table(size=(corpus_size + 1))
+    # print(sampling_table)
+
+    for sequence in corpus_tokenized:
+        # print(sequence)
+        positive_skip_grams, _ = tf.keras.preprocessing.sequence.skipgrams(
+          sequence,
+          vocabulary_size=corpus_size,
+          window_size=window_size,
+          negative_samples=0)
+
+        print(positive_skip_grams)
+
+        arr = dict()
+
+        for i in positive_skip_grams:
+            print(arr)
+            if i[0] in arr.keys() and i[1] not in arr.values():
+                arr[i[0]].append(i[1])
+            else:
+                arr[i[0]] = [i[1]]
+
+        for (k, v) in arr.items():
+            while len(v) < window_size * 2:
+                arr[k].append(k)
+            if len(v) > window_size * 2:
+                arr[k] = arr[k][:window_size*2]
+
+        print(arr)
+
+
+
+        for target_word, context_word in arr.items():
+
+            target_class = tf.expand_dims(
+                tf.constant([target_word], dtype="int64"), 1)
+
+            negative_sampling_candidates, _, _ = tf.random.log_uniform_candidate_sampler(
+                    true_classes=target_class,
+                    num_true=1,
+                    num_sampled=num_ns,
+                    unique=True,
+                    range_max=corpus_size,
+                    seed=seed,
+                    name="negative_sampling"
+                )
+
+            negative_sampling_candidates = tf.expand_dims(negative_sampling_candidates, 1)
+            target = tf.concat([target_class, negative_sampling_candidates], 0)
+            # context = tf.concat([context_class, negative_sampling_candidates], 0)
+            label = tf.constant([1] + [0] * num_ns, dtype="int64")
+
+            targets.append(target)
+            contexts.append(context_word)
+            labels.append(label)
+
+        print(contexts)
+        print(targets)
+        print(contexts)
         return targets, contexts, labels
 
 

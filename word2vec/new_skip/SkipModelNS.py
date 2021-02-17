@@ -1,16 +1,16 @@
-import tensorflow as tf
 import numpy as np
-import keras
-from tensorflow.python.keras.layers import Embedding, Dot, Flatten
+
+from tensorflow.keras import Model
+from keras.layers import Embedding, Dot, Flatten
 
 
-class SkipModelNS(tf.keras.Model):
+class SkipModelNS(Model):
     def __init__(self, vocab_size, embedding_dim, num_ns=4):
         super(SkipModelNS, self).__init__()
         self.target_embedding = Embedding(vocab_size,
                                   embedding_dim,
                                   input_length=1,
-                                  name="glove_embedding", )
+                                  name="skip_embedding", )
 
         self.context_embedding = Embedding(vocab_size, embedding_dim,
                                            input_length=num_ns + 1,)
@@ -21,10 +21,10 @@ class SkipModelNS(tf.keras.Model):
 
     def call(self, input, **kwargs):
         target, context = input
-        # print(target)
-        # print(context)
+        print(target)
+        print(context)
         targets = self.target_embedding(target)
-        contexts = self.target_embedding(context)
+        contexts = self.context_embedding(context)
         d = self.dots([contexts, targets])
         fl = self.flatten(d)
         return fl
