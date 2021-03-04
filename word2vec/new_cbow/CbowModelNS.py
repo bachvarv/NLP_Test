@@ -33,4 +33,4 @@ class CbowModelNS(Model):
 
     def get_embedding_matrix(self):
         weights = np.array(self.embedding_layer.get_weights())
-        return weights
+        return weights[0][1:]

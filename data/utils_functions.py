@@ -173,7 +173,7 @@ def cooccur_mat(vocab, corpus, window_size=10, min_count=None):
     mat = np.zeros(shape=(vocab_size, vocab_size))
     for line in corpus:
         words = line.lower().strip().split(' ')
-        print(words)
+        # print(words)
         for ind, w in enumerate(words):
             w = re.sub(r'[^\s\w]', '', w)
             (w_ind, _) = vocab[w]

@@ -15,6 +15,8 @@ FILES500 = '../word2vec/training/Win10_W2VSKIP200_Epoch500.csv'
 FILE3 = '../glove/training/Win10_Glove300_Epoch10.csv'
 FILEG50 = '../glove/training/Win10_Glove200_Epoch50.csv'
 FILEG500 = '../glove/training/Win10_Glove300_Epoch500.csv'
+FILEG10 = '../glove/newglove/Glove_10EPOCHS_300VECTORSIZE.csv'
+FILEG10_200Vec = '../glove/newglove/Glove_10EPOCHS_200VECTORSIZE.csv'
 
 FILE41 = '../word2vec/training/Win10_W2VCBOW300_Epoch10.csv'
 FILEC500 = '../word2vec/training/Win10_W2VSCBOW200_Epoch500.csv'
@@ -35,17 +37,16 @@ cbow_dic = Dictionary()
 cbow_dic.open_file(FILEC500)
 
 glove_dic = Dictionary()
-glove_dic.open_file(FILEG500)
+glove_dic.open_file(FILEG10_200Vec)
 
 # glove_dic.display_pca_scatterplot_2D()
 # cbow_dic.display_pca_scatterplot_2D()
 # skip_dic.display_pca_scatterplot_2D()
 
-# glove_dic.plotWords()
+glove_dic.plotWords()
 # cbow_dic.plotWords()
 # skip_dic.plotWords()
 
-print('skip ')
 # print('glove bulgaria:', glove_dic.get_sim_by_key('bulgaria', 5))
 # print('skip bulgaria:', skip_dic.get_sim_by_key('bulgaria', 5))
 # print('cbow bulgaria:', cbow_dic.get_sim_by_key('bulgaria', 5))
@@ -80,9 +81,9 @@ print('skip ')
 #                               dictionary.sub_of_values('fun', 'exciting')),2))
 
 # print(skip_dic.get_similar(skip_dic.get('south') + skip_dic.get('east') - skip_dic.get('west'), 5))
-print(skip_dic.get_sim_by_key('south',5))
-print(skip_dic.get_sim_by_key('west',5))
-print(skip_dic.get_sim_by_key('east',5))
-print(skip_dic.get_sim_by_key('north',5))
-print(skip_dic.get_sim_by_key('sea',5))
+# print(skip_dic.get_sim_by_key('south',5))
+# print(skip_dic.get_sim_by_key('west',5))
+# print(skip_dic.get_sim_by_key('east',5))
+# print(skip_dic.get_sim_by_key('north',5))
+# print(skip_dic.get_sim_by_key('sea',5))
 # print(skip_dic.get_similar(skip_dic.get("south")))
