@@ -31,5 +31,5 @@ class SkipModelNS(Model):
 
     def get_embedding_matrix(self):
         weights = np.array(self.target_embedding.get_weights())
-        return weights[0][1:]
+        return weights
 

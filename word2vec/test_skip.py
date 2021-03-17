@@ -8,13 +8,15 @@ SEED = 42
 
 
 # print(dataset)
-file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus.txt")
+# file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus.txt")
+file = open("/home/bachvarv/Abschlussarbeit/Corpus/Albert.txt")
 # file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small2.txt", 'r')
 # file = open("/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt", 'r')
 text = file.readlines()
 corpus_tokenized, V, dic = tokenize(text)
 V = V + 1
 inv_dic={i:word for word, i in dic.items()}
+EPOCHS = 10
 window = 4
 num_ns = 4
 
@@ -104,7 +106,7 @@ model.compile(optimizer="adam",
 
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir="logs")
 
-model.fit(dataset, epochs=10, callbacks=[tensorboard_callback])
+model.fit(dataset, epochs=EPOCHS, callbacks=[tensorboard_callback])
 
 matrix = model.get_embedding_matrix()
 # print(matrix.shape)
@@ -112,7 +114,7 @@ matrix = model.get_embedding_matrix()
 lookup_table = fill_dict(dic.keys(), matrix[0][1:])
 dic = Dictionary(lookup_table)
 
-dic.save("SKIPNS_10EPOCHS_200VECTORSIZE")
+dic.save("Albert_SKIPNS_10EPOCHS_200VECTORSIZE")
 
 # print(dataset[0])
 # result = model(dataset[0])

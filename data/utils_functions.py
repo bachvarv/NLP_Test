@@ -265,8 +265,6 @@ def create_skip_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed
 def create_cbow_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed):
     targets, contexts, labels = [], [], []
 
-    print(corpus_tokenized)
-
     # sampling_table = tf.keras.preprocessing.sequence.make_sampling_table(size=(corpus_size + 1))
     # print(sampling_table)
 
@@ -278,12 +276,10 @@ def create_cbow_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed
           window_size=window_size,
           negative_samples=0)
 
-        print(positive_skip_grams)
 
         arr = dict()
 
         for i in positive_skip_grams:
-            print(arr)
             if i[0] in arr.keys() and i[1] not in arr.values():
                 arr[i[0]].append(i[1])
             else:
@@ -294,10 +290,6 @@ def create_cbow_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed
                 arr[k].append(k)
             if len(v) > window_size * 2:
                 arr[k] = arr[k][:window_size*2]
-
-        print(arr)
-
-
 
         for target_word, context_word in arr.items():
 
@@ -323,9 +315,6 @@ def create_cbow_dataset(corpus_tokenized, corpus_size, window_size, num_ns, seed
             contexts.append(context_word)
             labels.append(label)
 
-        print(contexts)
-        print(targets)
-        print(contexts)
         return targets, contexts, labels
 
 

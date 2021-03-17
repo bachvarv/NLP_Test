@@ -7,7 +7,8 @@ from tensorflow.keras.callbacks import TensorBoard
 
 
 # FILE = "/home/bachvarv/Abschlussarbeit/Corpus/corpus_small.txt"
-FILE = "/home/bachvarv/Abschlussarbeit/Corpus/corpus.txt"
+# FILE = "/home/bachvarv/Abschlussarbeit/Corpus/corpus.txt"
+FILE = "/home/bachvarv/Abschlussarbeit/Corpus/Albert.txt"
 
 file = open(FILE, 'r')
 EPOCHS = 10
@@ -29,9 +30,9 @@ for i in matrix:
         labels.append(constant(coocc, shape=(1,)))
     u = u + 1
 
-print(targets)
-print(contexts)
-print(labels)
+# print(targets)
+# print(contexts)
+# print(labels)
 
 dataset = data.Dataset.from_tensor_slices(((targets, contexts), labels))
 # print(dataset)
@@ -54,4 +55,4 @@ print(matrix[0])
 
 lookup_table = fill_dict(dictionary.keys(), matrix[0])
 dict = Dictionary(lookup_table)
-dict.save("Glove_10EPOCHS_200VECTORSIZE")
+dict.save("Albert_Glove_10EPOCHS_200VECTORSIZE")

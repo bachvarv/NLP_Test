@@ -15,6 +15,8 @@ FILES500 = '../word2vec/training/Win10_W2VSKIP200_Epoch500.csv'
 FILE3 = '../glove/training/Win10_Glove300_Epoch10.csv'
 FILEG50 = '../glove/training/Win10_Glove200_Epoch50.csv'
 FILEG500 = '../glove/training/Win10_Glove300_Epoch500.csv'
+Albert_FILEG5 = '../glove/training/Albert_Glove_5EPOCHS_200VECTORSIZE.csv'
+Albert_FILEG10 = '../glove/training/Albert_Glove_10EPOCHS_200VECTORSIZE.csv'
 FILEG10 = '../glove/newglove/Glove_10EPOCHS_300VECTORSIZE.csv'
 FILEG10_200Vec = '../glove/newglove/Glove_10EPOCHS_200VECTORSIZE.csv'
 
@@ -22,8 +24,11 @@ FILE41 = '../word2vec/training/Win10_W2VCBOW300_Epoch10.csv'
 FILEC500 = '../word2vec/training/Win10_W2VSCBOW200_Epoch500.csv'
 
 FILESKIPNS = "../word2vec/training_data/SKIPNS_10EPOCHS_200VECTORSIZE.csv"
-
+Albert_FILESKIPNS10 = "../word2vec/training/Albert_SKIPNS_10EPOCHS_200VECTORSIZE.csv"
+Albert_FILESKIPNS5 = "../word2vec/training/Albert_SKIPNS_5EPOCHS_200VECTORSIZE.csv"
 FILECBOWNS = "../word2vec/training_data/CBOWNS_10EPOCHS_200VECTORSIZE.csv"
+Albert_FILECBOWNS10 = "../word2vec/training/Albert_CBOWNS_10EPOCHS_200VECTORSIZE.csv"
+Albert_FILECBOWNS5 = "../word2vec/training/Albert_CBOWNS_5EPOCHS_200VECTORSIZE.csv"
 
 my_dict={}
 
@@ -31,21 +36,21 @@ my_dict={}
 # dictionary = Dictionary()
 # dictionary.open_file(FILE1)
 skip_dic = Dictionary()
-skip_dic.open_file(FILESKIPNS)
+skip_dic.open_file(Albert_FILESKIPNS10)
 
 cbow_dic = Dictionary()
-cbow_dic.open_file(FILEC500)
+cbow_dic.open_file(Albert_FILECBOWNS10)
 
 glove_dic = Dictionary()
-glove_dic.open_file(FILEG10_200Vec)
+glove_dic.open_file(Albert_FILEG10)
 
 # glove_dic.display_pca_scatterplot_2D()
 # cbow_dic.display_pca_scatterplot_2D()
 # skip_dic.display_pca_scatterplot_2D()
 
-glove_dic.plotWords()
+# glove_dic.plotWords()
 # cbow_dic.plotWords()
-# skip_dic.plotWords()
+skip_dic.plotWords()
 
 # print('glove bulgaria:', glove_dic.get_sim_by_key('bulgaria', 5))
 # print('skip bulgaria:', skip_dic.get_sim_by_key('bulgaria', 5))
