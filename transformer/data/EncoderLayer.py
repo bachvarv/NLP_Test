@@ -5,14 +5,14 @@ from transformer.data.MultiHeadAttentionLayer import MultiHeadAttentionLayer
 
 
 class EncoderLayer(Layer):
-    def __init__(self, d_model, num_heads, dff, rate=0.1):
+    def __init__(self, d_model, num_heads, dff, rate=0.1, layer_norm_eps=1e-6):
         super(EncoderLayer, self).__init__()
 
         self.mha = MultiHeadAttentionLayer(d_model, num_heads)
         self.ffn = self.point_wise_feed_forward_network(d_model, dff)
 
-        self.layer_norm1 = LayerNormalization(epsilon=1e-6)
-        self.layer_norm2 = LayerNormalization(epsilon=1e-6)
+        self.layer_norm1 = LayerNormalization(epsilon=layer_norm_eps)
+        self.layer_norm2 = LayerNormalization(epsilon=layer_norm_eps)
 
         self.dropout1 = Dropout(rate)
         self.dropout2 = Dropout(rate)
