@@ -1,7 +1,4 @@
 
-from d2l import tensorflow as d2l
-import gluon
-
 from bert.corpus_utils.utils import download_data_wiki
 from bert.data.BERTModel import BERTModel
 
