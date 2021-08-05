@@ -5,12 +5,13 @@ import tensorflow as tf
 from _cffi_backend import new_struct_type
 
 from bert.data.BERTEncoderLayer import BERTEncoderLayer
-from tensorflow.keras.losses import CategoricalCrossentropy
+from tensorflow.keras.losses import CategoricalCrossentropy, SparseCategoricalCrossentropy
 from tensorflow.keras.layers import Dense, Softmax
 from tensorflow.keras.optimizers import Adam
 
 from bert.data.MLMLayer import MLMLayer
 import numpy as np
+
 
 class BERTModel(tf.keras.Model):
     def __init__(self, num_layers, d_model, num_heads, dff,
@@ -21,8 +22,6 @@ class BERTModel(tf.keras.Model):
                                          dff, input_vocab_length, maximum_positional_encoding,
                                          rate=rate, layer_norm_eps=layer_norm_eps)
 
-        self.hidden = Dense(d_model, activation='tanh')
-
         self.nsp_layer = Dense(2)
 
         self.mlm_layer = MLMLayer(input_vocab_length, d_model)
@@ -32,6 +31,10 @@ class BERTModel(tf.keras.Model):
         self.loss = CategoricalCrossentropy()
 
         self.checkpoint_path = 'checkpoint/learning/'
+
+        self.checkpoint = tf.train.Checkpoint(step=tf.Variable(1), bert=self)
+
+        self.manager = tf.train.CheckpointManager(self.checkpoint, self.checkpoint_path, max_to_keep=3)
 
     def call(self, token_ids, segments, pred_positions = None, training=True):
         x = self.encoding(token_ids, segments, training, None)
@@ -44,42 +47,36 @@ class BERTModel(tf.keras.Model):
         else:
             mlm_y_hat = None
 
-        x = self.hidden(x)
+        # x = self.hidden(x)
         nsp_y_hat = self.nsp_layer(x[:, 0, :])
+        nsp_y_hat = self.softmax(nsp_y_hat)
         return x, mlm_y_hat, nsp_y_hat
 
     def train_step(self, dataset, epochs):
         start_time = time.time()
-        batch = 0
+        if self.manager.latest_checkpoint:
+            self.checkpoint.restore(self.manager.latest_checkpoint)
+            print("Restored from {}".format(self.manager.latest_checkpoint))
+        else:
+            print("Initializing from scratch.")
         for i in range(epochs):
-
             for item in dataset:
-                if (batch == 100):
-                    break
                 try:
                     tokens_ids, segments, valid_lens, pred_positions, mlm_weights, mlm_labels, nsp_labels = item
                     # print(mlm_labels)
                     with tf.GradientTape() as tape:
                         x, mlm_y_hat, nsp_y_hat = self.call(tokens_ids, segments, pred_positions)
 
-                        nsp_real = self._generate_nsp_labels(nsp_labels)
+                        nsp_real = [1 if label else 0 for label in nsp_labels]
+                        nsp_real = tf.keras.utils.to_categorical(nsp_real)
                         nsp_loss = self.loss(nsp_real, nsp_y_hat)
-
-
                         if mlm_y_hat is not None:
                             # print(mlm_y_hat)
                             mlm_y_predicted = tf.argmax(mlm_y_hat, axis=2)
-                            # print(mlm_y_predicted)
-                            # mask = np.cast['float32'](mlm_weights)
                             mlm_y_predicted *= mlm_weights
                             mlm_y_predicted = tf.cast(mlm_y_predicted, tf.float32)
 
                             mlm_loss = self.loss(mlm_labels, mlm_y_predicted)
-                            # print(mlm_loss)
-
-                        # print(nsp_y_hat)
-
-                        # nsp_loss = self.loss(nsp_labels, nsp_y_hat)
 
                     if mlm_loss is not None:
                         print(mlm_loss)
@@ -91,13 +88,15 @@ class BERTModel(tf.keras.Model):
 
                         gradients = tape.gradient(nsp_loss, self.trainable_variables)
                         self.optimizer.apply_gradients(zip(gradients, self.trainable_variables))
+
+                    self.checkpoint.step.assign_add(1)
+                    if int(self.checkpoint.step) %2 == 0:
+                        self.manager.save()
+
                 except StopIteration:
                     print("Epoch ended")
                     continue
 
-                batch+=1
-            self.save_weights(self.checkpoint_path + 'BERT_Save_Epoch_%n'.format(i) + time.strftime("%d_%m_%Y_%H:%M:%S",
-                                                                                          time.gmtime()))
 
         end_time = time.time()
         print(end_time - start_time)

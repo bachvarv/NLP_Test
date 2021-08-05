@@ -1,20 +1,11 @@
-import collections
 import logging
-import os
-import pathlib
-import re
-import string
-import sys
 import time
 
 import numpy as np
-import matplotlib.pyplot as plt
-
-import tensorflow_datasets as tfds
-import tensorflow_text as text
 import tensorflow as tf
+import tensorflow_datasets as tfds
+import tensorflow_text
 
-from transformer.data.Encoder import Encoder
 from transformer.data.Transformer import Transformer
 
 
@@ -48,10 +39,7 @@ def positional_encoding(position, d_model):
 
     angle_rads[:, 0::2] = np.sin(angle_rads[:, 0::2])
     angle_rads[:, 1::2] = np.sin(angle_rads[:, 1::2])
-
-    print("Positional Encoding befor:", angle_rads.shape)
     pos_encoding = angle_rads[np.newaxis, ...]
-    print("Positional Encoding after:", pos_encoding.shape)
 
     return pos_encoding
 
@@ -123,7 +111,7 @@ examples, metadata = tfds.load('ted_hrlr_translate/pt_to_en',
                                with_info=True, as_supervised=True)
 
 train_examples, val_examples = examples['train'], examples['validation']
-# print(train_examples.batch(1).take(1))
+print(train_examples.batch(1).take(1))
 # print(examples)
 
 # The Interesting Part about this is that

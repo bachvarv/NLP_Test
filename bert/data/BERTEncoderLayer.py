@@ -18,7 +18,7 @@ class BERTEncoderLayer(Layer):
         self.pos_encoding = tf.Variable(
             initial_value=tf.random_normal_initializer(mean=1., stddev=initializer_range)(
                 shape=[1, maximum_position_encoding, d_model]),
-            trainable=True, name='pos_encodding')
+            trainable=True)
 
         self.dropout = Dropout(rate)
 

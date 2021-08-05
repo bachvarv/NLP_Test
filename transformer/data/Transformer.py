@@ -108,6 +108,9 @@ class Transformer(Model):
                                       combined_mask,
                                       dec_padding_mask)
 
+            print(prediction)
+            print(tar_real)
+
             loss = self.loss_function(tar_real, prediction)
             predicted = tf.argmax(prediction, axis=2)
 

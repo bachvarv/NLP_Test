@@ -115,3 +115,10 @@ all_files.*
 checkpoint
 model-1000.*
 my_test_model.*
+
+ted_hrlr_translate_pt_en_converter/
+ted_hrlr_translate_pt_en_converter/
+*.zip
+checkpoint/
+training/
+saved_model/

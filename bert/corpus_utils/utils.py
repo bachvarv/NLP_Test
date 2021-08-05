@@ -11,7 +11,7 @@ import gluon
 
 def _read_text(dir):
     file_name = os.path.join(dir, 'wiki.train.tokens')
-    with open(file_name, 'r') as f:
+    with open(file_name, 'r', encoding='utf8') as f:
         lines = f.readlines()
 
         paragraphs = [line.strip().lower().split(' . ')
