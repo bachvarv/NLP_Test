@@ -7,6 +7,7 @@ from transformer.data.EncoderLayer import EncoderLayer
 from transformer.data.MultiHeadAttentionLayer import MultiHeadAttentionLayer
 import numpy as np
 
+
 class Decoder(Layer):
     def __init__(self, num_layers, d_model, num_heads, dff, target_vocab_size,
                  maximum_position_encoding, rate=0.1):

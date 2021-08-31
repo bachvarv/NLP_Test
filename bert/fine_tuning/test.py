@@ -318,14 +318,15 @@ if ckpt_manager.latest_checkpoint:
     ckpt.restore(ckpt_manager.latest_checkpoint)
 
 # for i in range(len(train_input_array)):
-model.fit(x=input_items, y=labels, batch_size=8, epochs=1)
+# model.fit(x=input_items, y=labels, batch_size=8, epochs=1)
 
 ckpt_manager.save()
 # #
 # #
 # print(len(validation_input))
-for i in range(len(validation_input)):
-    print("Validating")
-    print(model.evaluate(x=validation_input[i], y=validation_label[i],verbose=1))
+# for i in range(len(validation_input)):
+#     print("Validating")
+#     print(model.evaluate(x=validation_input[i], y=validation_label[i],verbose=1))
 #
-model.save('saved_model/')
+# model.save('saved_model/')
+model.save('model_py/model.h5')

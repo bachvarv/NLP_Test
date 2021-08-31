@@ -46,5 +46,8 @@ bert(tokens_ids, segments, pred_positions)
 tf.keras.utils.plot_model(bert)
 # bert.train_step(iterator, 1)
 
-checkpoint_path ="E:\\Masterarbeit\\pre-trained bert\\bert_multi_cased_L-12_H-768_A-12_4.tar\\variables\\variables.index"
+if(platform.system() == 'Linux'):
+    checkpoint_path = ''
+else:
+    checkpoint_path ="E:\\Masterarbeit\\pre-trained bert\\bert_multi_cased_L-12_H-768_A-12_4.tar\\variables\\variables.index"
 
