@@ -260,3 +260,4 @@ wrapt==1.12.1
 WSME==0.10.1
 xlrd==2.0.1
 zipp==3.5.0
+transformers~=4.11.3
