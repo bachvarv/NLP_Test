@@ -6,7 +6,7 @@ from abc import ABC
 from d2l import tensorflow as d2l
 import numpy as np
 import tensorflow as tf
-import gluon
+# import gluon
 
 
 def _read_text(dir):

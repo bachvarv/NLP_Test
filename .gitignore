@@ -122,3 +122,8 @@ ted_hrlr_translate_pt_en_converter/
 checkpoint/
 training/
 saved_model/
+model_py/
+wikitext-2/
+bert-base-german-cased/
+bert_en_cased_L-12_H-768_A-12_4/
+*.tar.gz

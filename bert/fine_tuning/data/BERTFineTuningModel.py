@@ -15,6 +15,7 @@ class BERTFineTuningModel(tf.keras.Model):
         self.max_sentence_size = max_sentence_size
         self.batch_size = batch_size
         self.output_target_vocab_size = target_vocab_size
+        print(target_vocab_size)
         # TODO: Change with the specific tokenizer
         # this is a multi_cased_preprocess/3
         # self.preprocessor = hub.KerasLayer("https://tfhub.dev/tensorflow/bert_multi_cased_preprocess/3")
@@ -30,36 +31,51 @@ class BERTFineTuningModel(tf.keras.Model):
         self.encoder_output = self.encoder_model(self.encoder_inputs)
 
         self.dropout = tensorflow.keras.layers.Dropout(rate=0.1)
-        self.dense = tf.keras.layers.Dense(self.output_target_vocab_size)
+        self.dense = tf.keras.layers.Dense(self.output_target_vocab_size, activation=None)
         self.accuracy_metric = tf.keras.metrics.SparseCategoricalCrossentropy()
+        self.loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+        self.optimizer = tf.keras.optimizers.Adam()
+
+        # Definition of the model
+        net = self.encoder_output['sequence_output']
+        net = self.dropout(net)
+        self.output_layer = self.dense(net)
+        self.model = tf.keras.Model(self.encoder_inputs, self.output_layer)
+        self.model.compile(optimizer=self.optimizer, loss=self.loss, metrics=[self.accuracy_metric])
+
         # self.softmax = tf.keras.layers.Softmax(axis=2)
 
     def call(self, inputs, training=None, mask=None):
-
         if inputs is None:
             return None
-        x = self.encoder_model(inputs)
-        # print(x)
-        x = x['sequence_output']
-        x = self.dropout(x)
-        x = self.dense(x)
+
+        inp, out = inputs
+        output = self.model(inp)
+
+        # x = self.encoder_model(inputs)
+        # x = x['sequence_output']
+        # x = self.dropout(x)
+        # x = self.dense(x)
         # x = self.softmax(x)
-        return x
+        return output
 
-    def train(self, inputs, lengths, epochs):
+    def train(self, inputs, epochs):
         start = time.time()
-        for _ in range(epochs):
-            for i in range(len(inputs)):
+        self.model.fit(x=inputs[0], y=inputs[1], batch_size=1, epochs=1)
+        # for _ in range(epochs):
 
-                # print(inputs[i])
-                if len(inputs[i][0]) == 0 or len(inputs[i][1]) == 0:
-                    continue
-                x = self.call(inputs[i][0])
+            # for i in range(len(inputs)):
+            #
+            #     if len(inputs[i][0]) == 0 or len(inputs[i][1]) == 0:
+            #         continue
 
-                if x is None:
-                    continue
-
-                label = inputs[i][1]['input_word_ids']
+                #
+                # x = self.call(inputs[i])
+                #
+                # if x is None:
+                #     continue
+                #
+                # label = inputs[i][1]
                 # label = tf.cast(label_dict['input_word_ids'], dtype=tf.int64)
 
 
@@ -68,23 +84,26 @@ class BERTFineTuningModel(tf.keras.Model):
                 # predicted = tf.keras.utils.to_categorical(predicted)
                 # label = tf.keras.utils.to_categorical(label)
                 # predicted = tf.cast(x, tf.float64)
-                print(x)
-                print(label)
-                loss = self.loss(label, x)
-                print(loss)
-
-                with tf.GradientTape() as tape:
-                    gradients = tape.gradient(loss,
-                                              self.trainable_variables, unconnected_gradients='zero')
+                # print(x)
+                # print(label)
+                # loss = self.model.loss(label, x)
+                # print(loss)
+                # with tf.GradientTape() as tape:
+                    # gradients = tape.gradient(loss,
+                    #                           self.trainable_variables)
+                    # gradients = tape.gradient(loss, self.model.trainable_variables)
+                    # print(gradients_encoder)
                     # print("Trainable: {}".format(self.trainable_variables))
+                    # print("Gradients")
                     # print(gradients)
 
-                self.optimizer.apply_gradients(zip(gradients, self.trainable_variables))
+                # self.model.optimizer.apply_gradients(zip(gradients,
+                #                                          self.model.trainable_variables))
                 # print(loss)
 
         end = time.time()
         print("Time it took {}".format(end - start))
-        return x
+        return 'Finished'
 
     def _pre_process_data(self, input):
         if self.batch_size == 1:

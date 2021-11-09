@@ -29,6 +29,8 @@ class BERTModel(tf.keras.Model):
         self.softmax = Softmax()
 
         self.loss = CategoricalCrossentropy()
+        self.loss_sparse = SparseCategoricalCrossentropy()
+
 
         self.checkpoint_path = 'checkpoint/learning/'
 
@@ -71,12 +73,8 @@ class BERTModel(tf.keras.Model):
                         nsp_real = tf.keras.utils.to_categorical(nsp_real)
                         nsp_loss = self.loss(nsp_real, nsp_y_hat)
                         if mlm_y_hat is not None:
-                            # print(mlm_y_hat)
-                            mlm_y_predicted = tf.argmax(mlm_y_hat, axis=2)
-                            mlm_y_predicted *= mlm_weights
-                            mlm_y_predicted = tf.cast(mlm_y_predicted, tf.float32)
 
-                            mlm_loss = self.loss(mlm_labels, mlm_y_predicted)
+                            mlm_loss = self.loss_sparse(mlm_labels, mlm_y_hat)
 
                     if mlm_loss is not None:
                         print(mlm_loss)

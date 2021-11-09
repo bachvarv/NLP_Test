@@ -1,13 +1,10 @@
 import os
+import platform
 
-import numpy
 import tensorflow_hub as hub
 import tensorflow as tf
 import numpy as np
 import tensorflow_datasets as tfds
-from keras.utils.metrics_utils import Reduction
-from numpy import dtype
-from official import nlp
 from official.nlp import optimization, bert
 import official.nlp.bert.tokenization
 
@@ -48,17 +45,17 @@ def pre_process_input(input, batch_size, max_sentence_size):
                 tf.convert_to_tensor(processed_input)}
 
 
-def different_pre_process_input(input, max_sentence_size):
-    if input is None:
-        return None, None, None
-
-    size = len(input)
-    input_mask = np.zeros((size, max_sentence_size)).astype(int)
-    processed_input = np.zeros((size, max_sentence_size)).astype(int)
-    input_type_ids = np.zeros((size, max_sentence_size)).astype(int)
-
-
-    return input_mask, input_type_ids, processed_input
+# def different_pre_process_input(input, max_sentence_size):
+#     if input is None:
+#         return None, None, None
+#
+#     size = len(input)
+#     input_mask = np.zeros((size, max_sentence_size)).astype(int)
+#     processed_input = np.zeros((size, max_sentence_size)).astype(int)
+#     input_type_ids = np.zeros((size, max_sentence_size)).astype(int)
+#
+#
+#     return input_mask, input_type_ids, processed_input
 
 ## Dataset
 batch_size = 8
@@ -67,29 +64,30 @@ max_sentence_size = 128
 examples, metadata = tfds.load('ted_hrlr_translate/pt_to_en',
                                with_info=True, as_supervised=True)
 
-dataframe = tfds.as_dataframe(examples['train'].take(-1), metadata)
 
-print(dataframe.head(2))
-ds = tf.data.Dataset.from_tensor_slices((dataframe['en'], dataframe['pt']))
-print(ds)
 
 train_examples, val_examples = examples['train'], examples['validation']
 en_examples = []
 pt_examples = []
 
-model_name = 'ted_hrlr_translate_pt_en_converter'
-tf.keras.utils.get_file(f"{model_name}.zip",
-                                    f"https://storage.googleapis.com/download.tensorflow.org/models/{model_name}.zip",
-                                    cache_dir='.', cache_subdir='', extract=True)
-tokenizer = tf.saved_model.load(model_name)
-en_tokenizer = tokenizer.en
-pt_tokenizer = tokenizer.pt
+# model_name = 'ted_hrlr_translate_pt_en_converter'
+# tf.keras.utils.get_file(f"{model_name}.zip",
+#                                     f"https://storage.googleapis.com/download.tensorflow.org/models/{model_name}.zip",
+#                                     cache_dir='.', cache_subdir='', extract=True)
+# tokenizer = tf.saved_model.load(model_name)
+# en_tokenizer = tokenizer.en
+# pt_tokenizer = tokenizer.pt
 
-model_checkpoint = 'E:\\Masterarbeit\\pre-trained bert\\bert_multi_cased_L-12_H-768_A-12_4'
+#TODO: change the checkpoint place
+if(platform.system() == 'Linux'):
+    model_checkpoint = 'checkpoint/bert_multi_cased_L-12_H-768_A-12_4'
+    vocab_path = os.path.join(model_checkpoint, "assets/vocab.txt")
+else:
+    model_checkpoint = 'E:\\Masterarbeit\\pre-trained bert\\bert_multi_cased_L-12_H-768_A-12_4'
+    vocab_path = os.path.join(model_checkpoint, "assets\\vocab.txt")
 
 # TODO: new Tokenizer remove the old one
-act_tokenizer = bert.tokenization.FullTokenizer(vocab_file=os.path.join(model_checkpoint,
-                                                                        "assets\\vocab.txt"), do_lower_case=True)
+act_tokenizer = bert.tokenization.FullTokenizer(vocab_file=vocab_path, do_lower_case=True)
 
 # print("Vocab Size: ", len(act_tokenizer.vocab))
 
@@ -136,6 +134,7 @@ for train_pt_examples, train_en_examples in train_examples.batch(1):
     train_pt_examples.append('[SEP]')
     train_en_examples.insert(0, '[CLS]')
     train_en_examples.append('[SEP]')
+    print(train_en_examples)
     train_en_examples = act_tokenizer.convert_tokens_to_ids(train_en_examples)
     train_pt_examples = act_tokenizer.convert_tokens_to_ids(train_pt_examples)
     train_input_array.append(train_en_examples)
@@ -169,13 +168,16 @@ for train_pt_examples, train_en_examples in train_examples.batch(1):
 # input_mask = [[1 for _ in range(len(i))] for i in train_input_array]
 # input_type_ids = [[1 for _ in range(len(i))]  for i in train_input_array]
 
-print()
-en_text = dataframe['en'].values
-pt_text = dataframe['pt'].values
-input_words_tokenized = [act_tokenizer.convert_tokens_to_ids(act_tokenizer.tokenize(text)) for text in en_text]
-label_words_tokenized = [act_tokenizer.convert_tokens_to_ids(act_tokenizer.tokenize(text)) for text in pt_text]
-print(input_words_tokenized)
-print(label_words_tokenized)
+for text in train_input_array:
+    print(text)
+# en_text = dataframe['en'].values
+# pt_text = dataframe['pt'].values
+# input_words_tokenized = [act_tokenizer.convert_tokens_to_ids(act_tokenizer.tokenize(text.values))
+#                          for text in train_input_array]
+# label_words_tokenized = [act_tokenizer.convert_tokens_to_ids(act_tokenizer.tokenize(text.values))
+#                          for text in train_label_array]
+# print(input_words_tokenized)
+# print(label_words_tokenized)
 
 input_word_ids = []
 input_mask = []
@@ -183,23 +185,23 @@ input_type_ids = []
 labels = []
 # for i in range(len(input_word_ids)):
 #     size = len(input_word_ids[i]
-for i in range(len(input_words_tokenized)):
-    if len(input_words_tokenized[i]) > max_sentence_size or len(label_words_tokenized[i]) > max_sentence_size:
+for i in range(len(train_input_array)):
+    if len(train_input_array[i]) > max_sentence_size or len(train_label_array[i]) > max_sentence_size:
         continue
 
     input_word_ids.append(np.concatenate(
-        (input_words_tokenized[i], np.zeros(shape=max_sentence_size - len(input_words_tokenized[i]), dtype='int'))
+        (train_input_array[i], np.zeros(shape=max_sentence_size - len(train_input_array[i]), dtype='int'))
     ))
 
     input_mask.append(np.concatenate(
-        (np.ones_like(input_words_tokenized[i]),
-        np.zeros(shape=max_sentence_size - len(input_words_tokenized[i]), dtype='int'))
+        (np.ones_like(train_input_array[i]),
+        np.zeros(shape=max_sentence_size - len(train_input_array[i]), dtype='int'))
     ))
 
     input_type_ids.append(np.zeros(shape=max_sentence_size, dtype='int'))
 
     labels.append(np.concatenate(
-        (label_words_tokenized[i], np.zeros(shape=max_sentence_size - len(label_words_tokenized[i]), dtype='int')))
+        (train_label_array[i], np.zeros(shape=max_sentence_size - len(train_label_array[i]), dtype='int')))
     )
 
 # print(input_word_ids)
@@ -215,6 +217,8 @@ input_items = dict(
     input_type_ids=input_type_ids.to_tensor(),
     input_mask=input_mask.to_tensor()
 )
+
+print(input_items['input_word_ids'].dtype)
 
 for key, value in input_items.items():
   print(f'{key:15s} shape: {value.shape}')
@@ -264,6 +268,7 @@ vocab_size = len(act_tokenizer.vocab)
 # defining the model
 
 pre_trained_model = 'https://tfhub.dev/tensorflow/bert_multi_cased_L-12_H-768_A-12/4'
+pre_trained_model_file = './checkpoint/bert_multi_cased_L-12_H-768_A-12_4'
 
 inputs = dict(
     input_word_ids=tf.keras.layers.Input(shape=max_sentence_size, dtype=tf.int32),
@@ -271,7 +276,11 @@ inputs = dict(
     input_type_ids=tf.keras.layers.Input(shape=max_sentence_size, dtype=tf.int32)
 )
 
-encoder_input = hub.KerasLayer(pre_trained_model, trainable=True, name="BERT_Encoder")
+# Need to import the model through different means
+encoder_input = hub.KerasLayer(pre_trained_model_file, trainable=True, name="BERT_Encoder")
+# Import it from file
+# encoder_input = tf.keras.models.load_model('checkpoint/bert_model')
+
 
 outputs = encoder_input(inputs)
 
@@ -310,17 +319,18 @@ path_to_checkpoint = 'training/checkpoints'
 ckpt = tf.train.Checkpoint(model)
 ckpt_manager = tf.train.CheckpointManager(ckpt, path_to_checkpoint, max_to_keep=3)
 
-print(f'Training model with {pre_trained_model}')
+print(f'Training model with {pre_trained_model_file}')
 print(f'Training label: {np.shape(labels)}')
 print(f'Training input: {input_items["input_word_ids"].shape}')
+print(f'Input Items in the first item: {input_items["input_word_ids"][0]}')
 if ckpt_manager.latest_checkpoint:
     print(f'Loading checkpoint from {ckpt_manager.latest_checkpoint}')
     ckpt.restore(ckpt_manager.latest_checkpoint)
 
 # for i in range(len(train_input_array)):
-# model.fit(x=input_items, y=labels, batch_size=8, epochs=1)
+model.fit(x=input_items, y=labels, batch_size=8, epochs=1)
 
-ckpt_manager.save()
+# ckpt_manager.save()
 # #
 # #
 # print(len(validation_input))
@@ -329,4 +339,7 @@ ckpt_manager.save()
 #     print(model.evaluate(x=validation_input[i], y=validation_label[i],verbose=1))
 #
 # model.save('saved_model/')
-model.save('model_py/model.h5')
+# Changed the save method, because got Error tensorflowjs when loading the model: Error: Uncaught (in promise): Error: Unknown layer: KerasLayer
+# tf.keras.models.save_model(model, 'model_py/model.h5', save_format='h5', save_traces=True)
+
+model.to_json()
