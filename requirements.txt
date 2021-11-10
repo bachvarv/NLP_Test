@@ -106,7 +106,7 @@ nest-asyncio==1.5.1
 netaddr==0.8.0
 netifaces==0.11.0
 nose==1.3.7
-notebook==6.4.0
+notebook==6.4.1
 numpy==1.19.5
 oauth2client==4.1.3
 oauthlib==3.1.1
@@ -137,7 +137,7 @@ pecan==1.4.0
 pexpect==4.8.0
 phrasedml==1.1.1
 pickleshare==0.7.5
-Pillow==8.2.0
+Pillow==8.3.2
 plotly==5.3.1
 pluggy==1.0.0
 portalocker==2.0.0
@@ -208,9 +208,9 @@ sphinxcontrib-htmlhelp==2.0.0
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
-SQLAlchemy==1.0.19
+SQLAlchemy==1.3.0
 sqlalchemy-migrate==0.13.0
-sqlparse==0.4.1
+sqlparse==0.4.2
 statsd==3.3.0
 stevedore==3.3.0
 tellurium==2.2.0
@@ -219,11 +219,11 @@ tenacity==8.0.1
 tensorboard==2.5.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
-tensorflow==2.5.0
+tensorflow==2.5.1
 tensorflow-addons==0.13.0
 tensorflow-datasets==4.3.0
 tensorflow-estimator==2.5.0
-tensorflow-gpu==2.5.0
+tensorflow-gpu==2.5.1
 tensorflow-hub==0.12.0
 tensorflow-metadata==1.1.0
 tensorflow-model-optimization==0.6.0
