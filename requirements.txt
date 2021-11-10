@@ -210,7 +210,7 @@ sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 SQLAlchemy==1.0.19
 sqlalchemy-migrate==0.13.0
-sqlparse==0.4.1
+sqlparse==0.4.2
 statsd==3.3.0
 stevedore==3.3.0
 tellurium==2.2.0
