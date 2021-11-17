@@ -109,6 +109,8 @@ with open(path_to_corpus, 'r') as file:
         x, y = line.split(sep='\t')
         token_x = tokenizer(x, return_tensors='tf')
         token_y = tokenizer(y, return_tensors='tf')
+        # input_arr.append(token_x)
+        # label_arr.append(token_y)
         if random.randint(0, 100) > 10:
             input_arr.append(token_x)
             label_arr.append(token_y)
@@ -162,8 +164,8 @@ eval_inp_arr = dict(input_ids=eval_ids,
 # creating the dataset
 dataset = tf.data.Dataset.from_tensor_slices((inp_arr, labels))
 eval_dataset = tf.data.Dataset.from_tensor_slices((eval_inp_arr, eval_labels))
-print(dataset)
-print(eval_dataset)
+# print(dataset)
+# print(eval_dataset)
 
 # Creating the model
 inp_layer = dict(
@@ -199,11 +201,12 @@ if ckpt_manager.latest_checkpoint:
     print(f'Loaded checkpoint from {ckpt_manager.latest_checkpoint}')
 else:
     print('Initializing from scratch!')
-model.fit(dataset, batch_size=1)
+# model.fit(dataset, batch_size=1, epochs=2)
 
 
 model.evaluate(eval_dataset, batch_size=1)
-ckpt_manager.save()
+model.evaluate(dataset, batch_size=1)
+# ckpt_manager.save()^
 
 saved_model = os.path.join(os.curdir, 'saved_model')
 model.save(saved_model)
