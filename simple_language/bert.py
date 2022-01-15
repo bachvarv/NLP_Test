@@ -1,14 +1,20 @@
 import os
 import random
-import tarfile
-
-import numpy as np
-import requests
 import transformers
 import tensorflow as tf
 import subprocess
-from official.nlp import optimization
-from datasets import load_dataset
+# import official.nlp
+# from official.nlp import optimization
+# from datasets import load_dataset
+
+
+config = tf.compat.v1.ConfigProto(gpu_options =
+                         tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.8)
+# device_count = {'GPU': 1}
+)
+config.gpu_options.allow_growth = True
+session = tf.compat.v1.Session(config=config)
+tf.compat.v1.keras.backend.set_session(session)
 
 
 class CustomCallback(tf.keras.callbacks.Callback):
@@ -41,7 +47,8 @@ def pad_array(arr, size, item):
 
 cfg = dict(
     max_sentence=128,
-    hidde_layer_size=768
+    hidde_layer_size=768,
+    batch_size=2
 )
 
 
@@ -61,24 +68,24 @@ cfg = dict(
 #     model.extractall()
 
 if not os.path.isdir('bert-base-german-cased'):
-    git_lfs_url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.0.2/git-lfs-linux-amd64-v3.0.2.tar.gz'
-    file = 'git-lfs-linux-amd64-v3.0.2.tar.gz'
-    response = requests.get(git_lfs_url, stream=True)
-    if response.status_code == 200:
-        with open(file, 'wb') as f:
-            f.write(response.raw.read())
-            file = tarfile.open(file)
-            file.extractall('./git_lfs')
-            file.close()
-    subprocess.run(['./install.sh'], cwd='git_lfs')
-
-    subprocess.run(['git', 'lfs', 'install'], cwd='git_lfs')
-
-    print("Cloning Bert-Base-German-cased!")
+    #     git_lfs_url = 'https://github.com/git-lfs/git-lfs/releases/download/v3.0.2/git-lfs-linux-amd64-v3.0.2.tar.gz'
+    #     file = 'git-lfs-linux-amd64-v3.0.2.tar.gz'
+    #     response = requests.get(git_lfs_url, stream=True)
+    #     if response.status_code == 200:
+    #         with open(file, 'wb') as f:
+    #             f.write(response.raw.read())
+    #             file = tarfile.open(file)
+    #             file.extractall('./git_lfs')
+    #             file.close()
+    #     subprocess.run(['./install.sh'], cwd='git_lfs')
+    #
+    #     subprocess.run(['git', 'lfs', 'install'], cwd='git_lfs')
+    #
+    #     print("Cloning Bert-Base-German-cased!")
     url = 'https://huggingface.co/bert-base-german-cased'
     git("clone", url)
-
-    subprocess.run(['git', 'lfs', 'pull'], cwd='bert-base-german-cased')
+#
+#     subprocess.run(['git', 'lfs', 'pull'], cwd='bert-base-german-cased')
 
 
 # Path to vocabulary
@@ -190,12 +197,12 @@ arr_eval_label = tokenizer(eval_label_arr, max_length=cfg['max_sentence'], paddi
 dataset = tf.data.Dataset.from_tensor_slices((
     dict(input_ids=arr_inp['input_ids'],
          token_type_ids=arr_inp['token_type_ids'],
-         attention_mask=arr_inp['attention_mask']), arr_lab['input_ids'].numpy())).batch(8)
+         attention_mask=arr_inp['attention_mask']), arr_lab['input_ids'].numpy())).batch(cfg['batch_size'])
 
 eval_dataset = tf.data.Dataset.from_tensor_slices((
     dict(input_ids=arr_eval['input_ids'],
          token_type_ids=arr_eval['token_type_ids'],
-         attention_mask=arr_eval['attention_mask']), arr_eval_label['input_ids'].numpy()))
+         attention_mask=arr_eval['attention_mask']), arr_eval_label['input_ids'].numpy())).batch(1)
 # print(arr_lab['input_ids'].numpy())
 
 # print(dataset)
@@ -299,7 +306,7 @@ else:
     print('Initializing from scratch!')
 
 st = 1
-easy_model.fit(dataset, epochs=970,
+easy_model.fit(dataset, epochs=200,
                callbacks=[#tf.keras.callbacks.LearningRateScheduler(set_learn_rate),
                           tf.keras.callbacks.LambdaCallback(on_epoch_end=
                                                             lambda epoch, logs: print(f" How sure is the model: {tf.exp(logs['loss'])}")
