@@ -250,19 +250,21 @@ net = output.last_hidden_state
 # lstm_layer = tf.keras.layers.LSTM(cfg['hidde_layer_size'], return_state=True, return_sequences=True)
 # dense_layer = tf.keras.layers.Dense(tokenizer.vocab_size, activation='softmax')
 # do_layer = tf.keras.layers.Dropout(0.1)(net)
-lstm_layer = tf.keras.layers.LSTM(cfg['hidde_layer_size'], return_state=True, return_sequences=True)
-lstm_layer_2 = tf.keras.layers.LSTM(cfg['hidde_layer_size'], return_state=True, return_sequences=True)
-lstm_out_1, _, _ = lstm_layer(net)
-lstm_out_2, _, _ = lstm_layer_2(lstm_out_1)
-dense_layer = tf.keras.layers.Dense(tokenizer.vocab_size, activation='sigmoid')
-dense_output = dense_layer(lstm_out_2)
-soft_max_layer = tf.keras.layers.Softmax()
-softmax_out = soft_max_layer(dense_output)
+bidirectional = tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(cfg['hidde_layer_size'], return_sequences=True))
+lstm = tf.keras.layers.LSTM(cfg['hidde_layer_size'], return_sequences=True)
+# lstm_layer = tf.keras.layers.LSTM(cfg['hidde_layer_size'], return_state=True, return_sequences=True)
+
+bidirectional_out = bidirectional(net)
+bidirectional_out_do = tf.keras.layers.Dropout(0.01)(bidirectional_out)
+com_layer = lstm(bidirectional_out_do)
+print(com_layer.shape)
+dense_layer = tf.keras.layers.Dense(tokenizer.vocab_size, activation='softmax')
+dense_output = dense_layer(com_layer)
 # lstm_output, _, _ = lstm_layer(net)
 # dense_output = dense_layer(lstm_output)
 # lstm_out, lstm_h, lstm_c = lstm_layer(net)
 # print(dense_output)
-easy_model = tf.keras.Model(inp_layer, softmax_out)
+easy_model = tf.keras.Model(inp_layer, dense_output)
 
 # d_w = dense_layer.weights
 # print(d_w)
@@ -281,7 +283,7 @@ warmup_steps = int(num_steps*0.15)
 #                                     num_train_steps=num_steps,
 #                                     num_warmup_steps=warmup_steps,
 #                                     optimizer_type='adamw')
-opt = tf.keras.optimizers.Adam(learning_rate=1e-3)
+opt = tf.keras.optimizers.Adam(learning_rate=1e-4)
 
 # opti = transformers.AdamWeightDecay(learning_rate=1e-9)
 # optimizer = tf.keras.optimizers.Adam(learning_rate=5e-5)
@@ -292,7 +294,7 @@ metric = tf.keras.metrics.SparseCategoricalCrossentropy()
 
 easy_model.compile(optimizer=opt,
               loss=loss,
-              metrics=[metric, 'accuracy'])
+              metrics=[metric])
 
 # m.compile(optimizer=opt,
 #           loss=loss,
@@ -310,7 +312,7 @@ print(arg_max)
 print(tokenizer.decode(arg_max[0]))
 
 # Checkpoint Manger and Checkpoint
-path_to_checkpoint = os.path.join(os.curdir, 'model_checkpoint_lstmx2_expanded_corpus_v1')
+path_to_checkpoint = os.path.join(os.curdir, 'model_checkpoint_bidirectionalandLSTM_v1')
 # path_to_saved_easy_model = os.path.join(os.curdir, 'saved_easy_model_gru_1024_v3')
 # path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
 ckpt = tf.train.Checkpoint(easy_model)
@@ -329,12 +331,13 @@ else:
     print('Initializing from scratch!')
 
 st = 1
-easy_model.fit(dataset, epochs=2,
-               callbacks=[tf.keras.callbacks.LambdaCallback(on_epoch_end=
-                                                            lambda epoch, logs:
-                                                            print(f" How sure is the model: {tf.exp(logs['loss'])}"))
-                          ])
-easy_model.evaluate(eval_dataset)
+# easy_model.fit(dataset, epochs=5
+#                ,
+#                callbacks=[tf.keras.callbacks.LambdaCallback(on_epoch_end=
+#                                                             lambda epoch, logs:
+#                                                             print(f" How sure is the model: {tf.exp(logs['loss'])}"))
+#                           ])
+# easy_model.evaluate(eval_dataset)
 
 
 # d_w2 = dense_layer.weights
@@ -360,20 +363,20 @@ print(arg_max)
 print(test_label['input_ids'])
 print(tokenizer.decode(arg_max[0]))
 
-# seed_text = 'Geburtsort'
-# for _ in range(10):
-#     token_list = tokenizer([seed_text], max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
-#     predicted = easy_model(token_list)
-#     arg_max = tf.argmax(predicted, axis=2)
-#     output_word = ""
-#     for i in arg_max[0]:
-#         # print(i)
-#         if i > 0:
-#             output_word += " " + tokenizer.decode(i)
-#     seed_text += " " + output_word
-#
-# print(seed_text)
-ckpt_manager.save()
+seed_text = 'Geburtsort'
+for _ in range(10):
+    token_list = tokenizer([seed_text], max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
+    predicted = easy_model(token_list)
+    arg_max = tf.argmax(predicted, axis=2)
+    output_word = ""
+    for i in arg_max[0]:
+        print(i)
+        if i > 0:
+            output_word += " " + tokenizer.decode(i)
+    seed_text += " " + output_word
+
+print(seed_text)
+# ckpt_manager.save()
 # model.save(path_to_saved_model)
 # easy_model.save(path_to_saved_easy_model)
 

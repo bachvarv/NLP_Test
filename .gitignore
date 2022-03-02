@@ -130,3 +130,4 @@ git_lfs/
 saved_model*/
 saved_easy_model*/
 model_checkpoint*/
+model_*/
