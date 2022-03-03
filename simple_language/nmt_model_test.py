@@ -30,17 +30,17 @@ if not os.path.isdir(model_name):
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 vocab_size = tokenizer.vocab_size
 
-config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.8))
-config.gpu_options.allow_growth = True
-session = tf.compat.v1.Session(config=config)
-tf.compat.v1.keras.backend.set_session(session)
+# config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.8))
+# config.gpu_options.allow_growth = True
+# session = tf.compat.v1.Session(config=config)
+# tf.compat.v1.keras.backend.set_session(session)
 
 # Config variables
 cfg = dict(
     max_sentence=128,
     hidden_layer_size=768,
     batch_size=1,
-    transformer_heads=2,
+    transformer_heads=12,
     head_size=64
 )
 
@@ -80,13 +80,13 @@ with open(path_to_corpus, 'r', encoding='utf-8') as file:
     #     print(len(tokenized_y))
         if random.randint(0, 100) > 10:
             input_arr.append(x)
-            label_arr.append(y)
+            label_arr.append('[CLS]' + y)
             # input_arr.append(tokenized_x)
             # label_arr.append(tokenized_y)
 
         else:
             eval_arr.append(x)
-            eval_label_arr.append(y)
+            eval_label_arr.append('[CLS]' + y)
             # eval_arr.append(tokenized_x)
             # eval_label_arr.append(tokenized_y)
 
@@ -110,13 +110,13 @@ with open(path_to_corpus_2, 'r', encoding='utf-8') as file:
     #     print(len(tokenized_y))
         if random.randint(0, 100) > 10:
             input_arr.append(x)
-            label_arr.append(y)
+            label_arr.append('[CLS]' + y)
             # input_arr.append(tokenized_x)
             # label_arr.append(tokenized_y)
 
         else:
             eval_arr.append(x)
-            eval_label_arr.append(y)
+            eval_label_arr.append('[CLS]' + y)
             # eval_arr.append(tokenized_x)
             # eval_label_arr.append(tokenized_y)
 
@@ -130,13 +130,13 @@ with open(path_to_corpus_3, 'r', encoding='utf-8') as file:
     #     print(len(tokenized_y))
         if random.randint(0, 100) > 10:
             input_arr.append(x)
-            label_arr.append(y)
+            label_arr.append('[CLS]' + y)
             # input_arr.append(tokenized_x)
             # label_arr.append(tokenized_y)
 
         else:
             eval_arr.append(x)
-            eval_label_arr.append(y)
+            eval_label_arr.append('[CLS]' + y)
 
 # creating the dataset
 
@@ -172,6 +172,20 @@ model.compile(optimizer=model.optimizer,
               loss=model.loss,
               metrics=['accuracy'])
 
+# Checkpoint
+path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_mix_v1')
+# path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
+
+ckpt = tf.train.Checkpoint(model)
+ckpt_manager = tf.train.CheckpointManager(ckpt, path_to_checkpoint, max_to_keep=1)
+
+if ckpt_manager.latest_checkpoint:
+    ckpt.restore(ckpt_manager.latest_checkpoint)
+    print(f'Loaded checkpoint from {ckpt_manager.latest_checkpoint}')
+else:
+    print('Initializing from scratch!')
+
+
 test_input = tokenizer('Anrede', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
 test_target = tokenizer('[CLS]', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
 
@@ -188,21 +202,11 @@ print(tokenizer.decode(output[0]))
 
 model.summary()
 
-# Checkpoint
-path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_mix_v1')
-# path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
-ckpt = tf.train.Checkpoint(model)
-ckpt_manager = tf.train.CheckpointManager(ckpt, path_to_checkpoint, max_to_keep=1)
 
-if ckpt_manager.latest_checkpoint:
-    ckpt.restore(ckpt_manager.latest_checkpoint)
-    print(f'Loaded checkpoint from {ckpt_manager.latest_checkpoint}')
-else:
-    print('Initializing from scratch!')
 
 # history = model.fit(dataset, epochs=5)
 # model.evaluate(eval_dataset)
-model.train_step(dataset, epochs=1)
+model.train_step(dataset, epochs=70)
 ckpt_manager.save()
 
 sentence = ['Anrede']

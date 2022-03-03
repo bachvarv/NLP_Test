@@ -1,3 +1,5 @@
+import time
+
 import tensorflow as tf
 import transformers
 
@@ -34,7 +36,7 @@ class NMTModel(tf.keras.Model):
 
         self.dense_layer = tf.keras.layers.Dense(vocab_size)
 
-        self.optimizer = tf.keras.optimizers.Adam()
+        self.optimizer = tf.keras.optimizers.Adam(learning_rate=1e-4)
         self.loss = tf.keras.losses.SparseCategoricalCrossentropy()
 
     def call(self, inputs, training):
@@ -52,9 +54,9 @@ class NMTModel(tf.keras.Model):
         target_enc = self.decoder_emb(target)
         target_enc = self.decoder_layers[0](target_enc, enc_out, enc_self_att, training, look_ahead_mask, dec_padding_mask)
         for i in range(self.heads):
-            target = self.decoder_layers[i](target_enc, enc_out, enc_self_att, training, look_ahead_mask, dec_padding_mask)
+            target_enc = self.decoder_layers[i](target_enc, enc_out, enc_self_att, training, look_ahead_mask, dec_padding_mask)
 
-        output = self.dense_layer(target)
+        output = self.dense_layer(target_enc)
 
         return output
     def create_masks(self, inp, tar):
@@ -72,7 +74,9 @@ class NMTModel(tf.keras.Model):
         return enc_padding_mask, dec_padding_mask, look_ahead_mask
 
     def train_step(self, dataset, epochs=5):
-        for _ in range(epochs):
+        start = time.time()
+        for i in range(epochs):
+            epoch_start = time.time()
             for step, element in enumerate(dataset):
                 _, target = element
                 with tf.GradientTape() as tape:
@@ -85,11 +89,15 @@ class NMTModel(tf.keras.Model):
                 self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
 
                 # Log every 200 batches.
-                if step % 200 == 0:
+                if step % 20 == 0:
                     print(
                         "Training loss (for one batch) at step %d: %.4f"
                         % (step, float(loss))
                     )
                     print("Seen so far: %s samples" % ((step + 1) * 1))
+            end = time.time()
+            print('Epoch #%d' % i)
+            print('Execution time was %d s' % (end - epoch_start))
+        print('Execution time was %d s' % (end - start))
 
 
