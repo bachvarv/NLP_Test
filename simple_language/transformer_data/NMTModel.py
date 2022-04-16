@@ -35,6 +35,7 @@ class NMTModel(tf.keras.Model):
                                                1e-3) for _ in range(transformer_heads)]
 
         self.dense_layer = tf.keras.layers.Dense(vocab_size)
+        self.softmax_layer = tf.keras.layers.Softmax()
 
         self.optimizer = tf.keras.optimizers.Adam(learning_rate=1e-4)
         self.loss = tf.keras.losses.SparseCategoricalCrossentropy()
@@ -56,7 +57,8 @@ class NMTModel(tf.keras.Model):
         for i in range(self.heads):
             target_enc = self.decoder_layers[i](target_enc, enc_out, enc_self_att, training, look_ahead_mask, dec_padding_mask)
 
-        output = self.dense_layer(target_enc)
+        output_dense = self.dense_layer(target_enc)
+        output = self.softmax_layer(output_dense)
 
         return output
     def create_masks(self, inp, tar):

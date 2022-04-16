@@ -3,6 +3,7 @@ import time
 import tensorflow as tf
 import transformers
 
+from simple_language.transformer_data.MaskedLoss import MaskedLoss
 from simple_language.transformer_data.NMTDecoderLayer import NMTDecoderLayer
 from simple_language.transformer_data.NMTEncoderLayer import NMTEncoderLayer
 from tensorflow.keras.layers import Embedding
@@ -35,10 +36,13 @@ class NMTModel_BERT_Encoding(tf.keras.Model):
                                                1e-3) for _ in range(transformer_heads)]
 
         self.dense_layer = tf.keras.layers.Dense(vocab_size)
+        self.softmax_layer = tf.keras.layers.Softmax()
 
         self.optimizer = tf.keras.optimizers.Adam(learning_rate=1e-4)
-        self.loss = tf.keras.losses.SparseCategoricalCrossentropy()
+        # self.loss = tf.keras.losses.SparseCategoricalCrossentropy()
+        self.loss = MaskedLoss()
 
+    @tf.function
     def call(self, inputs, training):
         inp, target = inputs
         # print(target)
@@ -58,7 +62,8 @@ class NMTModel_BERT_Encoding(tf.keras.Model):
         for i in range(self.heads):
             target_enc = self.decoder_layers[i](target_enc, encoding_out, enc_self_att, training, look_ahead_mask, dec_padding_mask)
 
-        output = self.dense_layer(target_enc)
+        output_dense = self.dense_layer(target_enc)
+        output = self.softmax_layer(output_dense)
 
         return output
     def create_masks(self, inp, tar):
@@ -86,12 +91,14 @@ class NMTModel_BERT_Encoding(tf.keras.Model):
 
                     loss = self.loss(target['input_ids'], prediction)
 
+                    loss = loss/tf.reduce_sum(tf.cast(target != 0, tf.float32))
+
                 grads = tape.gradient(loss, self.trainable_weights)
 
                 self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
 
                 # Log every 200 batches.
-                if step % 20 == 0:
+                if step % 1 == 0:
                     print(
                         "Training loss (for one batch) at step %d: %.4f"
                         % (step, float(loss))

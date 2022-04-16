@@ -1,10 +1,14 @@
 import os
 import random
 import subprocess
+import time
+
 import transformers
 import tensorflow as tf
-from simple_language.transformer_data.NMTModel import NMTModel
-from simple_language.transformer_data.NMTModel_BERT_Encoding import NMTModel_BERT_Encoding
+from matplotlib import pyplot as plt
+
+from simple_language.seq2seq_data.bahdanau.BertLanguageModel import BertLanguageModel
+from simple_language.transformer_data.MaskedLoss import MaskedLoss
 
 
 def git(*args):
@@ -26,19 +30,19 @@ if not os.path.isdir(model_name):
     url = 'https://huggingface.co/bert-base-german-cased'
     git("clone", url)
 
+
+
 # The Tokenizer
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
-print(tokenizer.add_tokens(['[GO]'], True))
 # tokenizer.add_special_tokens(['[GO]'])
-vocab_size = tokenizer.vocab_size + 1
-print(vocab_size)
-# config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=0.8))
-# config.gpu_options.allow_growth = True
-# session = tf.compat.v1.Session(config=config)
-# tf.compat.v1.keras.backend.set_session(session)
+vocab_size = tokenizer.vocab_size
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
+# config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=1))
+# config.gpu_options.allow_growth = True
+# session = tf.compat.v1.Session(config=config)
+# tf.compat.v1.keras.backend.set_session(session)
 if tf.test.gpu_device_name():
     print('GPU found')
 else:
@@ -175,40 +179,44 @@ with open(path_to_corpus_3, 'r', encoding='utf-8') as file:
 
 # arr = np.reshape(input_arr, newshape=[1, len(input_arr)])
 arr_inp = tokenizer(input_arr, max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
-arr_lab = tokenizer(label_arr, max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
+# arr_lab = tokenizer(label_arr, max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
 # print(arr_inp)
 
 arr_eval = tokenizer(eval_arr, max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
 arr_eval_label = tokenizer(eval_label_arr, max_length=cfg['max_sentence'], padding='max_length', truncation=True, return_tensors='tf')
-# print(arr_eval)
-### Old Way
-# print(non_tokenized)
 
 dataset = tf.data.Dataset.from_tensor_slices((
     dict(input_ids=arr_inp['input_ids'],
          token_type_ids=arr_inp['token_type_ids'],
          attention_mask=arr_inp['attention_mask']),
-    dict(input_ids=arr_lab['input_ids'],
-         token_type_ids=arr_lab['token_type_ids'],
-         attention_mask=arr_lab['attention_mask']))).batch(1).take(10)
+    label_arr)).batch(cfg['batch_size'])
 
 eval_dataset = tf.data.Dataset.from_tensor_slices((
     dict(input_ids=arr_eval['input_ids'],
          token_type_ids=arr_eval['token_type_ids'],
          attention_mask=arr_eval['attention_mask']),
-    dict(input_ids=arr_eval_label['input_ids'],
-         token_type_ids=arr_eval_label['token_type_ids'],
-         attention_mask=arr_eval_label['attention_mask']))).batch(1)
+    eval_label_arr)).batch(1)
 
-model = NMTModel_BERT_Encoding(model_name, cfg['hidden_layer_size'], cfg['transformer_heads'], cfg['max_sentence'], vocab_size)
-model.embedding_layer.resize_token_embeddings(len(tokenizer))
-model.compile(optimizer=model.optimizer,
-              loss=model.loss,
+# Model
+model = BertLanguageModel(cfg['hidden_layer_size'], vocab_size, tokenizer, path_to_model=model_name, bert_trainable=False)
+
+model.compile(optimizer=tf.keras.optimizers.Adam(
+                                                     #learning_rate=1e-4
+                                                     learning_rate=2e-5
+                                                 ),
+              loss=MaskedLoss(),
               metrics=['accuracy'])
 
 # Checkpoint
-path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_mix_masked_loss_v1')
+path_to_checkpoint = os.path.join(os.curdir, 'BLM_v2_lr2e-5_Bahdanau_15EP')
+# SLM_v4 lr=1e-4
+# SLM_v5 lr=1e-3 changed loss to be calculated from logits
+# SLM_v6_with_VGA lr=1e-3 to run with gpu
 # path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
+# BLM_v1_train_pair_add_dot_for_end_symbol and the learning rate is 2e-5
+# BLM_v1 the learning rate is 1e-3
+# BLM_v1_lr_1e-3 lr 1e-3 5 EP
+# BLM_v1_freeze_BERT_lr1e-4_Bahdanau was trained for 5 Iterations
 
 ckpt = tf.train.Checkpoint(model)
 ckpt_manager = tf.train.CheckpointManager(ckpt, path_to_checkpoint, max_to_keep=1)
@@ -219,50 +227,43 @@ if ckpt_manager.latest_checkpoint:
 else:
     print('Initializing from scratch!')
 
-
-test_input = tokenizer('Anrede', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
-test_target = tokenizer('', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
-
-inputs = (dict(input_ids=test_input['input_ids'],
-              token_type_ids=test_input['token_type_ids'],
-              attention_mask=test_input['attention_mask']),
-          dict(input_ids=test_target['input_ids'],
-               token_type_ids=test_target['token_type_ids'],
-               attention_mask=test_target['attention_mask'])
-          )
-
-output = model(inputs, False)
-print(output.shape)
-print(output)
-output = tf.argmax(output, axis=-1)
-print(output)
-print(tokenizer.decode(output[0]))
-
+result, _ = model((['Geburtsort'], ['[CLS]']))
+prediction = tf.argmax(result.logits, axis=-1)
+target = tokenizer(['In welchem Land sind Sie geboren?'])['input_ids']
+print(target)
+print(prediction.numpy())
+# print(result.logits)
+s = tokenizer.decode(prediction[0])
+print(s)
 model.summary()
 
+start = time.time()
+losses = []
+for i in range(1, 16):
+    for inp, tar in dataset:
+        logs = model.train_step((inp, tar))
+        print(logs)
+        losses.append(logs['batch_loss'].numpy())
+    print(f'Step {i}')
+end = time.time()
+plt.plot(losses)
+plt.show()
 
 
-# history = model.fit(dataset, epochs=5)
-# model.evaluate(eval_dataset)
-model.train_step(dataset, epochs=1)
+print(end - start)
+
 ckpt_manager.save()
 
-sentence = ['Anrede']
-pred = ['']
-token = tokenizer(sentence, max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
-pred_token = tokenizer(pred, max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
-test_inp = (dict(input_ids=token['input_ids'],
-              token_type_ids=token['token_type_ids'],
-              attention_mask=token['attention_mask']),
-            dict(input_ids=pred_token['input_ids'],
-              token_type_ids=pred_token['token_type_ids'],
-              attention_mask=pred_token['attention_mask']))
-predicted = model(test_inp, False)
-print(predicted.shape)
-arg_max = tf.argmax(predicted, axis=-1)
-print(arg_max)
-print(tokenizer.decode(arg_max[0]))
+result, _ = model((['Anrede'], ['[CLS]']))
 
-# save_history(history, path_to_history)
-
-
+prediction = tf.argmax(result.logits, axis=-1)
+target = tokenizer(['Herr oder Frau.'])['input_ids']
+print(target)
+# print(result.logits)
+print(prediction)
+s = tokenizer.decode(prediction[0])
+print(s)
+# for inp, tar in dataset:
+#     # print(inp, tar)
+#     model.train_step((inp, tar))
+#     break

@@ -19,6 +19,8 @@ def save_history(history, file):
             f.writelines(line)
         f.close()
 
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+
 model_name = os.path.join(os.curdir, 'bert-base-german-cased')
 path_to_history = os.path.join(os.curdir, 'history_nmt_mix_v1.csv')
 
@@ -80,13 +82,13 @@ with open(path_to_corpus, 'r', encoding='utf-8') as file:
     #     print(len(tokenized_y))
         if random.randint(0, 100) > 10:
             input_arr.append(x)
-            label_arr.append('[CLS]' + y)
+            label_arr.append(y)
             # input_arr.append(tokenized_x)
             # label_arr.append(tokenized_y)
 
         else:
             eval_arr.append(x)
-            eval_label_arr.append('[CLS]' + y)
+            eval_label_arr.append(y)
             # eval_arr.append(tokenized_x)
             # eval_label_arr.append(tokenized_y)
 
@@ -110,13 +112,13 @@ with open(path_to_corpus_2, 'r', encoding='utf-8') as file:
     #     print(len(tokenized_y))
         if random.randint(0, 100) > 10:
             input_arr.append(x)
-            label_arr.append('[CLS]' + y)
+            label_arr.append(y)
             # input_arr.append(tokenized_x)
             # label_arr.append(tokenized_y)
 
         else:
             eval_arr.append(x)
-            eval_label_arr.append('[CLS]' + y)
+            eval_label_arr.append(y)
             # eval_arr.append(tokenized_x)
             # eval_label_arr.append(tokenized_y)
 
@@ -130,13 +132,13 @@ with open(path_to_corpus_3, 'r', encoding='utf-8') as file:
     #     print(len(tokenized_y))
         if random.randint(0, 100) > 10:
             input_arr.append(x)
-            label_arr.append('[CLS]' + y)
+            label_arr.append(y)
             # input_arr.append(tokenized_x)
             # label_arr.append(tokenized_y)
 
         else:
             eval_arr.append(x)
-            eval_label_arr.append('[CLS]' + y)
+            eval_label_arr.append(y)
 
 # creating the dataset
 
@@ -173,7 +175,8 @@ model.compile(optimizer=model.optimizer,
               metrics=['accuracy'])
 
 # Checkpoint
-path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_mix_v1')
+# model_nmt_mix_v1 was trained with label having a [CLS] token added before it is tokenized and prepared for training
+path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_dec_emb_mix_app_softmax_v1')
 # path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
 
 ckpt = tf.train.Checkpoint(model)
@@ -187,7 +190,7 @@ else:
 
 
 test_input = tokenizer('Anrede', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
-test_target = tokenizer('[CLS]', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
+test_target = tokenizer('Herr', max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')
 
 inputs = (dict(input_ids=test_input['input_ids'],
               token_type_ids=test_input['token_type_ids'],
@@ -206,7 +209,7 @@ model.summary()
 
 # history = model.fit(dataset, epochs=5)
 # model.evaluate(eval_dataset)
-model.train_step(dataset, epochs=70)
+model.train_step(dataset, epochs=2)
 ckpt_manager.save()
 
 sentence = ['Anrede']
