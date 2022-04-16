@@ -137,7 +137,7 @@ pecan==1.4.0
 pexpect==4.8.0
 phrasedml==1.1.1
 pickleshare==0.7.5
-Pillow==8.3.2
+Pillow==9.0.1
 plotly==5.3.1
 pluggy==1.0.0
 portalocker==2.0.0
