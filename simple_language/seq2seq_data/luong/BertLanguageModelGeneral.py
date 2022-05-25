@@ -1,9 +1,10 @@
+import numpy as np
 import tensorflow as tf
 import transformers
 
 from tensorflow.keras import Model
 
-from data.ShapeChecker import ShapeChecker
+from simple_language.seq2seq_data.luong.ShapeChecker import ShapeChecker
 from simple_language.seq2seq_data.SimpleLanguageDecoder import DecoderInput
 from simple_language.seq2seq_data.luong.BERTLanguageDecoderGeneral import BertLanguageDecoderGeneral
 
@@ -20,36 +21,76 @@ class BertLanguageModelGeneral(Model):
         self.tokenizer = tokenizer
         self.sequence_length = 128
 
+        self.start_token = tokenizer.convert_tokens_to_ids('[CLS]')
+        self.end_token = tokenizer.convert_tokens_to_ids(['[SEP]'])
+
+        token_ids = tokenizer.convert_tokens_to_ids(['', '[UNK]', '[CLS]'])
+        token_mask = np.zeros([vocab_size], dtype=bool)
+        token_mask[token_ids] = True
+        self.token_mask = token_mask
+
         self.shape_checker = ShapeChecker()
 
-    def call(self, inputs):
+    def call(self, inputs, max_length=128):
 
         inp, target_text = inputs
 
         (input_tokens, input_mask) = self._preprocess(inp)
-        (target_tokens, target_mask) = self._preprocess(target_text)
+        target_tokens = self._preprocess_for_decoder(target_text)
 
         encoding = self.encoder(input_tokens)
         enc_output, state = encoding.last_hidden_state, encoding.pooler_output
+        dec_state = state
         batch, length = tf.shape(enc_output)[0], tf.shape(enc_output)[1]
         # print(enc_output)
         # print(state)
         self.shape_checker(enc_output, ('batch_size', 'seq_length', 'd_model'))
         self.shape_checker(state, ('batch_size', 'd_model'))
 
-        # if self.path_to_Bert_Model is not None:
-        #     dec_input = DecoderInput(new_tokens=target_tokens['input_ids'],
-        #                              enc_output=encoding,
-        #                              mask=input_mask)
-        # else:
-        # self.decoder.attention.setup_memory(enc_output)
-        dec_input = DecoderInput(new_tokens=target_tokens['input_ids'],
-                                 enc_output=enc_output,
-                                 mask=input_mask)
-        dec_state = state
-        dec_pred, dec_state = self.decoder(dec_input, dec_state)
+        predicted_text = []
+        done = tf.zeros([1, 1], dtype=tf.bool)
+        for _ in range(max_length):
 
-        return dec_pred, dec_state
+            dec_input = DecoderInput(  # new_tokens=target_tokens['input_ids'],
+                new_tokens=target_tokens,
+                enc_output=enc_output,
+                mask=input_mask)
+
+            dec_pred, dec_state = self.decoder(dec_input, dec_state)
+            target_tokens = self._sample_token(dec_pred.logits)
+
+            done = done | (target_tokens[0] in self.end_token)
+            target_tokens = tf.where(done, tf.constant(0, dtype=tf.int64), target_tokens)
+            predicted_text.append(target_tokens[0])
+
+            if tf.reduce_all(done):
+                predicted_text = predicted_text[:-1]
+                break
+
+        text = tf.concat(predicted_text, axis=-1)
+        text = self.tokenizer.convert_ids_to_tokens(text)
+        return dec_pred, dec_state, text
+
+    def _sample_token(self, logits):
+        shape_checker = ShapeChecker()
+        # 't' is usually 1 here.
+        shape_checker(logits, ('batch', 't', 'vocab'))
+        shape_checker(self.token_mask, ('vocab',))
+
+        token_mask = self.token_mask[tf.newaxis, tf.newaxis, :]
+        shape_checker(token_mask, ('batch', 't', 'vocab'), broadcast=True)
+
+        logits = tf.where(token_mask, -np.inf, logits)
+
+        new_token = tf.argmax(logits, axis=-1)
+
+        return new_token
+
+    def _preprocess_for_decoder(self, target_text):
+        target_tokens = tf.constant([self.tokenizer.convert_tokens_to_ids(target_text)])
+        self.shape_checker(target_tokens, ('batch_size', 'tar_length'))
+
+        return target_tokens
 
     def _preprocess(self, input_text):
         # self.shape_checker(input_text, ('batch_size'))
@@ -130,4 +171,5 @@ class BertLanguageModelGeneral(Model):
         y_pred = dec_result.logits
         loss = self.loss(y, y_pred)
         return loss, dec_state
+
 

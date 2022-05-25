@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.layers import Layer, AdditiveAttention, Dense
 
-from data.ShapeChecker import ShapeChecker
+from simple_language.seq2seq_data.bahdanau.ShapeChecker import ShapeChecker
 
 
 class BahdanauAttention(Layer):
