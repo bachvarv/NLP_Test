@@ -5,6 +5,7 @@ import transformers
 import tensorflow as tf
 
 from simple_language.transformer_data.NMTModel import NMTModel
+from matplotlib import pyplot as plt
 
 
 def git(*args):
@@ -61,16 +62,16 @@ input_arr = []
 eval_arr = []
 label_arr = []
 eval_label_arr = []
-path_to_corpus = os.path.join(os.path.join(os.curdir, 'corpus'), 'einfache_sprache.csv')
-path_to_corpus_2 = os.path.join(os.path.join(os.curdir, 'corpus'), 'spd_programm_einfache_sprache_v1.csv')
-path_to_corpus_3 = os.path.join(os.path.join(os.curdir, 'corpus'), 'simple_language_openAI.csv')
+path_to_corpus = os.path.join(os.path.join(os.curdir, 'corpus_for_test'), 'einfache_sprache.csv')
+path_to_corpus_2 = os.path.join(os.path.join(os.curdir, 'corpus_for_test'), 'spd_programm_einfache_sprache_v1.csv')
+path_to_corpus_3 = os.path.join(os.path.join(os.curdir, 'corpus_for_test'), 'simple_language_openAI.csv')
 longest_cand = 0
-with open(path_to_corpus, 'r', encoding='utf-8') as file:
+with open(path_to_corpus, 'r') as file:
 
     lines = file.readlines()
     # print(len(lines))
     for line in lines:
-
+        print(line)
         x, y = line.split(sep='\t')
         tokenized_x = tokenizer.tokenize(x)
         tokenized_y = tokenizer.tokenize(y)
@@ -102,9 +103,11 @@ with open(path_to_corpus, 'r', encoding='utf-8') as file:
         #         longest_cand = size_y
 
 
-with open(path_to_corpus_2, 'r', encoding='utf-8') as file:
+with open(path_to_corpus_2, 'r') as file:
     lines = file.readlines()
     for line in lines:
+        
+        
         x, y = line.split(sep='\t')
         tokenized_x = tokenizer.tokenize(x)
         tokenized_y = tokenizer.tokenize(y)
@@ -122,9 +125,10 @@ with open(path_to_corpus_2, 'r', encoding='utf-8') as file:
             # eval_arr.append(tokenized_x)
             # eval_label_arr.append(tokenized_y)
 
-with open(path_to_corpus_3, 'r', encoding='utf-8') as file:
+with open(path_to_corpus_3, 'r') as file:
     lines = file.readlines()
     for line in lines:
+        print(line)
         x, y = line.split(sep='\t')
         tokenized_x = tokenizer.tokenize(x)
         tokenized_y = tokenizer.tokenize(y)
@@ -176,7 +180,8 @@ model.compile(optimizer=model.optimizer,
 
 # Checkpoint
 # model_nmt_mix_v1 was trained with label having a [CLS] token added before it is tokenized and prepared for training
-path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_dec_emb_mix_app_softmax_v1')
+path_to_checkpoint = os.path.join(os.curdir, 'model_nmt_lr1e-4_new')
+# model_nmt_lr1e-3_v2 ist eine lernrate von 1e-4
 # path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
 
 ckpt = tf.train.Checkpoint(model)
@@ -196,7 +201,7 @@ inputs = (dict(input_ids=test_input['input_ids'],
               token_type_ids=test_input['token_type_ids'],
               attention_mask=test_input['attention_mask']), test_target['input_ids'])
 
-output = model(inputs, False)
+output, _ = model(inputs, False)
 print(output.shape)
 print(output)
 output = tf.argmax(output, axis=-1)
@@ -206,11 +211,12 @@ print(tokenizer.decode(output[0]))
 model.summary()
 
 
-
-# history = model.fit(dataset, epochs=5)
-# model.evaluate(eval_dataset)
-# model.train_step(dataset, epochs=1)
-# ckpt_manager.save()
+#history = model.fit(dataset, epochs=5)
+#model.evaluate(eval_dataset)
+losses = model.train_step(dataset, epochs=30)
+plt.plot(losses)
+plt.savefig('nmt_lr1e-4_new_30EP.png')
+ckpt_manager.save()
 
 sentence = ['Anrede']
 pred = ['[CLS]']
@@ -219,7 +225,7 @@ pred_token = tokenizer(pred, max_length=cfg['max_sentence'], padding='max_length
 test_inp = (dict(input_ids=token['input_ids'],
               token_type_ids=token['token_type_ids'],
               attention_mask=token['attention_mask']), pred_token['input_ids'])
-predicted = model(test_inp, False)
+predicted, _ = model(test_inp, False)
 print(predicted.shape)
 arg_max = tf.argmax(predicted, axis=-1)
 print(arg_max)
@@ -227,12 +233,15 @@ print(tokenizer.decode(arg_max[0]))
 
 # test = eval_dataset.__iter__().__next__()
 dec_inp = tokenizer(['[CLS]'], max_length=cfg['max_sentence'], padding='max_length', return_tensors='tf')['input_ids']
-
-for i, t in eval_dataset:
-    out = model((i, dec_inp))
-    text = tokenizer.convert_tokens_to_ids(out)
-    print(t)
+ind = 0
+for inp, t in eval_dataset:
+    out, _ = model((inp, dec_inp))
+    text = tokenizer.convert_tokens_to_ids(out.numpy()[0])
+    print(eval_label_arr[ind])
     print(text)
+    print(tokenizer.decode(text))
+    print('___________________________')
+    ind = ind + 1
 
 
 # inp, target = test

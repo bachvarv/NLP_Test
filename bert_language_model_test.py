@@ -6,9 +6,11 @@ import time
 import transformers
 import tensorflow as tf
 from matplotlib import pyplot as plt
+from nltk.translate.bleu_score import corpus_bleu
+import csv
 
-from seq2seq_data.bahdanau.BertLanguageModel import BertLanguageModel
-from transformer_data.MaskedLoss import MaskedLoss
+from simple_language.seq2seq_data.bahdanau.BertLanguageModel import BertLanguageModel
+from simple_language.transformer_data.MaskedLoss import MaskedLoss
 
 
 def git(*args):
@@ -39,10 +41,10 @@ vocab_size = tokenizer.vocab_size
 
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
-config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=1))
-config.gpu_options.allow_growth = True
-session = tf.compat.v1.Session(config=config)
-tf.compat.v1.keras.backend.set_session(session)
+#config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=1))
+#config.gpu_options.allow_growth = True
+#session = tf.compat.v1.Session(config=config)
+#tf.compat.v1.keras.backend.set_session(session)
 #if tf.test.gpu_device_name():
 #    print('GPU found')
 #else:
@@ -72,9 +74,9 @@ input_arr = []
 eval_arr = []
 label_arr = []
 eval_label_arr = []
-path_to_corpus = os.path.join(os.path.join(os.curdir, 'corpus'), 'einfache_sprache.csv')
-path_to_corpus_2 = os.path.join(os.path.join(os.curdir, 'corpus'), 'spd_programm_einfache_sprache_v1.csv')
-path_to_corpus_3 = os.path.join(os.path.join(os.curdir, 'corpus'), 'simple_language_openAI.csv')
+path_to_corpus = os.path.join(os.path.join(os.curdir, 'corpus_for_test'), 'einfache_sprache.csv')
+path_to_corpus_2 = os.path.join(os.path.join(os.curdir, 'corpus_for_test'), 'spd_programm_einfache_sprache_v1.csv')
+path_to_corpus_3 = os.path.join(os.path.join(os.curdir, 'corpus_for_test'), 'simple_language_openAI.csv')
 longest_cand = 0
 with open(path_to_corpus, 'r', encoding='utf-8') as file:
 
@@ -198,22 +200,23 @@ eval_dataset = tf.data.Dataset.from_tensor_slices((
     eval_label_arr)).batch(1)
 
 # Model
-model = BertLanguageModel(cfg['hidden_layer_size'], vocab_size, tokenizer, path_to_model=model_name, bert_trainable=False)
+model = BertLanguageModel(cfg['hidden_layer_size'], vocab_size, tokenizer, path_to_model=model_name)
 
-model.compile(optimizer=tf.keras.optimizers.Adam(
-                                                     #learning_rate=1e-4
-                                                     learning_rate=2e-5
+model.compile(optimizer=tf.keras.optimizers.Adam(2e-5
+                                                    #learning_rate=1e-4
+                                                    #learning_rate=2e-5
                                                  ),
               loss=MaskedLoss(),
               metrics=['accuracy'])
 
 # Checkpoint
-path_to_checkpoint = os.path.join(os.curdir, 'BLM_HPC_v1_lr2e-5_Bahdanau_15EP')
+path_to_checkpoint = os.path.join(os.curdir, 'BLM_HPC_lr2e-5_Bahdanau_50EP')
 # SLM_v4 lr=1e-4
 # SLM_v5 lr=1e-3 changed loss to be calculated from logits
 # SLM_v6_with_VGA lr=1e-3 to run with gpu
 # path_to_saved_model = os.path.join(os.curdir, 'saved_model_gru_1024_v3')
 # BLM_v1_train_pair_add_dot_for_end_symbol and the learning rate is 2e-5
+# BLM_HPC_v5_lr2e-5_Bahdanau_100EP is trained an additional 15 times
 # BLM_v1 the learning rate is 1e-3
 # BLM_v1_lr_1e-3 lr 1e-3 5 EP
 # BLM_v1_freeze_BERT_lr1e-4_Bahdanau was trained for 5 Iterations
@@ -227,19 +230,21 @@ if ckpt_manager.latest_checkpoint:
 else:
     print('Initializing from scratch!')
 
-result, _ = model((['Geburtsort'], ['[CLS]']))
-prediction = tf.argmax(result.logits, axis=-1)
+result, _, text = model((['Geburtsort'], ['[CLS]']))
+print(text)
+print('In welchem Land sind Sie geboren?')
+""" prediction = tf.argmax(result.logits, axis=-1)
 target = tokenizer(['In welchem Land sind Sie geboren?'])['input_ids']
 print(target)
 print(prediction.numpy())
 # print(result.logits)
 s = tokenizer.decode(prediction[0])
-print(s)
+print(s) """
 model.summary()
 
 start = time.time()
 losses = []
-for i in range(1, 16):
+for i in range(1, 51):
     for inp, tar in dataset:
         logs = model.train_step((inp, tar))
         print(logs)
@@ -247,22 +252,33 @@ for i in range(1, 16):
     print(f'Step {i}')
 end = time.time()
 plt.plot(losses)
-plt.show()
+plt.savefig('bslm_bahdanau_2e_5_50EP_P3.png')
 
 
 print(end - start)
 
-ckpt_manager.save()
 
-result, _ = model((['Anrede'], ['[CLS]']))
+result, _, text = model((['Anrede'], ['[CLS]']))
+print(text)
+print('Herr oder Frau.')
 
-prediction = tf.argmax(result.logits, axis=-1)
-target = tokenizer(['Herr oder Frau.'])['input_ids']
-print(target)
-# print(result.logits)
-print(prediction)
-s = tokenizer.decode(prediction[0])
-print(s)
+# BLEU_SCORE
+pred_arr = []
+eval_label_arr
+for cand in eval_arr:
+    print(f'Candidate: {cand}')
+    _, _, text = model(([cand], ['[CLS]']))
+    pred_arr.append(text)
+    print(f'Prediction: {text}')
+    print('_____________________________________')
+bleu = corpus_bleu(eval_label_arr, pred_arr)
+print(bleu)
+
+with open('bahdanau_bleu50EP_eval.csv', 'a+') as file:
+    csv_writer = csv.writer(file)
+    csv_writer.writerow([path_to_checkpoint, str(bleu)])
+
+#ckpt_manager.save()
 # for inp, tar in dataset:
 #     # print(inp, tar)
 #     model.train_step((inp, tar))

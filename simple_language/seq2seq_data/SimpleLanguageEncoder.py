@@ -2,7 +2,7 @@ import transformers
 import tensorflow as tf
 from tensorflow.keras.layers import Layer, GRU, Embedding
 
-from data.ShapeChecker import ShapeChecker
+from simple_language.seq2seq_data.bahdanau.ShapeChecker import ShapeChecker
 
 
 class SimpleLanguageEncoder(Layer):

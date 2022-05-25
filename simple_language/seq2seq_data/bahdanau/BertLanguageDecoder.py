@@ -2,7 +2,7 @@ import typing
 
 from tensorflow.keras.layers import Layer, Embedding, GRU, Dense
 
-from data.ShapeChecker import ShapeChecker
+from simple_language.seq2seq_data.bahdanau.ShapeChecker import ShapeChecker
 from simple_language.seq2seq_data.bahdanau.BahdanauAttention import BahdanauAttention
 import tensorflow as tf
 

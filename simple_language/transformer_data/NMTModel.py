@@ -24,7 +24,9 @@ class NMTModel(tf.keras.Model):
     def __init__(self, model_name, hidden_layer_size, transformer_heads, seq_len, vocab_size):
         super(NMTModel, self).__init__()
         self.heads = transformer_heads
-        self.embedding_layer = transformers.TFBertModel.from_pretrained(model_name)
+        self.bert_layer = transformers.TFBertModel.from_pretrained(model_name)
+        self.enc_embedding_layer = Embedding(vocab_size, hidden_layer_size, input_length=seq_len)
+
         self.encoder_layers = [NMTEncoderLayer(hidden_layer_size,
                                                transformer_heads,
                                                1e-3) for _ in range(transformer_heads)]
@@ -46,7 +48,7 @@ class NMTModel(tf.keras.Model):
         # print(inp['attention_mask'])
         enc_padding_mask, dec_padding_mask, look_ahead_mask = self.create_masks(inp['input_ids'], target)
 
-        enc_out = self.embedding_layer(inp).last_hidden_state
+        enc_out = self.bert_layer(inp).last_hidden_state
         # print(enc_out.shape)
         enc_self_att = self.encoder_layers[0](enc_out, enc_out, training, enc_padding_mask)
         for i in range(1, self.heads):
@@ -60,7 +62,9 @@ class NMTModel(tf.keras.Model):
         output_dense = self.dense_layer(target_enc)
         output = self.softmax_layer(output_dense)
 
-        return output
+        new_token = tf.argmax(output, axis=-1)
+        return new_token, output
+
     def create_masks(self, inp, tar):
         enc_padding_mask = create_padding_mask(inp)
 
@@ -76,16 +80,18 @@ class NMTModel(tf.keras.Model):
         return enc_padding_mask, dec_padding_mask, look_ahead_mask
 
     def train_step(self, dataset, epochs=5):
+        losses = list()
         start = time.time()
         for i in range(epochs):
             epoch_start = time.time()
             for step, element in enumerate(dataset):
                 _, target = element
+                print(element)
                 with tf.GradientTape() as tape:
-                    prediction = self.call(element, True)
+                    _, prediction = self.call(element, True)
 
                     loss = self.loss(target, prediction)
-
+                    losses.append(loss)
                 grads = tape.gradient(loss, self.trainable_weights)
 
                 self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
@@ -98,8 +104,9 @@ class NMTModel(tf.keras.Model):
                     )
                     print("Seen so far: %s samples" % ((step + 1) * 1))
             end = time.time()
-            print('Epoch #%d' % i)
+            print('Epoch #%d' % (i+1))
             print('Execution time was %d s' % (end - epoch_start))
         print('Execution time was %d s' % (end - start))
+        return losses
 
 

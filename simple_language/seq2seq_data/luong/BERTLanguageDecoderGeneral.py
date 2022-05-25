@@ -1,7 +1,7 @@
 import typing
 
 from tensorflow.keras.layers import Layer, Embedding, GRU, Dense
-from data.ShapeChecker import ShapeChecker
+from simple_language.seq2seq_data.luong.ShapeChecker import ShapeChecker
 import tensorflow as tf
 
 from typing import Any
