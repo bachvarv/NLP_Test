@@ -1,0 +1,8 @@
+2022-05-10 13:40:37.604577: I tensorflow/core/platform/cpu_feature_guard.cc:152] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE3 SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-10 13:40:41.352802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30999 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2022-05-10 13:40:45.235983: I tensorflow/stream_executor/cuda/cuda_dnn.cc:379] Loaded cuDNN version 8303
+Traceback (most recent call last):
+  File "simple_language_model_test.py", line 231, in <module>
+    result, _ = model((['Geburtsort'], ['[CLS]']))
+ValueError: too many values to unpack (expected 2)

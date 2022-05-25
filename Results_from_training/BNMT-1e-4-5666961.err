@@ -1,0 +1,31 @@
+2022-05-22 22:09:26.170159: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2022-05-22 22:09:26.170215: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu014
+2022-05-22 22:09:26.170225: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu014
+2022-05-22 22:09:26.170345: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 510.47.3
+2022-05-22 22:09:26.170370: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 470.82.1
+2022-05-22 22:09:26.170379: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:313] kernel version 470.82.1 does not match DSO version 510.47.3 -- cannot find working devices in this configuration
+2022-05-22 22:09:26.174729: I tensorflow/core/platform/cpu_feature_guard.cc:152] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE3 SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some layers from the model checkpoint at ./bert-base-german-cased were not used when initializing TFBertModel: ['mlm___cls', 'nsp___cls']
+- This IS expected if you are initializing TFBertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFBertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+All the layers of TFBertModel were initialized from the model checkpoint at ./bert-base-german-cased.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertModel for predictions without further training.
+Traceback (most recent call last):
+  File "nmt_model_test.py", line 214, in <module>
+    model.train_step(dataset, epochs=1)
+  File "/home/hstr_bachvarv/EinfacheSprache/NLP_Test/simple_language/transformer_data/NMTModel.py", line 91, in train_step
+    loss = self.loss(target, prediction)
+  File "/usr/local/lib/python3.8/dist-packages/keras/losses.py", line 141, in __call__
+    losses = call_fn(y_true, y_pred)
+  File "/usr/local/lib/python3.8/dist-packages/keras/losses.py", line 245, in call
+    return ag_fn(y_true, y_pred, **self._fn_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.8/dist-packages/keras/losses.py", line 1862, in sparse_categorical_crossentropy
+    return backend.sparse_categorical_crossentropy(
+  File "/usr/local/lib/python3.8/dist-packages/keras/backend.py", line 5168, in sparse_categorical_crossentropy
+    epsilon_ = _constant_to_tensor(epsilon(), output.dtype.base_dtype)
+  File "/usr/local/lib/python3.8/dist-packages/keras/backend.py", line 958, in _constant_to_tensor
+    return tf.constant(x, dtype=dtype)
+TypeError: Cannot convert 1e-07 to EagerTensor of dtype int64

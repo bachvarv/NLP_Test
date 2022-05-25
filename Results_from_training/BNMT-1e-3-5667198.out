@@ -1,0 +1,330 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+Anrede	Herr oder Frau.
+
+Vorname	Vorname.
+
+Nachname	Familienname.
+
+Geburtsname (sofern abweichend)	Wenn sich Ihr Name geändert hat: Dann schreiben Sie auch Ihren Geburtsnamen dazu.
+
+Geburtsort	In welchem Land sind Sie geboren?
+
+Geburtsdatum	Wann sind Sie geboren?
+
+Geburtsland	In welchem Land sind Sie geboren?
+
+Staatsangehörigkeit	Staatsangehörigkeit (Von welchem Land haben Sie einen Pass?)
+
+Rentenversicherungsnummer	Nummer von der Rentenversicherung.
+
+Rentenversicherungsnummer ist noch nicht vorhanden und wurde beantragt	Wenn Sie noch keine Nummer von der Rentenversicherung haben: Haben Sie beim Amt eine Nummer beantragt?
+
+Straße	Straße.
+
+Hausnummer	Nummer des Hauses.
+
+ggf. wohnhaft bei	Wohnen Sie bei einer anderen Person in der Wohnung? Wenn ja, wie heißt diese Person?
+
+Postleitzahl	Postleitzahl (die Nummer vor der Stadt. Sie besteht aus fünf Zahlen).
+
+Wohnort	Stadt oder Dorf, wo man wohnt.
+
+Die Angaben zur Telefonnummer und zur E-Mail-Adresse sind freiwillig.	Sie können Ihre Telefonnummer und Ihre E-Mail-Adresse aufschreiben. Sie müssen das aber nicht tun.
+
+Telefonnummer	Die Nummer Ihres Telefons.
+
+E-Mail-Adresse	Die Adresse von Ihrer E-Mail.
+
+Ihr Familienstand	Ihre aktuelle Familiensituation.
+
+Mein Familienstand:	In was für eine Beziehung sind Sie im Moment.
+
+ledig	Sie sind nicht verheiratet und waren auch noch nie verheiratet.
+
+verheiratet	Sie haben eine Frau geheiratet.
+
+geschieden seit	Sie habe sich von ihrer Frau getrennt und sind geschieden.
+
+verwitwet	Ihr Partner/Ihre Partnerin ist gestorben.
+
+Meine Bankverbindung	Informationen zu Ihrem Bankkonto.
+
+Leistungen nach dem SGB II werden in der Regel auf ein Konto überwiesen.	"Das Jobcenter überweist Ihnen das ""Hartz IV""-Geld normalerweise auf ein Konto."
+
+Kontoinhaberin/Kontoinhaber	Wem gehört das Konto?
+
+Bank	Bank.
+
+IBAN	IBAN (Die Nummer finden Sie auf Ihrer EC-Karte.).
+
+Die IBAN finden Sie in der Regel auf Ihrem Kontoauszug.	Die IBAN-Nummer finden Sie auch auf Ihren Kontoinformationen.
+
+Ich habe für den Monat der Antragstellung bereits Leistungen bei einem anderen Jobcenter beantragt oder von diesem bezogen.	Sie stellen diesen Antrag in einem Monat. Haben Sie für denselben Monat schon bei einem anderen Jobcenter einen Antrag gestellt? Oder haben Sie von einem anderen Jobcenter in diesem Monat finanzielle Hilfen bekommen?
+
+Falls ja, legen Sie bitte entsprechende Nachweise vor oder geben Sie das andere Jobcenter an.	Wenn ja: Legen Sie bitte das Papier vom Jobcenter dazu, wo steht, dass Sie finanzielle Hilfen bekommen.
+
+Ich fühle mich gesundheitlich in der Lage, eine Tätigkeit von mindestens drei Stunden täglich auszuüben.	Sie denken, dass Sie so gesund sind, dass Sie mindestens drei Stunden jeden Tag arbeiten können.
+
+Ich bin Berechtigte/Berechtigter nach dem Asylbewerberleistungsgesetz.	Sie haben ein Recht auf finanzielle Hilfen nach dem Asylbewerberleistungsgesetz.
+
+Legen Sie bitte entsprechende Nachweise (z. B. Aufenthaltserlaubnis, Aufenthaltsgestattung, Duldung, Bescheid des Bundesamtes für Migration und Flüchtlinge (BAMF)) vor.	"Legen Sie das Papier vom Amt dazu. Zum Beispiel: ""Aufenthaltserlaubnis"", ""Aufenthaltsgestattung"", ""Duldung"", ""Bescheid"" vom Bundesamt für Migration und Flüchtlinge."
+
+Ich bin Schülerin/Schüler, Studentin/Student oder Auszubildende/Auszubildender.	Sie sind Schülerin/Schüler, oder Studentin/Student, der Auszubildende/Auszubildender.
+
+Bitte legen Sie entsprechende Nachweise vor.	Legen Sie bitte ein Papier, wo steht, dass stimmt, was Sie schreiben.
+
+Legen Sie bitte den Bescheid oder Ablehnungsbescheid für BAB oder BAföG vor, wenn vorhanden.	Legen Sie bitte ein Papier von dem BAföG-Amt dazu, wo steht, dass Sie einen Antrag gestellt haben. Wenn das BAföG-Amt bereits über Ihren Antrag entschieden hat: Dann legen Sie bitte den Brief dazu, wo steht, dass das BAföG-Amt Ihren Antrag angenommen oder abgelehnt hat.
+
+Während der Ausbildung bin ich in einem Wohnheim, Internat, einer besonderen Einrichtung für Menschen mit Behinderung oder beim Ausbilder mit voller Verpflegung oder anderweitig mit Kostenerstattung für Unterkunft und Verpflegung untergebracht.	Als Sie Ihre Ausbildung gemacht haben, haben Sie in einem Wohnheim, in einem Internat oder bei einem Ausbilder oder an einem anderen Ort gelebt. Sie mussten dort nichts für das Wohnen und das Essen bezahlen.
+
+Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt).	Sie leben jetzt oder bald in einer stationären Einrichtung: zum Beispiel in einem Hospital, in einem Altenheim, in einem Gefängnis.
+
+Justizvollzugsanstalt	Gefängnis.
+
+Dauer der Unterbringung von – bis	Sie werden dort von - bis leben.
+
+Art der stationären Einrichtung	Art der Einrichtung.
+
+Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt). Bitte legen Sie entsprechende Nachweise vor.	Sie leben jetzt oder bald in einer stationären Einrichtung: zum Beispiel in einem Hospital, in einem Altenheim, in einem Gefängnis. Wenn ja: Legen Sie bitte ein Papier dazu, wo steht: Wo Sie gelebt haben? Wie lange sie dort gelebt haben?
+
+Leben Sie allein, sind unter 2. keine weiteren Angaben erforderlich. Bitte weiter bei Abschnitt 3.	Wenn Sie allein leben, müssen Sie hier (Nummer 2) nichts mehr schreiben. Schreiben Sie bitte bei Nummer 3 weiter.
+
+Meine Wohnsituation	"Personen, mit denen Sie zusammenleben. Diese Personen sind Ihre Partnerin/Ihr Partner und/oder Verwandte von Ihnen (""Bedarfsgemeinschaft"")."
+
+Hier sind Mehrfachnennungen möglich.	Sie können auch zwei oder mehr Kreuze machen.
+
+Da Sie die Leistungen beantragen, wird davon ausgegangen, dass Sie auch die Vertretung Ihrer Bedarfsgemeinschaft übernommen haben. Dies gilt nicht, wenn über 15-jährige Mitglieder Ihrer Bedarfsgemeinschaft gegenüber dem Jobcenter erklären, dass sie ihre Interessen selbst wahrnehmen wollen, z. B. durch eine eigene Antragstellung (§ 38 SGB II). Zu den nicht vertretenen Personen sind hier keine Angaben erforderlich.	"Hier müssen Sie die Personen nennen, die zu Ihrer ""Bedarfsgemeinschaft"" gehören. Sie stellen den Antrag auf finanzielle Hilfe. Das Amt nimmt daher an, dass Sie auch für die anderen aus Ihrer ""Bedarfsgemeinschaft"" sprechen. Wenn eine Person aus Ihrer ""Bedarfsgemeinschaft"" älter als 15 Jahre ist, kann diese Person selbst einen Antrag stellen (nach dem Gesetz: § 38 SGB II). In diesem Fall brauchen Sie zu dieser Person hier keine Informationen geben."
+
+meiner Ehegattin/meinem Ehegatten	Sie leben zusammen mit Ihrer Ehefrau/Ihrem Ehemann. Sie leben nicht dauernd getrennt.
+
+meiner eingetragenen Lebenspartnerin/meinem eingetragenen Lebenspartner	Sie leben zusammen mit Ihrer eingetragenen gleichgeschlechtlichen Lebenspartnerin (eine Frau wie Sie)/Ihrem eingetragenen gleichgeschlechtlichen Lebenspartner (ein Mann wie Sie). Sie leben nicht dauernd getrennt.
+
+meiner Partnerin/meinem Partner in einer Verantwortungs- und Einstehensgemeinschaft („eheähnliche Gemeinschaft“)	"Sie leben mit Ihrer Partnerin/Ihrem Partner zusammen und sind nicht verheiratet. Sie leben aber zusammen wie ein Ehepaar (""eheähnliche Gemeinschaft"")."
+
+unverheirateten Kind(ern) zwischen 15 Jahren und 24 Jahren	Sie leben mit Ihrem Kind oder mit Ihren Kindern zusammen. Das Kind oder die Kinder ist/sind nicht verheiratet und jünger als 25 Jahre alt.
+
+meinen Eltern bzw. einem Elternteil. Sind Sie als Antragstellerin bzw. als Antragsteller unter 25 Jahre alt, füllen Sie bitte für Ihre Eltern jeweils eine Anlage WEP aus.	Sie sind jünger als 25 Jahre und leben mit Ihren Eltern oder nur mit Ihrer Mutter oder Ihrem Vater zusammen.
+
+sonstigen Verwandten oder Verschwägerten (zum Beispiel Großeltern, Geschwister über 25 Jahre, verheiratete Kinder, Tanten oder Onkel)	"In Ihrer Wohnung leben noch ... (Zahl) weitere Personen, die Sie nicht unter Nummer 2 genannt haben. Diese Personen gehören nicht zu Ihrer ""Bedarfgemeinschaft"". Wenn darunter Personen sind, die zu Ihrer weiteren Familie gehören (zum Beispiel Ihre Tante oder der Bruder Ihrer Frau), füllen Sie bitte das Formular Anlage HG aus."
+
+Prüfung eines Mehrbedarfs	Wenn Sie aus bestimmten Gründen mehr Geld brauchen: Hier können Sie weitere finanzielle Hilfen beantragen,
+
+Die Angaben sind freiwillig und nur erforderlich, wenn Sie einen Mehrbedarf beantragen möchten.	Sie müssen diese Informationen nur dann geben, wenn Sie das wollen und wenn Sie weitere finanzielle Hilfe haben möchten.
+
+Ich bin alleinerziehend.	Sie erziehen Ihr Kind/Ihre Kinder allein.
+
+Ich bin schwanger.	Sie sind schwanger.
+
+Bitte legen Sie einen Nachweis vor, aus dem der voraussichtliche Entbindungstermin hervorgeht.	Bitte legen Sie ein Papier vom Arzt dazu, wo steht, wann das Baby wahrscheinlich auf die Welt kommt.
+
+Ich erzeuge mein Warmwasser dezentral (z. B. Boiler, Durchlauferhitzer) und habe deshalb einen Mehrbedarf.	Ihr warmes Wasser wird in Ihrer Wohnung durch elektrischen Boiler oder mit Gas heiß gemacht.
+
+Ich benötige aus medizinischen Gründen eine kostenaufwändige Ernährung.	Sie sind krank und müssen deshalb besonderes Essen kaufen, das mehr kostet.
+
+Bitte füllen Sie die Anlage MEB aus.	Bitte füllen Sie das Formular Anlage MEB aus.
+
+Ich habe eine Behinderung und erhalte: Leistungen zur Teilhabe am Arbeitsleben nach § 49 Neuntes Buch Sozialgesetzbuch (SGB IX) oder sonstige Hilfen zur Erlangung eines geeigneten Arbeitsplatzes oder Eingliederungshilfen nach § 112 SGB IX.	Sie haben eine Behinderung und bekommen: finanzielle Hilfen, um arbeiten zu können (nach dem Gesetz: §349 Neuntes Buch Sozialgesetzbuch (SGB IX)) oder andere Hilfen, damit Sie eine Arbeit finden, oder finanzielle und andere Hilfen (nach dem Gesetz: § 54 Abs. 1 Satz 1 Nr. 1-3 SGB XII).
+
+Bitte legen Sie einen aktuellen Bescheid vor.	Bitte legen Sie ein Papier vom Amt dazu, wo steht, dass es richtig ist, was Sie schreiben.
+
+Ich bin nicht erwerbsfähig 9 und Inhaberin/Inhaber eines Ausweises nach § 152 Abs. 5 SGB IX mit dem Merkzeichen G oder aG.	Sie können nicht arbeiten, weil Sie eine schwere Behinderung haben. Sie haben einen Ausweis mit dem Merkzeichen G oder aG (nach dem Gesetz: § 152 Abs. 5 SGB IX). Das ist ein Ausweis für Schwerbehinderte.
+
+Bitte legen Sie einen aktuellen Nachweis (z. B. Schwerbehindertenausweis) vor.	Bitte legen Sie ein Papier dazu, wo steht, dass richtig ist, was Sie schreiben.
+
+Ich und/oder ein anderes Mitglied der Bedarfsgemeinschaft hat Einkommen.	"Einkommen (Was Sie und Ihre ""Bedarfsgemeinschaft"" (siehe Nummer 2) jeden Monat an Geld haben.)."
+
+Zur Prüfung der Einkommensverhältnisse muss jedes Mitglied der Bedarfsgemeinschaft ab dem vollendeten 15. Lebensjahr bei vorhandenem Einkommen die Anlage EK ausfüllen	"Wenn ja: Füllen Sie bitte für sich und für jede Person aus Ihrer ""Bedarfsgemeinschaft"", die 15 Jahre oder älter ist, das Formular Anlage EK aus."
+
+Vermögen	Geld, was Sie haben, oder andere Dinge, wie ein Auto, die Geld kosten.
+
+Meine Bedarfsgemeinschaft verfügt über erhebliches Vermögen.	Sie haben gespartes Geld oder andere wertvolle Dinge wie ein Auto.
+
+Sollte bei Ihnen erhebliches Vermögen vorliegen, füllen Sie bitte die Anlage VM aus.	"Füllen Sie bitte das Formular Anlage VM aus. Dort schreiben Sie für jede Person aus Ihrer ""Bedarfsgemeinschaft"", welches Vermögen diese Person hat."
+
+Bitte legen Sie den Bescheid/die Bescheide vor, sofern über den Antrag/die Anträge schon entschieden wurde.	Wenn Sie schon wissen, dass Sie finanzielle Hilfe bekommen: Legen Sie bitte das Papier vom Amt vor, wo steht, dass Sie finanzielle Hilfe bekommen.
+
+Ich habe (mögliche) Ansprüche auf andere (Sozial-)Leistungen (z. B. Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld).	Sie haben schon andere finanzielle Hilfen (zum Beispiel Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld nach dem Gesetz: Drittes Sozialgesetzbuch (SGB III)) beantragt. Oder Sie wollen das bald tun.
+
+Vorrangige Leistungen	Haben Sie ein Recht, finanzielle Hilfen von anderen Institutionen zu bekommen?
+
+Ich bin gerade dabei, mir einen Kaffee zu machen.	Ich mache mir einen Kaffe
+
+Wir haben beschlossen, morgen in die Stadt zu gehen.	Wir wollen morgen in die Stadt gehen.
+
+Er hat sich entschieden, nicht mit uns zu kommen.	Er wollte nicht kommen.
+
+Sie ist die beste Freundin, die ich je hatte.	Sie ist meine beste Freundin.
+
+Er ist sehr nett, aber ich kann ihn nicht ausstehen.	Er ist sehr nett, aber ich mag ihn nicht.
+
+Ich verstehe nicht, warum du so wütend bist.	Ich weiß nicht, warum du so verärgert bist
+
+Ich bin gerne hier. Es ist schön, die Natur zu sehen und die frische Luft einzuatmen. Ich fühle mich frei und entspannt.	Ich mag hier zu sein. Die Natur ist sehr schön und die Luft ist sehr frisch. Ich fühle keine Probleme hier. Ich fühle mich auch frei.
+
+Er betätigte sich auch auf dem Gebiet der Theologie und trat mit einem unkonventionellen theologischen Konzept hervor.	Er interessierte sich für Theologie und erstellte einen neuen geistlichen Konzept.
+
+Nach dem Tod seiner ersten Frau heiratete er im Jahre 1856 die Schriftstellerin und Journalistin Ernestine von le Fort. Aus dieser Ehe gingen zwei Söhne hervor.	Nach dem Tod seiner ersten Frau heiratete er die Schriftstellerin und Journalistin Ernestine von le Fort im Jahr 1856. Sie hatten zwei Söhne.
+
+1864 zog er mit seiner Familie nach Berlin, wo er bis zu seinem Tod wohnte.	Er wohnte seit 1864 mit seiner Familie in Berlin. Da ist er gestorben.
+
+Dort arbeitete er als Journalist und Herausgeber verschiedener Zeitschriften, unter anderem der „Gartenlaube“.	Er war ein Journalist und Editor für viele Zeitschriften. Er arbeitete für die Zeitschrift “Gartenlaube”
+
+Ernst Theodor Amadeus Hoffmann starb am 25. Juni 1822 in Berlin an einem Schlaganfall.	Ernst Theodor Amadeus Hoffmann wurde am 25. Juni 1822 in Berlin bis zum Tod geschlagen.
+
+Als Steuer (früher auch Taxe) wird eine Geldleistung ohne Anspruch auf individuelle Gegenleistung bezeichnet, die von einer öffentlichen oder privaten Institution erhoben wird.	Steuern sind Geld, das einer Institution gezahlt werden, ohne dass man etwas dafür erwartet.
+
+Die Steuer ist eine Abgabe, die vom Staat zur Finanzierung seiner Aufgaben erhoben wird. Die Steuerpflichtigen sind verpflichtet, die Steuer zu entrichten.	Die Steuer ist Geld, das man für Aufgaben des Staates zahlt. Die Personen die Arbeiten müssen Steuern zahlen.
+
+Steuern werden in Deutschland aufgrund des Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UStG) sowie weiterer steuerrechtlicher Vorschriften erhoben. 	Die Steuern die man zahlt, hängen von Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UstG) und weitere Regeln.
+
+Nach dem Steuerrecht in Deutschland ist eine Steuer eine Abgabe, die von Inländern oder ausländischen Personen erhoben wird. Sie dient der Erzielung von Einnahmen zur Finanzierung öffentlicher Aufgaben.	Eine Steuer ist eine Gebühr, die von Menschen verlangt wird, die in einem bestimmten Land leben oder von Ausländern. Sie wird verwendet, um Geld für öffentliche Aufgaben zu sammeln.
+
+Steuern werden im allgemeinen Sprachgebrauch auch als „Abgaben“ bezeichnet.	"In allgemeinen, Menschen nennen Steuern ""Gebühren"" oder ""Kosten."""
+
+Der Name des Sterns ist auch in der Astronomie, wie in der Umgangssprache, einfach Sonne, üblicherweise mit dem bestimmten Artikel, im Englischen Sun (korrekterweise mit großem Anfangsbuchstaben, da es sich um einen Eigennamen handelt).	Der Name des Sterns ist auch in Astronomie, wie im Volksmund, einfach die Sonne, meist mit dem bestimmten Artikel, in Englisch Sun (korrekt mit einer Großbuchstaben, da es ein echter Name ist).
+
+Die Sonne übertrifft 700-fach die Gesamtmasse aller acht Planeten des Sonnensystems und 330.000-fach jene der Erde, die im Durchmesser 109-mal hineinpasst, im Volumen rund 1,3 Millionen Mal. Mit einer Energieabstrahlung, die pro Sekunde das 20.000-Fache der Primärenergieumwandlung seit Beginn der Industrialisierung ausmacht, fällt sie in die Leuchtkraftklasse V.	Die Sonne ist sehr viel größer als alle acht Planeten im Sonnensystem zusammen. Sie ist auch 330.000-mal größer als die Erde. Die Sonne strahlt pro Sekunde so viel Energie ab, wie die gesamte Industrie in einem Jahr verbraucht.
+
+Initializing from scratch!
+(1, 128)
+tf.Tensor(
+[[10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623 10623
+  10623 10623 10623 10623 10623 10623 10623 10623]], shape=(1, 128), dtype=int64)
+tf.Tensor([0], shape=(1,), dtype=int64)
+[ P A D ]
+Model: "nmt_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ tf_bert_model (TFBertModel)  multiple                 109081344 
+                                                                 
+ embedding (Embedding)       multiple                  0 (unused)
+                                                                 
+ nmt_encoder_layer (NMTEncod  multiple                 6300928   
+ erLayer)                                                        
+                                                                 
+ nmt_encoder_layer_1 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_2 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_3 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_4 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_5 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_6 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_7 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_8 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_9 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_10 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ nmt_encoder_layer_11 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ embedding_1 (Embedding)     multiple                  23040000  
+                                                                 
+ nmt_decoder_layer (NMTDecod  multiple                 8666368   
+ erLayer)                                                        
+                                                                 
+ nmt_decoder_layer_1 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_2 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_3 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_4 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_5 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_6 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_7 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_8 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_9 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_10 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ nmt_decoder_layer_11 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ dense_288 (Dense)           multiple                  23070000  
+                                                                 
+ softmax (Softmax)           multiple                  0         
+                                                                 
+=================================================================
+Total params: 334,798,896
+Trainable params: 334,798,896
+Non-trainable params: 0
+_________________________________________________________________
+Training loss (for one batch) at step 0: 10.4144
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 2.7542
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 8.7224
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.4679
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 3.8758
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 2.5723
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.1355
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 3.8884
+Seen so far: 141 samples

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "bleu_test.py", line 73, in <module>
+    rows.append([checkpoints[i], str(scores[i])])
+IndexError: list index out of range

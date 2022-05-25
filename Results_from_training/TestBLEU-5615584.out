@@ -1,0 +1,87 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+['Sie', 'sind', 'eine', 'eine', 'Frau', 'und', 'so', 'so', 'ver', '.', '[PAD]']
+We have 12 checkpoints
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr1e-3
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Herr', 'oder', 'Frau', '.', '[PAD]'], ['Vor', '##name', '.', '[PAD]'], ['Familien', '##name', '.', '[PAD]'], ['Wenn', 'sich', 'Ihr', 'Name', 'geändert', 'hat', ':', 'Dann', 'schreiben', 'Sie', 'auch', 'Ihren', 'Geburts', '##namen', 'dazu', '.', '[PAD]'], ['In', 'welchem', 'Land', 'sind', 'Sie', 'geboren', '?', '[PAD]']]
+0.8673988811797031
+_____________________________________________________________________________
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr1e-4
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Herr', 'oder', 'Frau', '.', '[PAD]'], ['Vor', '##name', '.', '[PAD]'], ['Familien', '##name', '.', '[PAD]'], ['Wenn', 'sich', 'Ihr', 'Name', 'geändert', 'hat', ':', 'Dann', 'schreiben', 'Sie', 'auch', 'Ihren', 'Geburts', '##namen', 'dazu', '.', '[PAD]'], ['In', 'welchem', 'Land', 'sind', 'Sie', 'geboren', '?', '[PAD]']]
+0.34385360530422926
+_____________________________________________________________________________
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr2e-5
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['In', '##name', '.', '[PAD]'], ['Nummer', '##name', '.', '[PAD]'], ['Nummer', '##name', '.', '[PAD]'], ['Sie', 'Sie', 'nicht', 'für', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', ',', '.', '[PAD]'], ['In', 'welchem', 'Land', 'sind', 'Sie', 'geboren', '?', '[PAD]']]
+0.010782928728999847
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr1e-3
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Ich', 'mache', 'mir', 'einen', 'Kaffe', '[PAD]'], ['Ich', 'mache', 'mir', 'einen', 'Kaffe', '[PAD]'], ['Ich', 'mache', 'mir', 'einen', 'Kaffe', '[PAD]'], ['Ich', 'mache', 'mir', 'einen', 'Kaffe', '[PAD]'], ['Ich', 'mache', 'mir', 'einen', 'Kaffe', '[PAD]']]
+0.00038279761891708315
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr1e-4
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Sie', 'sind', 'schwanger', '.', '[PAD]'], ['Sie', 'sind', 'schwanger', '.', '[PAD]'], ['Sie', 'sind', 'schwanger', '.', '[PAD]'], ['Sie', 'sind', 'schwanger', '.', '[PAD]'], ['Sie', 'sind', 'schwanger', '.', '[PAD]']]
+0.0004008237896549501
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr2e-5
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Sie', 'sind', 'ein', 'Papier', '?', '[PAD]'], ['Sie', 'sind', 'ein', 'Papier', '?', '[PAD]'], ['Sie', 'sind', 'ein', 'Papier', '?', '[PAD]'], ['Sie', 'sind', 'ein', 'Papier', '?', '[PAD]'], ['Sie', 'sind', 'ein', 'Papier', '?', '[PAD]']]
+3.753753446785211e-156
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr1e-5
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Herr', 'Frau', '.', '[PAD]'], ['Vor', '##name', '.', '[PAD]'], ['Familien', '##name', '.', '[PAD]'], ['Wenn', 'Sie', 'Ihr', 'Ihr', 'auch', 'auch', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Köpfe', 'schreiben', '[PAD]'], ['In', 'sind', 'sind', 'sind', 'Sie', 'geboren', '?', '[PAD]']]
+0.04513203620167232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr1e-3_Bahdanau_100EP
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.', '[PAD]'], ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.', '[PAD]'], ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.', '[PAD]'], ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.', '[PAD]'], ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.', '[PAD]']]
+0.012737306310961689
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr1e-4_Bahdanau_100EP
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.', '[PAD]'], ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.', '[PAD]'], ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.', '[PAD]'], ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.', '[PAD]'], ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.', '[PAD]']]
+0.003361064897059016
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr2e-5_Bahdanau
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'], ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.']]
+3.4178190850602566e-80
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr2e-5_Bahdanau_15EP
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Herr', 'oder', 'Frau', '.', '[PAD]'], ['Vor', '##name', '.', '[PAD]'], ['Familien', '##name', '.', '[PAD]'], ['Wenn', 'sich', 'Ihr', 'Name', 'geändert', 'hat', ':', 'Dann', 'schreiben', 'Sie', 'auch', 'Ihren', 'Geburts', '##namen', 'dazu', '.', '[PAD]'], ['In', 'welchem', 'Land', 'sind', 'Sie', 'geboren', '?', '[PAD]']]
+0.30962935473129777
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr1e-5_Bahdanau_50EP
+['Anrede', 'Vorname', 'Nachname', 'Geburtsname (sofern abweichend)', 'Geburtsort']
+[['Herr', 'oder', 'Frau', '.', '[PAD]'], ['Vor', '##name', '.', '[PAD]'], ['Familien', '##name', '.', '[PAD]'], ['Wenn', 'Ihr', 'Ihr', 'Name', 'Name', 'auch', 'auch', 'auch', 'auch', 'auch', 'auch', 'Ihren', 'Ihren', 'Ihren', 'Ihren', 'Geburts', 'schreiben', '.', '[PAD]'], ['In', 'welchem', 'Land', 'sind', 'Sie', 'geboren', '?', '[PAD]']]
+0.06951408907623116
+_____________________________________________________________________________
+We must have simmilar 12 BLEU-scores

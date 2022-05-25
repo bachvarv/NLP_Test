@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "nmt_model_test.py", line 108, in <module>
+    line = line.decode('unicode_escape').encode('latin-1').decode('utf8')
+AttributeError: 'str' object has no attribute 'decode'

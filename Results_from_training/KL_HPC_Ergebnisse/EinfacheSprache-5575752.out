@@ -1,0 +1,67 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+Initializing from scratch!
+[[3, 173, 7375, 414, 287, 371, 2626, 26972, 4]]
+[[14913 14913 14913 14913 14913 14913 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344 22344
+  22344 22344 22344 22344 22344 22344 22344 22344]]
+Saarb Saarb Saarb Saarb Saarb Saarb angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören angehören
+Model: "bert_language_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ tf_bert_model (TFBertModel)  multiple                 109081344 
+                                                                 
+ bert_language_decoder (Bert  multiple                 52015152  
+ LanguageDecoder)                                                
+                                                                 
+=================================================================
+Total params: 161,096,496
+Trainable params: 161,096,496
+Non-trainable params: 0
+_________________________________________________________________
+1.9073486328125e-06
+[[3, 1964, 309, 946, 26914, 4]]
+tf.Tensor(
+[[27016 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530 14530
+  14530 14530 14530 14530 14530 14530 14530 14530]], shape=(1, 128), dtype=int64)
+[unused17]bereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaftbereitschaft

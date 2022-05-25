@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "bleu_test.py", line 53, in <module>
+    print(prediction)
+NameError: name 'prediction' is not defined

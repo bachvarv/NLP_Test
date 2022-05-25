@@ -1,0 +1,9 @@
+2022-05-18 23:00:23.927684: I tensorflow/core/platform/cpu_feature_guard.cc:152] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE3 SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-18 23:00:27.736507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30999 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+Traceback (most recent call last):
+  File "bleu_test.py", line 100, in <module>
+    scores_unseen.append(translator.print_bleu_score())
+  File "/home/hstr_bachvarv/EinfacheSprache/NLP_Test/simple_language/seq2seq_data/translator_model/SimpleLanguageTranslator.py", line 72, in print_bleu_score
+    x, y = line.split(sep='\t')
+ValueError: not enough values to unpack (expected 2, got 1)

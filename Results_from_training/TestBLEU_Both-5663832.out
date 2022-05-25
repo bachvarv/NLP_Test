@@ -1,0 +1,59 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+We have 12 checkpoints
+Line contains Tab
+Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.	Bekommen Sie schon Wohngeld? Dann schreiben Sie hier Ihre Wohngeld-Nummer auf. 
+
+Line contains Tab
+Antragstellende Person 	Wer stellt den Antrag?
+
+Line contains Tab
+Stellung in Beruf?	Was machen Sie?
+
+Line contains Tab
+Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll	Auf welches Konto soll das Wohngeld gezahlt werden?
+
+Line contains Tab
+Anschrift der Wohnung, für die Wohngeld beantragt wird 	Adresse von Ihrer Wohnung
+
+Line contains Tab
+Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?	Ist diese Wohnung für alle Personen die einzige Wohnung, wo sie leben?
+
+Line contains Tab
+Mittelpunkt der Lebens-Beziehungen	Eine Person wohnt in einer Wohnung. Die Person hat keinen anderen Wohnort. Die Person ist regelmäßig in der Wohnung. Dann ist die Wohnung der Mittelpunkt der Lebens-Beziehungen.
+
+Line contains Tab
+Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 	Wie viel bezahlen Sie jeden Monat für die Wohnung? Das steht in Ihrem Miet-Vertrag oder in einem Brief von Ihrem Vermieter. Schreiben Sie die Zahl auf.
+
+"Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitge-
+
+Line contains Tab
+ber) für diese oder eine andere Wohnung?"	Bekommen Sie oder ein anderes Haushalts-Mitglied schon Geld für die Miete? z.B. Wohngeld, vom Arbeitgeber, von Familie.
+
+Line contains Tab
+Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 	Wird sich in den nächsten 12 Monaten bei Ihnen oder bei einer Person in Ihrem Wohnunh etwas beim Geld ändern?
+
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr1e-3
+Testing ./SLM_HPC_v1_without_BERT_lr1e-3

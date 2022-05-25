@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "bleu_test.py", line 49, in <module>
+    checkpoints.add(os.path.join(os.curdir, 'BLM_HPC_v1_lr1e-5_Bahdanau_50EP'))
+AttributeError: 'list' object has no attribute 'add'

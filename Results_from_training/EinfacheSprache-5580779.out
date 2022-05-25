@@ -1,0 +1,213 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+30000
+Initializing from scratch!
+[[3, 173, 7375, 414, 287, 371, 2626, 26972, 4]]
+[[24173 20751 20751  2206 19168  5327  5327  5327  5327 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424 22424
+  22424 22424 22424 22424 22424 22424 22424 22424]]
+Gedenken Vic Vic entsprechen interessantgehrgehrgehrgehr Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron Armstron
+Model: "simple_language_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ simple_language_encoder (Si  multiple                 26583552  
+ mpleLanguageEncoder)                                            
+                                                                 
+ simple_language_decoder (Si  multiple                 52015152  
+ mpleLanguageDecoder)                                            
+                                                                 
+=================================================================
+Total params: 78,598,704
+Trainable params: 78,598,704
+Non-trainable params: 0
+_________________________________________________________________
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.592074>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.246418>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.246677>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.736559>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.165161>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.838167>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.163817>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.571597>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.019121>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.81922>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=7.7274103>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.587209>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.793509>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.764>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.276526>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.895867>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.161442>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.44767>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.512904>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.0171795>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.513978>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.368921>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.017806>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.878865>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.017906>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=7.723362>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.734176>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.878421>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.816542>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.100897>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.839287>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.732931>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.073338>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.925465>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=7.7221203>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.272499>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.58372>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.9098>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.027135>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.44544>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.204561>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.761722>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.074024>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.019593>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.961892>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.857839>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.169372>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.765024>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.857508>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.51074>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.576236>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.856999>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.790801>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.65926>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.567833>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.158978>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.854848>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.094726>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.786635>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.948892>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.053562>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.78739>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.658033>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.02537>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.9703665>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.61696>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.587142>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.244676>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.017262>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.831616>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=7.726555>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=7.726452>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.016159>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.01779>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.241874>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.273685>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.971667>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.060404>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.875432>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.565343>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.046424>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.759183>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.810272>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.787256>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.132104>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.856409>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.873006>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.853157>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.971322>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.872458>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.980918>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.614887>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.094166>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.070411>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.15046>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.969855>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.142924>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.871761>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.155946>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.023891>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.073702>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.989201>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.06297>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.563376>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.981113>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.022273>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.504393>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.091819>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.0231695>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.128931>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.437306>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.914924>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.851743>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.848398>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.724319>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.75759>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.757639>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.902395>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.056152>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.966921>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.125008>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.436181>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.090097>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.141354>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.941653>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.258611>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.813149>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=8.992688>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.51009>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.974989>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.609328>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.944058>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.686945>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.831323>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.807726>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.751644>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.842353>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.115515>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.015491>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=9.819033>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.086993>}
+{'batch_loss': <tf.Tensor: shape=(), dtype=float32, numpy=10.098525>}
+Step 1
+
+561.9587414264679
+[[3, 1964, 309, 946, 26914, 4]]
+tf.Tensor(
+[[26914 26914 26914     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4     4     4     4     4
+      4     4     4     4     4     4     4     4]], shape=(1, 128), dtype=int64)
+... [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP] [SEP]

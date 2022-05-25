@@ -1,0 +1,74 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+We have 2 checkpoints
+Printing score of Checkpoint: ./BLM_HPC_lr2e-5_Bahdanau_50EP
+Testing ./BLM_HPC_lr2e-5_Bahdanau_50EP
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+1.8126943795130283e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_EP50_r2e-5
+Testing ./BSLM_HPC_General_EP50_r2e-5
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Jeder', 'Mensch', '.']
+1.0352266068948086e-233
+_____________________________________________________________________________
+We must have simmilar 0 BLEU-scores

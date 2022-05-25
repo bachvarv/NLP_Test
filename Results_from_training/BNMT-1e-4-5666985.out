@@ -1,0 +1,896 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+Anrede	Herr oder Frau.
+
+Vorname	Vorname.
+
+Nachname	Familienname.
+
+Geburtsname (sofern abweichend)	Wenn sich Ihr Name geändert hat: Dann schreiben Sie auch Ihren Geburtsnamen dazu.
+
+Geburtsort	In welchem Land sind Sie geboren?
+
+Geburtsdatum	Wann sind Sie geboren?
+
+Geburtsland	In welchem Land sind Sie geboren?
+
+Staatsangehörigkeit	Staatsangehörigkeit (Von welchem Land haben Sie einen Pass?)
+
+Rentenversicherungsnummer	Nummer von der Rentenversicherung.
+
+Rentenversicherungsnummer ist noch nicht vorhanden und wurde beantragt	Wenn Sie noch keine Nummer von der Rentenversicherung haben: Haben Sie beim Amt eine Nummer beantragt?
+
+Straße	Straße.
+
+Hausnummer	Nummer des Hauses.
+
+ggf. wohnhaft bei	Wohnen Sie bei einer anderen Person in der Wohnung? Wenn ja, wie heißt diese Person?
+
+Postleitzahl	Postleitzahl (die Nummer vor der Stadt. Sie besteht aus fünf Zahlen).
+
+Wohnort	Stadt oder Dorf, wo man wohnt.
+
+Die Angaben zur Telefonnummer und zur E-Mail-Adresse sind freiwillig.	Sie können Ihre Telefonnummer und Ihre E-Mail-Adresse aufschreiben. Sie müssen das aber nicht tun.
+
+Telefonnummer	Die Nummer Ihres Telefons.
+
+E-Mail-Adresse	Die Adresse von Ihrer E-Mail.
+
+Ihr Familienstand	Ihre aktuelle Familiensituation.
+
+Mein Familienstand:	In was für eine Beziehung sind Sie im Moment.
+
+ledig	Sie sind nicht verheiratet und waren auch noch nie verheiratet.
+
+verheiratet	Sie haben eine Frau geheiratet.
+
+geschieden seit	Sie habe sich von ihrer Frau getrennt und sind geschieden.
+
+verwitwet	Ihr Partner/Ihre Partnerin ist gestorben.
+
+Meine Bankverbindung	Informationen zu Ihrem Bankkonto.
+
+Leistungen nach dem SGB II werden in der Regel auf ein Konto überwiesen.	"Das Jobcenter überweist Ihnen das ""Hartz IV""-Geld normalerweise auf ein Konto."
+
+Kontoinhaberin/Kontoinhaber	Wem gehört das Konto?
+
+Bank	Bank.
+
+IBAN	IBAN (Die Nummer finden Sie auf Ihrer EC-Karte.).
+
+Die IBAN finden Sie in der Regel auf Ihrem Kontoauszug.	Die IBAN-Nummer finden Sie auch auf Ihren Kontoinformationen.
+
+Ich habe für den Monat der Antragstellung bereits Leistungen bei einem anderen Jobcenter beantragt oder von diesem bezogen.	Sie stellen diesen Antrag in einem Monat. Haben Sie für denselben Monat schon bei einem anderen Jobcenter einen Antrag gestellt? Oder haben Sie von einem anderen Jobcenter in diesem Monat finanzielle Hilfen bekommen?
+
+Falls ja, legen Sie bitte entsprechende Nachweise vor oder geben Sie das andere Jobcenter an.	Wenn ja: Legen Sie bitte das Papier vom Jobcenter dazu, wo steht, dass Sie finanzielle Hilfen bekommen.
+
+Ich fühle mich gesundheitlich in der Lage, eine Tätigkeit von mindestens drei Stunden täglich auszuüben.	Sie denken, dass Sie so gesund sind, dass Sie mindestens drei Stunden jeden Tag arbeiten können.
+
+Ich bin Berechtigte/Berechtigter nach dem Asylbewerberleistungsgesetz.	Sie haben ein Recht auf finanzielle Hilfen nach dem Asylbewerberleistungsgesetz.
+
+Legen Sie bitte entsprechende Nachweise (z. B. Aufenthaltserlaubnis, Aufenthaltsgestattung, Duldung, Bescheid des Bundesamtes für Migration und Flüchtlinge (BAMF)) vor.	"Legen Sie das Papier vom Amt dazu. Zum Beispiel: ""Aufenthaltserlaubnis"", ""Aufenthaltsgestattung"", ""Duldung"", ""Bescheid"" vom Bundesamt für Migration und Flüchtlinge."
+
+Ich bin Schülerin/Schüler, Studentin/Student oder Auszubildende/Auszubildender.	Sie sind Schülerin/Schüler, oder Studentin/Student, der Auszubildende/Auszubildender.
+
+Bitte legen Sie entsprechende Nachweise vor.	Legen Sie bitte ein Papier, wo steht, dass stimmt, was Sie schreiben.
+
+Legen Sie bitte den Bescheid oder Ablehnungsbescheid für BAB oder BAföG vor, wenn vorhanden.	Legen Sie bitte ein Papier von dem BAföG-Amt dazu, wo steht, dass Sie einen Antrag gestellt haben. Wenn das BAföG-Amt bereits über Ihren Antrag entschieden hat: Dann legen Sie bitte den Brief dazu, wo steht, dass das BAföG-Amt Ihren Antrag angenommen oder abgelehnt hat.
+
+Während der Ausbildung bin ich in einem Wohnheim, Internat, einer besonderen Einrichtung für Menschen mit Behinderung oder beim Ausbilder mit voller Verpflegung oder anderweitig mit Kostenerstattung für Unterkunft und Verpflegung untergebracht.	Als Sie Ihre Ausbildung gemacht haben, haben Sie in einem Wohnheim, in einem Internat oder bei einem Ausbilder oder an einem anderen Ort gelebt. Sie mussten dort nichts für das Wohnen und das Essen bezahlen.
+
+Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt).	Sie leben jetzt oder bald in einer stationären Einrichtung: zum Beispiel in einem Hospital, in einem Altenheim, in einem Gefängnis.
+
+Justizvollzugsanstalt	Gefängnis.
+
+Dauer der Unterbringung von – bis	Sie werden dort von - bis leben.
+
+Art der stationären Einrichtung	Art der Einrichtung.
+
+Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt). Bitte legen Sie entsprechende Nachweise vor.	Sie leben jetzt oder bald in einer stationären Einrichtung: zum Beispiel in einem Hospital, in einem Altenheim, in einem Gefängnis. Wenn ja: Legen Sie bitte ein Papier dazu, wo steht: Wo Sie gelebt haben? Wie lange sie dort gelebt haben?
+
+Leben Sie allein, sind unter 2. keine weiteren Angaben erforderlich. Bitte weiter bei Abschnitt 3.	Wenn Sie allein leben, müssen Sie hier (Nummer 2) nichts mehr schreiben. Schreiben Sie bitte bei Nummer 3 weiter.
+
+Meine Wohnsituation	"Personen, mit denen Sie zusammenleben. Diese Personen sind Ihre Partnerin/Ihr Partner und/oder Verwandte von Ihnen (""Bedarfsgemeinschaft"")."
+
+Hier sind Mehrfachnennungen möglich.	Sie können auch zwei oder mehr Kreuze machen.
+
+Da Sie die Leistungen beantragen, wird davon ausgegangen, dass Sie auch die Vertretung Ihrer Bedarfsgemeinschaft übernommen haben. Dies gilt nicht, wenn über 15-jährige Mitglieder Ihrer Bedarfsgemeinschaft gegenüber dem Jobcenter erklären, dass sie ihre Interessen selbst wahrnehmen wollen, z. B. durch eine eigene Antragstellung (§ 38 SGB II). Zu den nicht vertretenen Personen sind hier keine Angaben erforderlich.	"Hier müssen Sie die Personen nennen, die zu Ihrer ""Bedarfsgemeinschaft"" gehören. Sie stellen den Antrag auf finanzielle Hilfe. Das Amt nimmt daher an, dass Sie auch für die anderen aus Ihrer ""Bedarfsgemeinschaft"" sprechen. Wenn eine Person aus Ihrer ""Bedarfsgemeinschaft"" älter als 15 Jahre ist, kann diese Person selbst einen Antrag stellen (nach dem Gesetz: § 38 SGB II). In diesem Fall brauchen Sie zu dieser Person hier keine Informationen geben."
+
+meiner Ehegattin/meinem Ehegatten	Sie leben zusammen mit Ihrer Ehefrau/Ihrem Ehemann. Sie leben nicht dauernd getrennt.
+
+meiner eingetragenen Lebenspartnerin/meinem eingetragenen Lebenspartner	Sie leben zusammen mit Ihrer eingetragenen gleichgeschlechtlichen Lebenspartnerin (eine Frau wie Sie)/Ihrem eingetragenen gleichgeschlechtlichen Lebenspartner (ein Mann wie Sie). Sie leben nicht dauernd getrennt.
+
+meiner Partnerin/meinem Partner in einer Verantwortungs- und Einstehensgemeinschaft („eheähnliche Gemeinschaft“)	"Sie leben mit Ihrer Partnerin/Ihrem Partner zusammen und sind nicht verheiratet. Sie leben aber zusammen wie ein Ehepaar (""eheähnliche Gemeinschaft"")."
+
+unverheirateten Kind(ern) zwischen 15 Jahren und 24 Jahren	Sie leben mit Ihrem Kind oder mit Ihren Kindern zusammen. Das Kind oder die Kinder ist/sind nicht verheiratet und jünger als 25 Jahre alt.
+
+meinen Eltern bzw. einem Elternteil. Sind Sie als Antragstellerin bzw. als Antragsteller unter 25 Jahre alt, füllen Sie bitte für Ihre Eltern jeweils eine Anlage WEP aus.	Sie sind jünger als 25 Jahre und leben mit Ihren Eltern oder nur mit Ihrer Mutter oder Ihrem Vater zusammen.
+
+sonstigen Verwandten oder Verschwägerten (zum Beispiel Großeltern, Geschwister über 25 Jahre, verheiratete Kinder, Tanten oder Onkel)	"In Ihrer Wohnung leben noch ... (Zahl) weitere Personen, die Sie nicht unter Nummer 2 genannt haben. Diese Personen gehören nicht zu Ihrer ""Bedarfgemeinschaft"". Wenn darunter Personen sind, die zu Ihrer weiteren Familie gehören (zum Beispiel Ihre Tante oder der Bruder Ihrer Frau), füllen Sie bitte das Formular Anlage HG aus."
+
+Prüfung eines Mehrbedarfs	Wenn Sie aus bestimmten Gründen mehr Geld brauchen: Hier können Sie weitere finanzielle Hilfen beantragen,
+
+Die Angaben sind freiwillig und nur erforderlich, wenn Sie einen Mehrbedarf beantragen möchten.	Sie müssen diese Informationen nur dann geben, wenn Sie das wollen und wenn Sie weitere finanzielle Hilfe haben möchten.
+
+Ich bin alleinerziehend.	Sie erziehen Ihr Kind/Ihre Kinder allein.
+
+Ich bin schwanger.	Sie sind schwanger.
+
+Bitte legen Sie einen Nachweis vor, aus dem der voraussichtliche Entbindungstermin hervorgeht.	Bitte legen Sie ein Papier vom Arzt dazu, wo steht, wann das Baby wahrscheinlich auf die Welt kommt.
+
+Ich erzeuge mein Warmwasser dezentral (z. B. Boiler, Durchlauferhitzer) und habe deshalb einen Mehrbedarf.	Ihr warmes Wasser wird in Ihrer Wohnung durch elektrischen Boiler oder mit Gas heiß gemacht.
+
+Ich benötige aus medizinischen Gründen eine kostenaufwändige Ernährung.	Sie sind krank und müssen deshalb besonderes Essen kaufen, das mehr kostet.
+
+Bitte füllen Sie die Anlage MEB aus.	Bitte füllen Sie das Formular Anlage MEB aus.
+
+Ich habe eine Behinderung und erhalte: Leistungen zur Teilhabe am Arbeitsleben nach § 49 Neuntes Buch Sozialgesetzbuch (SGB IX) oder sonstige Hilfen zur Erlangung eines geeigneten Arbeitsplatzes oder Eingliederungshilfen nach § 112 SGB IX.	Sie haben eine Behinderung und bekommen: finanzielle Hilfen, um arbeiten zu können (nach dem Gesetz: §349 Neuntes Buch Sozialgesetzbuch (SGB IX)) oder andere Hilfen, damit Sie eine Arbeit finden, oder finanzielle und andere Hilfen (nach dem Gesetz: § 54 Abs. 1 Satz 1 Nr. 1-3 SGB XII).
+
+Bitte legen Sie einen aktuellen Bescheid vor.	Bitte legen Sie ein Papier vom Amt dazu, wo steht, dass es richtig ist, was Sie schreiben.
+
+Ich bin nicht erwerbsfähig 9 und Inhaberin/Inhaber eines Ausweises nach § 152 Abs. 5 SGB IX mit dem Merkzeichen G oder aG.	Sie können nicht arbeiten, weil Sie eine schwere Behinderung haben. Sie haben einen Ausweis mit dem Merkzeichen G oder aG (nach dem Gesetz: § 152 Abs. 5 SGB IX). Das ist ein Ausweis für Schwerbehinderte.
+
+Bitte legen Sie einen aktuellen Nachweis (z. B. Schwerbehindertenausweis) vor.	Bitte legen Sie ein Papier dazu, wo steht, dass richtig ist, was Sie schreiben.
+
+Ich und/oder ein anderes Mitglied der Bedarfsgemeinschaft hat Einkommen.	"Einkommen (Was Sie und Ihre ""Bedarfsgemeinschaft"" (siehe Nummer 2) jeden Monat an Geld haben.)."
+
+Zur Prüfung der Einkommensverhältnisse muss jedes Mitglied der Bedarfsgemeinschaft ab dem vollendeten 15. Lebensjahr bei vorhandenem Einkommen die Anlage EK ausfüllen	"Wenn ja: Füllen Sie bitte für sich und für jede Person aus Ihrer ""Bedarfsgemeinschaft"", die 15 Jahre oder älter ist, das Formular Anlage EK aus."
+
+Vermögen	Geld, was Sie haben, oder andere Dinge, wie ein Auto, die Geld kosten.
+
+Meine Bedarfsgemeinschaft verfügt über erhebliches Vermögen.	Sie haben gespartes Geld oder andere wertvolle Dinge wie ein Auto.
+
+Sollte bei Ihnen erhebliches Vermögen vorliegen, füllen Sie bitte die Anlage VM aus.	"Füllen Sie bitte das Formular Anlage VM aus. Dort schreiben Sie für jede Person aus Ihrer ""Bedarfsgemeinschaft"", welches Vermögen diese Person hat."
+
+Bitte legen Sie den Bescheid/die Bescheide vor, sofern über den Antrag/die Anträge schon entschieden wurde.	Wenn Sie schon wissen, dass Sie finanzielle Hilfe bekommen: Legen Sie bitte das Papier vom Amt vor, wo steht, dass Sie finanzielle Hilfe bekommen.
+
+Ich habe (mögliche) Ansprüche auf andere (Sozial-)Leistungen (z. B. Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld).	Sie haben schon andere finanzielle Hilfen (zum Beispiel Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld nach dem Gesetz: Drittes Sozialgesetzbuch (SGB III)) beantragt. Oder Sie wollen das bald tun.
+
+Vorrangige Leistungen	Haben Sie ein Recht, finanzielle Hilfen von anderen Institutionen zu bekommen?
+
+Ich bin gerade dabei, mir einen Kaffee zu machen.	Ich mache mir einen Kaffe
+
+Wir haben beschlossen, morgen in die Stadt zu gehen.	Wir wollen morgen in die Stadt gehen.
+
+Er hat sich entschieden, nicht mit uns zu kommen.	Er wollte nicht kommen.
+
+Sie ist die beste Freundin, die ich je hatte.	Sie ist meine beste Freundin.
+
+Er ist sehr nett, aber ich kann ihn nicht ausstehen.	Er ist sehr nett, aber ich mag ihn nicht.
+
+Ich verstehe nicht, warum du so wütend bist.	Ich weiß nicht, warum du so verärgert bist
+
+Ich bin gerne hier. Es ist schön, die Natur zu sehen und die frische Luft einzuatmen. Ich fühle mich frei und entspannt.	Ich mag hier zu sein. Die Natur ist sehr schön und die Luft ist sehr frisch. Ich fühle keine Probleme hier. Ich fühle mich auch frei.
+
+Er betätigte sich auch auf dem Gebiet der Theologie und trat mit einem unkonventionellen theologischen Konzept hervor.	Er interessierte sich für Theologie und erstellte einen neuen geistlichen Konzept.
+
+Nach dem Tod seiner ersten Frau heiratete er im Jahre 1856 die Schriftstellerin und Journalistin Ernestine von le Fort. Aus dieser Ehe gingen zwei Söhne hervor.	Nach dem Tod seiner ersten Frau heiratete er die Schriftstellerin und Journalistin Ernestine von le Fort im Jahr 1856. Sie hatten zwei Söhne.
+
+1864 zog er mit seiner Familie nach Berlin, wo er bis zu seinem Tod wohnte.	Er wohnte seit 1864 mit seiner Familie in Berlin. Da ist er gestorben.
+
+Dort arbeitete er als Journalist und Herausgeber verschiedener Zeitschriften, unter anderem der „Gartenlaube“.	Er war ein Journalist und Editor für viele Zeitschriften. Er arbeitete für die Zeitschrift “Gartenlaube”
+
+Ernst Theodor Amadeus Hoffmann starb am 25. Juni 1822 in Berlin an einem Schlaganfall.	Ernst Theodor Amadeus Hoffmann wurde am 25. Juni 1822 in Berlin bis zum Tod geschlagen.
+
+Als Steuer (früher auch Taxe) wird eine Geldleistung ohne Anspruch auf individuelle Gegenleistung bezeichnet, die von einer öffentlichen oder privaten Institution erhoben wird.	Steuern sind Geld, das einer Institution gezahlt werden, ohne dass man etwas dafür erwartet.
+
+Die Steuer ist eine Abgabe, die vom Staat zur Finanzierung seiner Aufgaben erhoben wird. Die Steuerpflichtigen sind verpflichtet, die Steuer zu entrichten.	Die Steuer ist Geld, das man für Aufgaben des Staates zahlt. Die Personen die Arbeiten müssen Steuern zahlen.
+
+Steuern werden in Deutschland aufgrund des Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UStG) sowie weiterer steuerrechtlicher Vorschriften erhoben. 	Die Steuern die man zahlt, hängen von Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UstG) und weitere Regeln.
+
+Nach dem Steuerrecht in Deutschland ist eine Steuer eine Abgabe, die von Inländern oder ausländischen Personen erhoben wird. Sie dient der Erzielung von Einnahmen zur Finanzierung öffentlicher Aufgaben.	Eine Steuer ist eine Gebühr, die von Menschen verlangt wird, die in einem bestimmten Land leben oder von Ausländern. Sie wird verwendet, um Geld für öffentliche Aufgaben zu sammeln.
+
+Steuern werden im allgemeinen Sprachgebrauch auch als „Abgaben“ bezeichnet.	"In allgemeinen, Menschen nennen Steuern ""Gebühren"" oder ""Kosten."""
+
+Der Name des Sterns ist auch in der Astronomie, wie in der Umgangssprache, einfach Sonne, üblicherweise mit dem bestimmten Artikel, im Englischen Sun (korrekterweise mit großem Anfangsbuchstaben, da es sich um einen Eigennamen handelt).	Der Name des Sterns ist auch in Astronomie, wie im Volksmund, einfach die Sonne, meist mit dem bestimmten Artikel, in Englisch Sun (korrekt mit einer Großbuchstaben, da es ein echter Name ist).
+
+Die Sonne übertrifft 700-fach die Gesamtmasse aller acht Planeten des Sonnensystems und 330.000-fach jene der Erde, die im Durchmesser 109-mal hineinpasst, im Volumen rund 1,3 Millionen Mal. Mit einer Energieabstrahlung, die pro Sekunde das 20.000-Fache der Primärenergieumwandlung seit Beginn der Industrialisierung ausmacht, fällt sie in die Leuchtkraftklasse V.	Die Sonne ist sehr viel größer als alle acht Planeten im Sonnensystem zusammen. Sie ist auch 330.000-mal größer als die Erde. Die Sonne strahlt pro Sekunde so viel Energie ab, wie die gesamte Industrie in einem Jahr verbraucht.
+
+Initializing from scratch!
+(1, 128)
+tf.Tensor(
+[[8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524 8524
+  8524 8524]], shape=(1, 128), dtype=int64)
+tf.Tensor([0], shape=(1,), dtype=int64)
+[ P A D ]
+Model: "nmt_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ tf_bert_model (TFBertModel)  multiple                 109081344 
+                                                                 
+ embedding (Embedding)       multiple                  0 (unused)
+                                                                 
+ nmt_encoder_layer (NMTEncod  multiple                 6300928   
+ erLayer)                                                        
+                                                                 
+ nmt_encoder_layer_1 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_2 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_3 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_4 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_5 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_6 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_7 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_8 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_9 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_10 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ nmt_encoder_layer_11 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ embedding_1 (Embedding)     multiple                  23040000  
+                                                                 
+ nmt_decoder_layer (NMTDecod  multiple                 8666368   
+ erLayer)                                                        
+                                                                 
+ nmt_decoder_layer_1 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_2 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_3 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_4 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_5 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_6 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_7 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_8 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_9 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_10 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ nmt_decoder_layer_11 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ dense_288 (Dense)           multiple                  23070000  
+                                                                 
+ softmax (Softmax)           multiple                  0         
+                                                                 
+=================================================================
+Total params: 334,798,896
+Trainable params: 334,798,896
+Non-trainable params: 0
+_________________________________________________________________
+Training loss (for one batch) at step 0: 10.6240
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 3.0071
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 1.0945
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.4811
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.5157
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.7682
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.6877
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.2781
+Seen so far: 141 samples
+Epoch #0
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4737
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5357
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.5100
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2162
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.1684
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.1060
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4851
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.2046
+Seen so far: 141 samples
+Epoch #1
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4817
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5394
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4739
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2241
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0872
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0193
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4805
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1648
+Seen so far: 141 samples
+Epoch #2
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4789
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5474
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4711
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2304
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0658
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0327
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4950
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1443
+Seen so far: 141 samples
+Epoch #3
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4757
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5518
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4700
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2318
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0535
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0384
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5025
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1351
+Seen so far: 141 samples
+Epoch #4
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4762
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5546
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4723
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2363
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0502
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0544
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5085
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1337
+Seen so far: 141 samples
+Epoch #5
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4785
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5560
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4690
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2353
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0373
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0609
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5079
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1342
+Seen so far: 141 samples
+Epoch #6
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4840
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5580
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4681
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2350
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0315
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0595
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5080
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1349
+Seen so far: 141 samples
+Epoch #7
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4874
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5592
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4690
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2362
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0314
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0540
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5073
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1357
+Seen so far: 141 samples
+Epoch #8
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4883
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5602
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4684
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2361
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0262
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0573
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5044
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1374
+Seen so far: 141 samples
+Epoch #9
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4908
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5613
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4677
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2358
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0241
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0549
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5047
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1376
+Seen so far: 141 samples
+Epoch #10
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4914
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5621
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4678
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2364
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0231
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0540
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5052
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1379
+Seen so far: 141 samples
+Epoch #11
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4926
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5627
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4677
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2373
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0219
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0528
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5045
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1381
+Seen so far: 141 samples
+Epoch #12
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4936
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5633
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4673
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2366
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0191
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0492
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5053
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1362
+Seen so far: 141 samples
+Epoch #13
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4936
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5630
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4683
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2379
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0192
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0470
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5027
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1351
+Seen so far: 141 samples
+Epoch #14
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4938
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5640
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4682
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2382
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0179
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0482
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5019
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1369
+Seen so far: 141 samples
+Epoch #15
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4947
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5638
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4681
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2381
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0168
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0484
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5013
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1372
+Seen so far: 141 samples
+Epoch #16
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4959
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5640
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4676
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2371
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0172
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0470
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5028
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1374
+Seen so far: 141 samples
+Epoch #17
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4968
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5644
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4673
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2354
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0132
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0428
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5019
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1379
+Seen so far: 141 samples
+Epoch #18
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4981
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5649
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4678
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2369
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0123
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0412
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5015
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1376
+Seen so far: 141 samples
+Epoch #19
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4982
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5648
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4682
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2355
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0114
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0420
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4982
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1374
+Seen so far: 141 samples
+Epoch #20
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4986
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5655
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4676
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2345
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0091
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0433
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4976
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1382
+Seen so far: 141 samples
+Epoch #21
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.5004
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5660
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4668
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2332
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0056
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0375
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4996
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1373
+Seen so far: 141 samples
+Epoch #22
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4995
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5658
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4673
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2330
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0080
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0331
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.5001
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1364
+Seen so far: 141 samples
+Epoch #23
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.4981
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5661
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4671
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2339
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0083
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0440
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4945
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1399
+Seen so far: 141 samples
+Epoch #24
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.5034
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5665
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4664
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2327
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0032
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0358
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4964
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1391
+Seen so far: 141 samples
+Epoch #25
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.5033
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5671
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4669
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2342
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0033
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0328
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4948
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1402
+Seen so far: 141 samples
+Epoch #26
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.5036
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5672
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4672
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2330
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0027
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0363
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4924
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1403
+Seen so far: 141 samples
+Epoch #27
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.5051
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5678
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4671
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2333
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0042
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0335
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4942
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1384
+Seen so far: 141 samples
+Epoch #28
+Execution time was 861 s
+Training loss (for one batch) at step 0: 0.5029
+Seen so far: 1 samples
+Training loss (for one batch) at step 20: 0.5677
+Seen so far: 21 samples
+Training loss (for one batch) at step 40: 0.4670
+Seen so far: 41 samples
+Training loss (for one batch) at step 60: 1.2326
+Seen so far: 61 samples
+Training loss (for one batch) at step 80: 2.0010
+Seen so far: 81 samples
+Training loss (for one batch) at step 100: 3.0392
+Seen so far: 101 samples
+Training loss (for one batch) at step 120: 1.4914
+Seen so far: 121 samples
+Training loss (for one batch) at step 140: 1.1393
+Seen so far: 141 samples
+Epoch #29
+Execution time was 861 s
+Execution time was 25857 s
+(1, 128)
+tf.Tensor([0], shape=(1,), dtype=int64)
+[ P A D ]
+Familienname.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Sie haben ein Recht auf finanzielle Hilfen nach dem Asylbewerberleistungsgesetz.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+"Personen, mit denen Sie zusammenleben. Diese Personen sind Ihre Partnerin/Ihr Partner und/oder Verwandte von Ihnen (""Bedarfsgemeinschaft"")."
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Sie können auch zwei oder mehr Kreuze machen.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Bitte legen Sie ein Papier vom Amt dazu, wo steht, dass es richtig ist, was Sie schreiben.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+"Einkommen (Was Sie und Ihre ""Bedarfsgemeinschaft"" (siehe Nummer 2) jeden Monat an Geld haben.)."
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Gesellschaft für alle
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Wir wollen die Digitalisierung gut nutzen. Das heißt: Mit der Digitalisierung soll unser Leben einfacher werden.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Pflegerinnen und Pfleger sollen einen besseren Lohn bekommen.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Besonders unterstützen wollen wir solche Vereine, Projekte und Gruppen, die sich gegen Rassismus und Rechts-Extremismus einsetzen. Rassismus heißt: Menschen behandeln andere Menschen schlecht. Und hassen sie sogar. Rechts-Extremismus ist so ähnlich wie Rassismus.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Ich mag hier zu sein. Die Natur ist sehr schön und die Luft ist sehr frisch. Ich fühle keine Probleme hier. Ich fühle mich auch frei.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Nach dem Tod seiner ersten Frau heiratete er die Schriftstellerin und Journalistin Ernestine von le Fort im Jahr 1856. Sie hatten zwei Söhne.
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+"In allgemeinen, Menschen nennen Steuern ""Gebühren"" oder ""Kosten."""
+
+[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]

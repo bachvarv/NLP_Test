@@ -1,0 +1,314 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+We have 12 checkpoints
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr1e-3
+Testing ./SLM_HPC_v1_without_BERT_lr1e-3
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Wenn', 'ja', ':', 'Legen', 'Sie', 'bitte', 'das', 'Papier', 'vom', 'Job', '##center', 'dazu', ',', 'wo', 'steht', ',', 'dass', 'Sie', 'finanzielle', 'Hilfen', 'bekommen', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Nummer', 'von', 'der', 'Renten', '##versicherung', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['starke', 'der', 'Renten', 'in', 'der', 'Welt']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Er', 'wohnte', 'seit', 'am', 'das', 'le', 'Fort', 'im', 'Jahr', '1856', '.', 'Sie', 'ist', 'er', 'die', 'Nummer', 'machen', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Er', 'wohnte', 'seit', '1864', 'mit', 'seiner', 'Familie', 'in', 'Berlin', '.', 'Da', 'ist', 'er', 'gestorben', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['We', '##m', 'gehört', 'das', 'Konto', '?']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Er', 'ist', 'sehr', 'ne', '##tt', ',', 'aber', 'ich', 'mag', 'ihn', 'nicht', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Bitte', 'legen', 'Sie', 'ein', 'Papier', 'vom', 'Arzt', 'dazu', ',', 'wo', 'steht', ',', 'wann', 'das', 'Baby', 'wahrscheinlich', 'auf', 'die', 'Welt', 'kommt', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Eine', 'Steuer', 'ist', 'eine', 'Wohnung', 'für', 'von', 'Frauen', 'gleich', 'frisch', '.', 'Und', 'die', 'Möglichkeit', 'haben', ',', 'was', 'wir', 'für', 'die', 'Luft', 'bezahlen', '.', 'Denn', 'sie', 'bezahlen', 'schon', 'genug', 'für', 'die', 'Gesellschaft', '.']
+8.118391078439603e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr1e-4
+Testing ./SLM_HPC_v1_without_BERT_lr1e-4
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'leben', 'zusammen', 'mit', 'Ihrer', 'Ehefrau', '/', 'Ihrem', 'Ehemann', '.', 'Sie', 'hatten', 'zwei', 'Söhne', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Sie', 'haben', 'eine', 'Frau', 'geheiratet', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Sie', 'haben', 'eine', 'Frau', 'geheiratet', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Er', 'wohnte', 'seit', '1864', 'mit', 'seiner', 'Familie', 'in', 'Berlin', '.', 'Da', 'ist', 'er', 'gestorben', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'leben', 'nicht', 'kommen', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Er', 'interessierte', 'sich', 'für', 'Theologie', 'und', 'erstellte', 'einen', 'neuen', 'geist', '##lichen', 'Konzept', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Er', 'wohnte', 'seit', '1864', 'mit', 'seiner', 'Familie', 'in', 'Berlin', '.', 'Da', 'ist', 'er', 'gestorben', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Er', 'war', 'ein', 'Journalist', 'und', 'Ed', '##itor', 'für', 'viele', 'Zeitschriften', '.', 'Er', 'arbeitete', 'für', 'die', 'Zeitschrift', 'geschlagen', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Sie', 'leben', 'mit', 'Ihrem', 'Kind', 'oder', 'mit', 'Ihren', 'Kindern', 'zusammen', '.', 'Sie', 'hatten', 'zwei', 'Söhne', '.']
+1.8489061825439158e-155
+_____________________________________________________________________________
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_lr2e-5
+Testing ./SLM_HPC_v1_without_BERT_lr2e-5
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'ist', 'ein', 'sollen', 'Papier', ',', ',', ',', 'dass']
+Candidate: Antragstellende Person 
+Prediction: ['In', '##name', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Nummer', '##name', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Sie', 'ist', 'ein', 'sollen', 'Papier', ',', ',', ',', 'dass']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'ist', 'ein', 'Papier', ',', ',', ',', ',', 'dass']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Sie', 'ist', 'ein', 'Papier', 'und', 'Menschen', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'werden', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['In', '##name', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Sie', 'ist', 'ein', 'sollen', 'Papier', ',', ',', ',', 'dass']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'wollen', 'ein', 'Menschen', 'Menschen', 'Ihrer', 'und', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'anderen', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Menschen', 'einem', 'Beispiel', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Sie', 'ist', 'ein', 'sollen', 'Papier', ',', ',', 'die', 'Menschen', 'werden', '.']
+5.734274442580845e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./SLM_HPC_v1_without_BERT_EP45_lr1e-3
+Testing ./SLM_HPC_v1_without_BERT_EP45_lr1e-3
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['neuen', '##euer', '##gesetzes', '(', 'Erb', '##ES', '##t', 'Abs', ')', '.', 'Und', 'sie', 'nehmen', 'die', 'Meinung', 'von', 'jedem', 'Erde', '.', 'Er', 'arbeitete', 'für', 'sie', 'immer', 'gearbeitet', 'Garten', '##laube', '##sst', '##euer', '##gesetzes', '(', '##t', '##G', ')', ')', 'des', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us', '##t', '##G', ')', 'jeden', 'Umsatzsteuer', '##gesetzes', '(', 'Us']
+Candidate: Antragstellende Person 
+Prediction: ['##isierung', 'sich', 'gegen', 'Theologie', 'und', 'erstellte', 'Wind', 'gemacht', 'wird', ')', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['##heim', ',', 'Tante', '.', 'Das', 'heißt', '-', 'Beispiel', 'diese', 'Extrem', '##ismus', 'einsetzen', '.', 'Rassismus', 'heißt', 'mit', 'Jahr', 'Energien', 'Meinung', 'Garten', '##laube', '##sst', 'Erde', '##n', ')', '##gesetzes', '(', 'mal', '##t', '##gesetzes', ')', ')', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['wurde', '##isierung', 'einsetzen', ',', 'mit', 'Abgeordnete', 'heißen', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Antrag', '##center', 'überw', 'Ihnen', '(', 'Stadt', ')', ')', '.', 'Und', 'wer', 'anders', 'dafür', 'Wind', 'nicht', 'tun', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['neuen', '##euer', '##gesetzes', '(', 'Erb', '##ES', '##t', '##G', ')', 'nichts', 'fü', 'schreiben', '.', 'Schreiben', 'keine', 'Recht', 'Wind', 'kommt', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['##heim', ',', 'Tante', '.', 'Das', 'heißt', '-', 'Beispiel', 'diese', '##ab', 'Erde', 'kommt', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['neuen', '##euer', '##gesetzes', '(', 'Erb', '##ES', '##t', 'Abs', ')', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Beruf', 'Am', '##40', 'Hoffmann', 'wurde', '##system', '25', '(', 'Neun', '34', '##9', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun', 'Neun']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['legen', 'Es', 'bitte', 'Welt']
+6.207365916201974e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr1e-3
+Testing ./BSLM_HPC_General_v1_lr1e-3
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Antragstellende Person 
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Stellung in Beruf?
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Ich', 'mache', 'mir', 'einen', 'Kaffe']
+0
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr1e-4
+Testing ./BSLM_HPC_General_v1_lr1e-4
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Sie', 'sind', 'schwanger', '.']
+4.723987679686888e-233
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr2e-5
+Testing ./BSLM_HPC_General_v1_lr2e-5
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Antragstellende Person 
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Stellung in Beruf?
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Sie', 'sind', 'ein', 'Papier', '?']
+1.1801709058180111e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_v1_lr1e-5
+Testing ./BSLM_HPC_General_v1_lr1e-5
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Wenn', 'Sie', 'bitte', 'bitte', 'das', 'das', 'Papier', 'das', 'steht', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Wir', 'Sie', 'Recht', 'ein', 'Recht', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['In', 'sind', 'sind', 'eine', 'eine', 'Wohnung', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['"', 'Sie', 'das', 'das', 'das', 'das', 'das', 'das', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'dass', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'Sie', 'ein', 'ein', 'das', 'das', 'Hilfen', 'das', 'finanzielle', 'Hilfen', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Die', 'Steuer', 'Geld', ',', 'Geld', ',', 'Geld', ',', 'Geld', '.', 'Sie', 'die', 'Geld', 'Geld', ',', 'Geld', 'Geld', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Die', '##m', 'Frau', 'Frau', 'mit', 'Frau', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Die', 'Veränderungen', 'das', 'das', 'das', 'das', 'das', 'Wohnung', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['"', 'Sie', 'Geld', 'Geld', ',', 'Geld', ',', 'Geld', ',', 'Geld', '.', 'Sie', 'Geld', 'Geld', ',', 'Geld', 'oder', 'Geld', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Die', 'Steuer', 'sind', 'die', 'die', 'mit', 'einer', 'Geld', '.']
+6.715685958966585e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr1e-3_Bahdanau_100EP
+Testing ./BLM_HPC_v1_lr1e-3_Bahdanau_100EP
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Ich', 'mag', 'hier', 'zu', 'sein', '.', 'Die', 'Natur', 'ist', 'sehr', 'schön', 'und', 'die', 'Luft', 'ist', 'sehr', 'frisch', '.', 'Ich', 'fühle', 'keine', 'Probleme', 'hier', '.', 'Ich', 'fühle', 'mich', 'auch', 'frei', '.']
+1.7890007755017964e-155
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr1e-4_Bahdanau_100EP
+Testing ./BLM_HPC_v1_lr1e-4_Bahdanau_100EP
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Wir', 'wollen', 'morgen', 'in', 'die', 'Stadt', 'gehen', '.']
+3.6016599447416165e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v5_lr2e-5_Bahdanau_100EP
+Testing ./BLM_HPC_v5_lr2e-5_Bahdanau_100EP
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Wenn', 'ja', 'Sie', 'bitte', 'das', 'Ihrer', 'Formul', '##ar', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'M', 'Anlage', 'Anlage', 'M', 'M', 'Anlage', 'M', 'M', 'Anlage', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M']
+Candidate: Antragstellende Person 
+Prediction: ['Bitte', 'Mensch', 'von', 'Recht', '?']
+Candidate: Stellung in Beruf?
+Prediction: ['Jeder', 'Mensch', 'für', 'der', 'seiner', 'gut', 'leben', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['"', 'Sie', '##llen', 'Sie', 'das', 'Papier', 'vom', '##ar', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'M', 'Anlage', 'M', 'Anlage', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Wir', 'wollen', 'ein', 'Ihrer', 'Ihrer', 'Ihrer', 'Ihrer', 'Ihrer', 'Anlage', '##ar', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'M', 'Anlage', 'M', 'M', 'Anlage', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Wir', 'wollen', 'sich', 'auch', 'das', '##isierung', '-', 'Beispiel', '-', 'Beispiel', '.', 'Das', 'wollen', ':', 'sich', 'Sie', 'auch', 'das', '##ar', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'Anlage', 'M', 'Anlage', 'Anlage', 'M', 'Anlage', 'M', 'M', 'Anlage', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'M', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten', 'nächsten']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Bitte', 'Mensch', 'von', 'der', 'Zukunft', ',', 'der', 'der', 'anderen', 'leben', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Die', 'wollen', 'ist', 'das', '##isierung', '-', '##isierung', '-', 'Beispiel', '.', 'Sie', 'wollen', 'wir', 'das', 'Beispiel', ',', 'die', 'das', 'Wohnung', '.', 'Das', 'wollen', 'wir', 'das', 'das', 'Beispiel', ',', 'das', 'das', 'viel', 'zu', 'machen', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'Sie', '##llen', 'Sie', 'das', 'Ihrer', 'Ihrer', 'Ihrer', 'denen', 'Sie', 'Beispiel', ',', 'Beispiel', 'Sie', 'in', 'Ihrer', 'Wohn', '"', ')', '.', 'Sie', 'Personen', 'das', 'das', 'das', 'Ihrer', 'oder', 'Ihrer', '"', ')', '.', 'Sie', 'Personen', 'das', 'das', 'das', 'Ihrer', 'oder', 'Ihrer', '"', ')', '.', 'Sie', 'Personen', 'das', 'das', 'das', 'Ihrer', 'oder', 'Ihrer', '"']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Wir', 'sind', 'auch', 'nicht', 'mehr', 'neue', 'Zeit', '.', 'Das', 'Grund', 'wir', 'die', 'uns', 'nicht', 'machen', '.', 'Das', 'wir', 'dafür', 'nicht', 'nicht', 'machen', '.', 'Dafür', 'wir', 'wir', 'nicht', 'machen', '.']
+7.989138676914572e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BLM_HPC_v1_lr1e-5_Bahdanau_50EP
+Testing ./BLM_HPC_v1_lr1e-5_Bahdanau_50EP
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'Sie', 'bitte', 'Sie', 'das', 'das', 'das', 'das', 'steht', 'Sie', 'schreiben', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Sie', 'sind', 'für', 'die', 'Zukunft']
+Candidate: Stellung in Beruf?
+Prediction: ['Sie', 'leben', 'leben', 'leben', 'leben', 'können', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Sie', 'Sie', 'ein', 'Papier', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das', 'das']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'Sie', 'ein', 'Papier', 'das', 'das', 'das', 'das', 'Institution', 'das', 'anderen', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Die', 'Die', 'ein', 'von', 'von', 'von', 'so', 'so', 'gezahlt', '.', 'Und', 'werden', 'werden', 'werden', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Sie', 'Sie', 'von', 'Recht', 'von', 'Wohnung', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Sie', 'Sie', 'nicht', 'das', 'das', 'das', 'Ihrer', 'Ihrer', 'Institution', 'dafür', 'dafür', 'dafür', 'nicht', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'Sie', 'haben', ',', 'in', 'in', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem', 'einem']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Die', 'Der', 'Geld', 'für', 'für', '-', 'so', 'so', 'so', 'dafür', 'dafür', '.']
+1.5765436890907274e-155
+_____________________________________________________________________________
+We must have simmilar 0 BLEU-scores

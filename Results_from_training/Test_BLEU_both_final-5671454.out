@@ -1,0 +1,733 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+We have 2 checkpoints
+Printing score of Checkpoint: ./BLM_HPC_lr2e-5_Bahdanau_50EP
+Testing ./BLM_HPC_lr2e-5_Bahdanau_50EP
+Candidate: Anrede
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Vorname
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Nachname
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Geburtsname (sofern abweichend)
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Geburtsort
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Geburtsdatum
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Geburtsland
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Staatsangehörigkeit
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Rentenversicherungsnummer
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Rentenversicherungsnummer ist noch nicht vorhanden und wurde beantragt
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Straße
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Hausnummer
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: ggf. wohnhaft bei
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Postleitzahl
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wohnort
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Die Angaben zur Telefonnummer und zur E-Mail-Adresse sind freiwillig.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Telefonnummer
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: E-Mail-Adresse
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ihr Familienstand
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Mein Familienstand:
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: ledig
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: verheiratet
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: geschieden seit
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: verwitwet
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Meine Bankverbindung
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Leistungen nach dem SGB II werden in der Regel auf ein Konto überwiesen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Kontoinhaberin/Kontoinhaber
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Bank
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: IBAN
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Die IBAN finden Sie in der Regel auf Ihrem Kontoauszug.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Ich habe für den Monat der Antragstellung bereits Leistungen bei einem anderen Jobcenter beantragt oder von diesem bezogen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Falls ja, legen Sie bitte entsprechende Nachweise vor oder geben Sie das andere Jobcenter an.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Ich fühle mich gesundheitlich in der Lage, eine Tätigkeit von mindestens drei Stunden täglich auszuüben.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich bin Berechtigte/Berechtigter nach dem Asylbewerberleistungsgesetz.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Legen Sie bitte entsprechende Nachweise (z. B. Aufenthaltserlaubnis, Aufenthaltsgestattung, Duldung, Bescheid des Bundesamtes für Migration und Flüchtlinge (BAMF)) vor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich bin Schülerin/Schüler, Studentin/Student oder Auszubildende/Auszubildender.
+Prediction: ['Sie', 'Gemeinschafts', 'anderen', 'anderen', 'Aufregung', '.']
+Candidate: Bitte legen Sie entsprechende Nachweise vor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Legen Sie bitte den Bescheid oder Ablehnungsbescheid für BAB oder BAföG vor, wenn vorhanden.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Während der Ausbildung bin ich in einem Wohnheim, Internat, einer besonderen Einrichtung für Menschen mit Behinderung oder beim Ausbilder mit voller Verpflegung oder anderweitig mit Kostenerstattung für Unterkunft und Verpflegung untergebracht.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt).
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Justizvollzugsanstalt
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Dauer der Unterbringung von – bis
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Art der stationären Einrichtung
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt). Bitte legen Sie entsprechende Nachweise vor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Leben Sie allein, sind unter 2. keine weiteren Angaben erforderlich. Bitte weiter bei Abschnitt 3.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Meine Wohnsituation
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Hier sind Mehrfachnennungen möglich.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Da Sie die Leistungen beantragen, wird davon ausgegangen, dass Sie auch die Vertretung Ihrer Bedarfsgemeinschaft übernommen haben. Dies gilt nicht, wenn über 15-jährige Mitglieder Ihrer Bedarfsgemeinschaft gegenüber dem Jobcenter erklären, dass sie ihre Interessen selbst wahrnehmen wollen, z. B. durch eine eigene Antragstellung (§ 38 SGB II). Zu den nicht vertretenen Personen sind hier keine Angaben erforderlich.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: meiner Ehegattin/meinem Ehegatten
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: meiner eingetragenen Lebenspartnerin/meinem eingetragenen Lebenspartner
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: meiner Partnerin/meinem Partner in einer Verantwortungs- und Einstehensgemeinschaft („eheähnliche Gemeinschaft“)
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: unverheirateten Kind(ern) zwischen 15 Jahren und 24 Jahren
+Prediction: ['Sie', '[unused1665]', 'in', '[unused1665]', 'leistet', '.']
+Candidate: meinen Eltern bzw. einem Elternteil. Sind Sie als Antragstellerin bzw. als Antragsteller unter 25 Jahre alt, füllen Sie bitte für Ihre Eltern jeweils eine Anlage WEP aus.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: sonstigen Verwandten oder Verschwägerten (zum Beispiel Großeltern, Geschwister über 25 Jahre, verheiratete Kinder, Tanten oder Onkel)
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Prüfung eines Mehrbedarfs
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Die Angaben sind freiwillig und nur erforderlich, wenn Sie einen Mehrbedarf beantragen möchten.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich bin alleinerziehend.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich bin schwanger.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bitte legen Sie einen Nachweis vor, aus dem der voraussichtliche Entbindungstermin hervorgeht.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich erzeuge mein Warmwasser dezentral (z. B. Boiler, Durchlauferhitzer) und habe deshalb einen Mehrbedarf.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich benötige aus medizinischen Gründen eine kostenaufwändige Ernährung.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bitte füllen Sie die Anlage MEB aus.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich habe eine Behinderung und erhalte: Leistungen zur Teilhabe am Arbeitsleben nach § 49 Neuntes Buch Sozialgesetzbuch (SGB IX) oder sonstige Hilfen zur Erlangung eines geeigneten Arbeitsplatzes oder Eingliederungshilfen nach § 112 SGB IX.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bitte legen Sie einen aktuellen Bescheid vor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Ich bin nicht erwerbsfähig 9 und Inhaberin/Inhaber eines Ausweises nach § 152 Abs. 5 SGB IX mit dem Merkzeichen G oder aG.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bitte legen Sie einen aktuellen Nachweis (z. B. Schwerbehindertenausweis) vor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Ich und/oder ein anderes Mitglied der Bedarfsgemeinschaft hat Einkommen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Zur Prüfung der Einkommensverhältnisse muss jedes Mitglied der Bedarfsgemeinschaft ab dem vollendeten 15. Lebensjahr bei vorhandenem Einkommen die Anlage EK ausfüllen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Vermögen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Meine Bedarfsgemeinschaft verfügt über erhebliches Vermögen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Sollte bei Ihnen erhebliches Vermögen vorliegen, füllen Sie bitte die Anlage VM aus.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bitte legen Sie den Bescheid/die Bescheide vor, sofern über den Antrag/die Anträge schon entschieden wurde.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich habe (mögliche) Ansprüche auf andere (Sozial-)Leistungen (z. B. Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld).
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Vorrangige Leistungen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Wie wir morgen leben, entscheidet sich hier und jetzt.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Wir sehen gerade.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'leistet', '.']
+Candidate: solidarische Gesellschaft
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: gut funktionierender Staat
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: öffentliche Investitionen in Infrastruktur
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wissenschaft und Forschung
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: kraftvolle Wirtschaft
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'leistet', '.']
+Candidate: starkes, souveränes Europa
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: zukunftsfähige Arbeitsplätze
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: der Kampf gegen den Klimawandel
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: lebenswerte Zukunft
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Gesellschaft des Respekts 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: souveränes Europa in der Welt
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Das ist unser Angebot, das Zukunftsprogramm.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Olaf Scholz wird mit einer Zukunftsregierung unser Land nach vorne bringen. Mit einer Regierung, die sich etwas vornimmt.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir überschreiten gerade die Schwelle zu einer neuen Zeit – nicht nur wegen der Erfahrungen und Folgen der Pandemie.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Pandemie
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Mit dem dringend notwendigen Klimaschutz verändert sich unsere Energieversorgung, wie wir produzieren und konsumieren. 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Unsere Kinder und Enkel sollen noch eine Welt haben, in der sie leben können
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bundestag
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Nicht irgendwie, sondern gesund, in Wohlstand und Frieden. 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Darum wollen wir, dass Deutschland der erfolgreiche Wirtschaftsstandort mit guten Arbeitsplätzen bleibt. 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Dafür werden wir in Wissenschaft, Forschung und die Entwicklung modernster Technologien investieren und Produkte anbieten, die überall auf der Welt gebraucht werden 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir wollen uns der Digitalisierung nicht unterwerfen, sondern sie nutzen, damit sie das Leben besser und leichter macht.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Und wir brauchen ein Gesundheitssystem, das beste medizinische Versorgung für alle bietet.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Dafür werden wir Geld in die Hand nehmen, kräftig investieren.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate:  Aber nicht die Bürger*innen mit normalen und kleinen Einkommen sollen das  bezahlen. Sie leisten längst genug, daher wollen wir für die große Mehrheit die Steuern senken.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate:  Wer ein sehr hohes Einkommen hat, kann aber mehr leisten.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Das gilt auch für globale Digitalkonzerne, die sehr viel Geld verdienen, oft aber kaum Steuern zahlen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir denken die großen Aufgaben zusammen – nur so entsteht das ganze Bild. Es sind die Zukunftsmissionen von Olaf Scholz, unserem Kanzlerkandidaten.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Mobilität
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Schnell und zuverlässig von A nach B kommen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir fördern die Entwicklung und Produktion von E-Autos und wollen mindestens 15 Millionen in diesem Jahrzehnt in Deutschland auf die Straße bringen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Mit einem Mobilitätsplan 2030 wollen wir vor allem dem öffentlichen Nahverkehr und dem Schienenverkehr einen kräftigen Schub geben.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bahnfahren durch ganz Europa soll zukünftig günstiger und attraktiver als Fliegen sein 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir sorgen dafür, dass bis zum Jahr 2040 unser Strom vollständig aus erneuerbaren Energien, vor allem Wind und Sonne, kommt.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bis spätestens 2045 soll Deutschland klimaneutral sein.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Dafür machen wir Tempo beim Ausbau der Erneuerbaren Energien und der Stromnetze
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Wir brauchen neue Stromspeicher und eine nachhaltige Wasserstoffproduktion.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Der Ausbau von Erneuerbaren Energien bringt auch neue, gut bezahlte Arbeitsplätze
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Digitale Souveränität in Deutschland und Europa
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Eine digitale Infrastruktur für Deutschland auf Weltniveau – bis 2030. Das ist unser Anspruch.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Eine Verwaltung, die den Bürgerinnen und Bürgern einfachen, digitalen Zugang zu ihren Leistungen ermöglich
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: digital erstklassig ausgestattete Schulen;
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: schneller, sicherer und bezahlbarer Internetzugang für alle: die „Gigabit-Gesellschaft“
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: wir beenden die Zweiklassenmedizin durch die Einführung einer solidarischen Bürgerversicherung, in der alle gleich gut behandelt werden.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir wollen höhere Löhne für Pflegekräfte.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir werden den Eigenanteil für Pflegebedürftige mit kleinen und mittleren Einkommen deckeln
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir wollen Familien besser unterstützen. Durch eine Kindergrundsicherung, die aus Geld und besseren Bildungs- und Freizeitangeboten für alle Kinder besteht
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir führen freie Fahrt für Kinder in Bussen und Bahnen im Nahverkehr ein.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Arbeit darf ihren Wert im Alter nicht verlieren. Wer gearbeitet hat, soll auch im Alter den gewohnten Lebensstandard halten können.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Eine Anhebung des gesetzlichen Rentenalters wird es mit uns nicht geben.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Respekt drückt sich auch in einer Gesellschaft aus, die inklusiv und solidarisch ist, die individuelle Lebenslagen anerkennt und es allen möglich macht, am gesellschaftlichen Leben teilzunehmen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: gerechte Löhne
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: gerechte Mieten
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: sichere Rente
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: gute Pflege
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Diskriminieren
+Prediction: ['Sie', '[unused1665]', 'in', '[unused1665]', 'leistet', '.']
+Candidate: Arbeit ist für viele Bürgerinnen und Bürger identitätsstiftend.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Jede Arbeit muss ordentlich entlohnt werden.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Für jede Arbeit muss man einen gerechten Lohn bekommen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'leistet', '.']
+Candidate: Wir werden die Garantie auf einen Ausbildungsplatz und das Recht auf Weiterbildung und einen beruflichen Neustart schaffen. 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wohnen ist Menschenrecht
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir schaffen mehr Wohnraum durch den Bau von jährlich 400.000 Wohnungen, davon sind 100.000 öffentlich gefördert. Diese Wohnungen sollen von jedem bezahlbar sein
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Der Anstieg der Mieten wird gebremst, indem Mieten in angespannten Wohnlagen zeitlich befristet nur in der Höhe der Inflationsrate steigen dürfen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir stehen für eine offene und gerechte Gesellschaft, in der alle gleiche Chancen haben – frei von Diskriminierung, unabhängig von Herkunft, Geschlecht, Religion, Behinderung oder von sexueller Orientierung
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir werden dafür sorgen, dass in Führungspositionen genauso viele Frauen wie Männer arbeiten
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wir werden dafür sorgen, dass Vereine, Projekte und Initiativen, die sich gegen Rassismus und Rechtsextremismus einsetzen, dauerhaft gefördert werden, statt immer wieder neu Fördergelder beantragen zu müssen. 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Dialog
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Vieles, was in Europa richtig ist, gilt auch darüber hinaus: gemeinsam große Aufgaben annehmen und lösen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich bin gerade dabei, mir einen Kaffee zu machen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Wir haben beschlossen, morgen in die Stadt zu gehen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Er hat sich entschieden, nicht mit uns zu kommen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Sie ist die beste Freundin, die ich je hatte.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Er ist sehr nett, aber ich kann ihn nicht ausstehen.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ich verstehe nicht, warum du so wütend bist.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Ich bin gerne hier. Es ist schön, die Natur zu sehen und die frische Luft einzuatmen. Ich fühle mich frei und entspannt.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Er betätigte sich auch auf dem Gebiet der Theologie und trat mit einem unkonventionellen theologischen Konzept hervor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Nach dem Tod seiner ersten Frau heiratete er im Jahre 1856 die Schriftstellerin und Journalistin Ernestine von le Fort. Aus dieser Ehe gingen zwei Söhne hervor.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: 1864 zog er mit seiner Familie nach Berlin, wo er bis zu seinem Tod wohnte.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', '[unused1665]', '.']
+Candidate: Dort arbeitete er als Journalist und Herausgeber verschiedener Zeitschriften, unter anderem der „Gartenlaube“.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Ernst Theodor Amadeus Hoffmann starb am 25. Juni 1822 in Berlin an einem Schlaganfall.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Als Steuer (früher auch Taxe) wird eine Geldleistung ohne Anspruch auf individuelle Gegenleistung bezeichnet, die von einer öffentlichen oder privaten Institution erhoben wird.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Die Steuer ist eine Abgabe, die vom Staat zur Finanzierung seiner Aufgaben erhoben wird. Die Steuerpflichtigen sind verpflichtet, die Steuer zu entrichten.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Steuern werden in Deutschland aufgrund des Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UStG) sowie weiterer steuerrechtlicher Vorschriften erhoben. 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Nach dem Steuerrecht in Deutschland ist eine Steuer eine Abgabe, die von Inländern oder ausländischen Personen erhoben wird. Sie dient der Erzielung von Einnahmen zur Finanzierung öffentlicher Aufgaben.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Steuern werden im allgemeinen Sprachgebrauch auch als „Abgaben“ bezeichnet.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Der Name des Sterns ist auch in der Astronomie, wie in der Umgangssprache, einfach Sonne, üblicherweise mit dem bestimmten Artikel, im Englischen Sun (korrekterweise mit großem Anfangsbuchstaben, da es sich um einen Eigennamen handelt).
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Die Sonne übertrifft 700-fach die Gesamtmasse aller acht Planeten des Sonnensystems und 330.000-fach jene der Erde, die im Durchmesser 109-mal hineinpasst, im Volumen rund 1,3 Millionen Mal. Mit einer Energieabstrahlung, die pro Sekunde das 20.000-Fache der Primärenergieumwandlung seit Beginn der Industrialisierung ausmacht, fällt sie in die Leuchtkraftklasse V.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+7.668081124696816e-233
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_EP50_r2e-5
+Testing ./BSLM_HPC_General_EP50_r2e-5
+Candidate: Anrede
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Vorname
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Nachname
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Geburtsname (sofern abweichend)
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Geburtsort
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Geburtsdatum
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Geburtsland
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Staatsangehörigkeit
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Rentenversicherungsnummer
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Rentenversicherungsnummer ist noch nicht vorhanden und wurde beantragt
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Straße
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Hausnummer
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: ggf. wohnhaft bei
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Postleitzahl
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wohnort
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Die Angaben zur Telefonnummer und zur E-Mail-Adresse sind freiwillig.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Telefonnummer
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: E-Mail-Adresse
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ihr Familienstand
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Mein Familienstand:
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: ledig
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: verheiratet
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: geschieden seit
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: verwitwet
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Meine Bankverbindung
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Leistungen nach dem SGB II werden in der Regel auf ein Konto überwiesen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Kontoinhaberin/Kontoinhaber
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bank
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: IBAN
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Die IBAN finden Sie in der Regel auf Ihrem Kontoauszug.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich habe für den Monat der Antragstellung bereits Leistungen bei einem anderen Jobcenter beantragt oder von diesem bezogen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Falls ja, legen Sie bitte entsprechende Nachweise vor oder geben Sie das andere Jobcenter an.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich fühle mich gesundheitlich in der Lage, eine Tätigkeit von mindestens drei Stunden täglich auszuüben.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin Berechtigte/Berechtigter nach dem Asylbewerberleistungsgesetz.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Legen Sie bitte entsprechende Nachweise (z. B. Aufenthaltserlaubnis, Aufenthaltsgestattung, Duldung, Bescheid des Bundesamtes für Migration und Flüchtlinge (BAMF)) vor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin Schülerin/Schüler, Studentin/Student oder Auszubildende/Auszubildender.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bitte legen Sie entsprechende Nachweise vor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Legen Sie bitte den Bescheid oder Ablehnungsbescheid für BAB oder BAföG vor, wenn vorhanden.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Während der Ausbildung bin ich in einem Wohnheim, Internat, einer besonderen Einrichtung für Menschen mit Behinderung oder beim Ausbilder mit voller Verpflegung oder anderweitig mit Kostenerstattung für Unterkunft und Verpflegung untergebracht.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt).
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Justizvollzugsanstalt
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Dauer der Unterbringung von – bis
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Art der stationären Einrichtung
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt). Bitte legen Sie entsprechende Nachweise vor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Leben Sie allein, sind unter 2. keine weiteren Angaben erforderlich. Bitte weiter bei Abschnitt 3.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Meine Wohnsituation
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Hier sind Mehrfachnennungen möglich.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Da Sie die Leistungen beantragen, wird davon ausgegangen, dass Sie auch die Vertretung Ihrer Bedarfsgemeinschaft übernommen haben. Dies gilt nicht, wenn über 15-jährige Mitglieder Ihrer Bedarfsgemeinschaft gegenüber dem Jobcenter erklären, dass sie ihre Interessen selbst wahrnehmen wollen, z. B. durch eine eigene Antragstellung (§ 38 SGB II). Zu den nicht vertretenen Personen sind hier keine Angaben erforderlich.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: meiner Ehegattin/meinem Ehegatten
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: meiner eingetragenen Lebenspartnerin/meinem eingetragenen Lebenspartner
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: meiner Partnerin/meinem Partner in einer Verantwortungs- und Einstehensgemeinschaft („eheähnliche Gemeinschaft“)
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: unverheirateten Kind(ern) zwischen 15 Jahren und 24 Jahren
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: meinen Eltern bzw. einem Elternteil. Sind Sie als Antragstellerin bzw. als Antragsteller unter 25 Jahre alt, füllen Sie bitte für Ihre Eltern jeweils eine Anlage WEP aus.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: sonstigen Verwandten oder Verschwägerten (zum Beispiel Großeltern, Geschwister über 25 Jahre, verheiratete Kinder, Tanten oder Onkel)
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Prüfung eines Mehrbedarfs
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Die Angaben sind freiwillig und nur erforderlich, wenn Sie einen Mehrbedarf beantragen möchten.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin alleinerziehend.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin schwanger.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bitte legen Sie einen Nachweis vor, aus dem der voraussichtliche Entbindungstermin hervorgeht.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich erzeuge mein Warmwasser dezentral (z. B. Boiler, Durchlauferhitzer) und habe deshalb einen Mehrbedarf.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich benötige aus medizinischen Gründen eine kostenaufwändige Ernährung.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bitte füllen Sie die Anlage MEB aus.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich habe eine Behinderung und erhalte: Leistungen zur Teilhabe am Arbeitsleben nach § 49 Neuntes Buch Sozialgesetzbuch (SGB IX) oder sonstige Hilfen zur Erlangung eines geeigneten Arbeitsplatzes oder Eingliederungshilfen nach § 112 SGB IX.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bitte legen Sie einen aktuellen Bescheid vor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin nicht erwerbsfähig 9 und Inhaberin/Inhaber eines Ausweises nach § 152 Abs. 5 SGB IX mit dem Merkzeichen G oder aG.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bitte legen Sie einen aktuellen Nachweis (z. B. Schwerbehindertenausweis) vor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich und/oder ein anderes Mitglied der Bedarfsgemeinschaft hat Einkommen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Zur Prüfung der Einkommensverhältnisse muss jedes Mitglied der Bedarfsgemeinschaft ab dem vollendeten 15. Lebensjahr bei vorhandenem Einkommen die Anlage EK ausfüllen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Vermögen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Meine Bedarfsgemeinschaft verfügt über erhebliches Vermögen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Sollte bei Ihnen erhebliches Vermögen vorliegen, füllen Sie bitte die Anlage VM aus.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bitte legen Sie den Bescheid/die Bescheide vor, sofern über den Antrag/die Anträge schon entschieden wurde.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich habe (mögliche) Ansprüche auf andere (Sozial-)Leistungen (z. B. Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld).
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Vorrangige Leistungen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wie wir morgen leben, entscheidet sich hier und jetzt.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir sehen gerade.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: solidarische Gesellschaft
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: gut funktionierender Staat
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: öffentliche Investitionen in Infrastruktur
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wissenschaft und Forschung
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: kraftvolle Wirtschaft
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: starkes, souveränes Europa
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: zukunftsfähige Arbeitsplätze
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: der Kampf gegen den Klimawandel
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: lebenswerte Zukunft
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Gesellschaft des Respekts 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: souveränes Europa in der Welt
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Das ist unser Angebot, das Zukunftsprogramm.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Olaf Scholz wird mit einer Zukunftsregierung unser Land nach vorne bringen. Mit einer Regierung, die sich etwas vornimmt.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir überschreiten gerade die Schwelle zu einer neuen Zeit – nicht nur wegen der Erfahrungen und Folgen der Pandemie.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Pandemie
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Mit dem dringend notwendigen Klimaschutz verändert sich unsere Energieversorgung, wie wir produzieren und konsumieren. 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Unsere Kinder und Enkel sollen noch eine Welt haben, in der sie leben können
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bundestag
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Nicht irgendwie, sondern gesund, in Wohlstand und Frieden. 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Darum wollen wir, dass Deutschland der erfolgreiche Wirtschaftsstandort mit guten Arbeitsplätzen bleibt. 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Dafür werden wir in Wissenschaft, Forschung und die Entwicklung modernster Technologien investieren und Produkte anbieten, die überall auf der Welt gebraucht werden 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir wollen uns der Digitalisierung nicht unterwerfen, sondern sie nutzen, damit sie das Leben besser und leichter macht.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Und wir brauchen ein Gesundheitssystem, das beste medizinische Versorgung für alle bietet.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Dafür werden wir Geld in die Hand nehmen, kräftig investieren.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate:  Aber nicht die Bürger*innen mit normalen und kleinen Einkommen sollen das  bezahlen. Sie leisten längst genug, daher wollen wir für die große Mehrheit die Steuern senken.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate:  Wer ein sehr hohes Einkommen hat, kann aber mehr leisten.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Das gilt auch für globale Digitalkonzerne, die sehr viel Geld verdienen, oft aber kaum Steuern zahlen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir denken die großen Aufgaben zusammen – nur so entsteht das ganze Bild. Es sind die Zukunftsmissionen von Olaf Scholz, unserem Kanzlerkandidaten.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Mobilität
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Schnell und zuverlässig von A nach B kommen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir fördern die Entwicklung und Produktion von E-Autos und wollen mindestens 15 Millionen in diesem Jahrzehnt in Deutschland auf die Straße bringen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Mit einem Mobilitätsplan 2030 wollen wir vor allem dem öffentlichen Nahverkehr und dem Schienenverkehr einen kräftigen Schub geben.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bahnfahren durch ganz Europa soll zukünftig günstiger und attraktiver als Fliegen sein 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir sorgen dafür, dass bis zum Jahr 2040 unser Strom vollständig aus erneuerbaren Energien, vor allem Wind und Sonne, kommt.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bis spätestens 2045 soll Deutschland klimaneutral sein.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Dafür machen wir Tempo beim Ausbau der Erneuerbaren Energien und der Stromnetze
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir brauchen neue Stromspeicher und eine nachhaltige Wasserstoffproduktion.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Der Ausbau von Erneuerbaren Energien bringt auch neue, gut bezahlte Arbeitsplätze
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Digitale Souveränität in Deutschland und Europa
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Eine digitale Infrastruktur für Deutschland auf Weltniveau – bis 2030. Das ist unser Anspruch.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Eine Verwaltung, die den Bürgerinnen und Bürgern einfachen, digitalen Zugang zu ihren Leistungen ermöglich
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: digital erstklassig ausgestattete Schulen;
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: schneller, sicherer und bezahlbarer Internetzugang für alle: die „Gigabit-Gesellschaft“
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: wir beenden die Zweiklassenmedizin durch die Einführung einer solidarischen Bürgerversicherung, in der alle gleich gut behandelt werden.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir wollen höhere Löhne für Pflegekräfte.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir werden den Eigenanteil für Pflegebedürftige mit kleinen und mittleren Einkommen deckeln
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir wollen Familien besser unterstützen. Durch eine Kindergrundsicherung, die aus Geld und besseren Bildungs- und Freizeitangeboten für alle Kinder besteht
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir führen freie Fahrt für Kinder in Bussen und Bahnen im Nahverkehr ein.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Arbeit darf ihren Wert im Alter nicht verlieren. Wer gearbeitet hat, soll auch im Alter den gewohnten Lebensstandard halten können.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Eine Anhebung des gesetzlichen Rentenalters wird es mit uns nicht geben.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Respekt drückt sich auch in einer Gesellschaft aus, die inklusiv und solidarisch ist, die individuelle Lebenslagen anerkennt und es allen möglich macht, am gesellschaftlichen Leben teilzunehmen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: gerechte Löhne
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: gerechte Mieten
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: sichere Rente
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: gute Pflege
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Diskriminieren
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Arbeit ist für viele Bürgerinnen und Bürger identitätsstiftend.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Jede Arbeit muss ordentlich entlohnt werden.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Für jede Arbeit muss man einen gerechten Lohn bekommen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir werden die Garantie auf einen Ausbildungsplatz und das Recht auf Weiterbildung und einen beruflichen Neustart schaffen. 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wohnen ist Menschenrecht
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir schaffen mehr Wohnraum durch den Bau von jährlich 400.000 Wohnungen, davon sind 100.000 öffentlich gefördert. Diese Wohnungen sollen von jedem bezahlbar sein
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Der Anstieg der Mieten wird gebremst, indem Mieten in angespannten Wohnlagen zeitlich befristet nur in der Höhe der Inflationsrate steigen dürfen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir stehen für eine offene und gerechte Gesellschaft, in der alle gleiche Chancen haben – frei von Diskriminierung, unabhängig von Herkunft, Geschlecht, Religion, Behinderung oder von sexueller Orientierung
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir werden dafür sorgen, dass in Führungspositionen genauso viele Frauen wie Männer arbeiten
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir werden dafür sorgen, dass Vereine, Projekte und Initiativen, die sich gegen Rassismus und Rechtsextremismus einsetzen, dauerhaft gefördert werden, statt immer wieder neu Fördergelder beantragen zu müssen. 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Dialog
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Vieles, was in Europa richtig ist, gilt auch darüber hinaus: gemeinsam große Aufgaben annehmen und lösen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin gerade dabei, mir einen Kaffee zu machen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wir haben beschlossen, morgen in die Stadt zu gehen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Er hat sich entschieden, nicht mit uns zu kommen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Sie ist die beste Freundin, die ich je hatte.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Er ist sehr nett, aber ich kann ihn nicht ausstehen.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich verstehe nicht, warum du so wütend bist.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ich bin gerne hier. Es ist schön, die Natur zu sehen und die frische Luft einzuatmen. Ich fühle mich frei und entspannt.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Er betätigte sich auch auf dem Gebiet der Theologie und trat mit einem unkonventionellen theologischen Konzept hervor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Nach dem Tod seiner ersten Frau heiratete er im Jahre 1856 die Schriftstellerin und Journalistin Ernestine von le Fort. Aus dieser Ehe gingen zwei Söhne hervor.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: 1864 zog er mit seiner Familie nach Berlin, wo er bis zu seinem Tod wohnte.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Dort arbeitete er als Journalist und Herausgeber verschiedener Zeitschriften, unter anderem der „Gartenlaube“.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Ernst Theodor Amadeus Hoffmann starb am 25. Juni 1822 in Berlin an einem Schlaganfall.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Als Steuer (früher auch Taxe) wird eine Geldleistung ohne Anspruch auf individuelle Gegenleistung bezeichnet, die von einer öffentlichen oder privaten Institution erhoben wird.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Die Steuer ist eine Abgabe, die vom Staat zur Finanzierung seiner Aufgaben erhoben wird. Die Steuerpflichtigen sind verpflichtet, die Steuer zu entrichten.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Steuern werden in Deutschland aufgrund des Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UStG) sowie weiterer steuerrechtlicher Vorschriften erhoben. 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Nach dem Steuerrecht in Deutschland ist eine Steuer eine Abgabe, die von Inländern oder ausländischen Personen erhoben wird. Sie dient der Erzielung von Einnahmen zur Finanzierung öffentlicher Aufgaben.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Steuern werden im allgemeinen Sprachgebrauch auch als „Abgaben“ bezeichnet.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Der Name des Sterns ist auch in der Astronomie, wie in der Umgangssprache, einfach Sonne, üblicherweise mit dem bestimmten Artikel, im Englischen Sun (korrekterweise mit großem Anfangsbuchstaben, da es sich um einen Eigennamen handelt).
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Die Sonne übertrifft 700-fach die Gesamtmasse aller acht Planeten des Sonnensystems und 330.000-fach jene der Erde, die im Durchmesser 109-mal hineinpasst, im Volumen rund 1,3 Millionen Mal. Mit einer Energieabstrahlung, die pro Sekunde das 20.000-Fache der Primärenergieumwandlung seit Beginn der Industrialisierung ausmacht, fällt sie in die Leuchtkraftklasse V.
+Prediction: ['Jeder', 'Mensch', '.']
+5.7077299118106354e-158
+_____________________________________________________________________________
+We must have simmilar 2 BLEU-scores
+We have 2 checkpoints
+Printing score of Checkpoint: ./BLM_HPC_lr2e-5_Bahdanau_50EP
+Testing ./BLM_HPC_lr2e-5_Bahdanau_50EP
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Sie', 'seiner', '[unused1665]', 'anderen', 'Aufregung', '.']
+1.8126943795130283e-232
+_____________________________________________________________________________
+Printing score of Checkpoint: ./BSLM_HPC_General_EP50_r2e-5
+Testing ./BSLM_HPC_General_EP50_r2e-5
+Candidate: Falls bekannt, tragen Sie bitte hier Ihre Wohngeldnummer ein.
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Antragstellende Person 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Stellung in Beruf?
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Geben Sie bitte die Bankverbindung an, auf welche das Wohngeld überwiesen werden soll
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Anschrift der Wohnung, für die Wohngeld beantragt wird 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Bildet der Wohnraum, für den Wohngeld beantragt wird, für alle Personen, die den Wohnraum bewohnen den Mittelpunkt der Lebensbeziehungen?
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Mittelpunkt der Lebens-Beziehungen
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Wie hoch ist die monatliche Miete/das Nutzungsentgelt für Ihren Wohnraum einschließlich Betriebskosten? 
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Erhalten Sie oder eine zum Haushalt rechnende Person Wohngeld oder andere private oder öffentliche Zuschüsse zur Bezahlung der Miete (z.B. von Verwandten, vom Arbeitgeber) für diese oder eine andere Wohnung?
+Prediction: ['Jeder', 'Mensch', '.']
+Candidate: Werden sich die Einnahmen der zum Haushalt rechnenden Personen in den nächsten 12 Monaten verringern oder erhöhen? 
+Prediction: ['Jeder', 'Mensch', '.']
+1.0352266068948086e-233
+_____________________________________________________________________________
+We must have simmilar 2 BLEU-scores

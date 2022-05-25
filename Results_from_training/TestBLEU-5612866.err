@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "bleu_test.py", line 49, in <module>
+    translator = SimpleLanguageTranslator(path_to_checkpoint, path_to_tokenizer, ModelType.bahdanau, corpus_list)
+NameError: name 'path_to_checkpoint' is not defined

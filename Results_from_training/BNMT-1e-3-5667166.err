@@ -1,0 +1,19 @@
+2022-05-23 10:09:45.540729: E tensorflow/stream_executor/cuda/cuda_driver.cc:271] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2022-05-23 10:09:45.540786: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: gpu014
+2022-05-23 10:09:45.540795: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: gpu014
+2022-05-23 10:09:45.540903: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 510.47.3
+2022-05-23 10:09:45.540928: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 470.82.1
+2022-05-23 10:09:45.540937: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:313] kernel version 470.82.1 does not match DSO version 510.47.3 -- cannot find working devices in this configuration
+2022-05-23 10:09:45.545392: I tensorflow/core/platform/cpu_feature_guard.cc:152] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE3 SSE4.1 SSE4.2 AVX
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some layers from the model checkpoint at ./bert-base-german-cased were not used when initializing TFBertModel: ['nsp___cls', 'mlm___cls']
+- This IS expected if you are initializing TFBertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFBertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+All the layers of TFBertModel were initialized from the model checkpoint at ./bert-base-german-cased.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertModel for predictions without further training.
+Traceback (most recent call last):
+  File "nmt_model_test.py", line 214, in <module>
+    losses = model.train_step(dataset, epochs=1)
+  File "/home/hstr_bachvarv/EinfacheSprache/NLP_Test/simple_language/transformer_data/NMTModel.py", line 83, in train_step
+    losses = [s]
+NameError: name 's' is not defined

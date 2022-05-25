@@ -1,0 +1,131 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+Initializing from scratch!
+(1, 128)
+tf.Tensor(
+[[ 7044 19265  7035 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265 19265
+  19265 19265 19265 19265 19265 19265 19265 19265]], shape=(1, 128), dtype=int64)
+tf.Tensor([1], shape=(1,), dtype=int64)
+[ u n u s e d 3 0 0 1 ]
+Model: "nmt_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ tf_bert_model (TFBertModel)  multiple                 109081344 
+                                                                 
+ embedding (Embedding)       multiple                  0 (unused)
+                                                                 
+ nmt_encoder_layer (NMTEncod  multiple                 6300928   
+ erLayer)                                                        
+                                                                 
+ nmt_encoder_layer_1 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_2 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_3 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_4 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_5 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_6 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_7 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_8 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_9 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_10 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ nmt_encoder_layer_11 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ embedding_1 (Embedding)     multiple                  23040000  
+                                                                 
+ nmt_decoder_layer (NMTDecod  multiple                 8666368   
+ erLayer)                                                        
+                                                                 
+ nmt_decoder_layer_1 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_2 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_3 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_4 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_5 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_6 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_7 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_8 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_9 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_10 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ nmt_decoder_layer_11 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ dense_288 (Dense)           multiple                  23070000  
+                                                                 
+ softmax (Softmax)           multiple                  0         
+                                                                 
+=================================================================
+Total params: 334,798,896
+Trainable params: 334,798,896
+Non-trainable params: 0
+_________________________________________________________________
+(1, 128)
+tf.Tensor([0], shape=(1,), dtype=int64)
+[ P A D ]

@@ -1,0 +1,2139 @@
+
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.03-tf2 (build 33659467)
+TensorFlow Version 2.8.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: CUDA Forward Compatibility mode ENABLED.
+  Using CUDA 11.6 driver version 510.47.03 with kernel driver version 470.82.01.
+  See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.
+
+Anrede	Herr oder Frau.
+
+Vorname	Vorname.
+
+Nachname	Familienname.
+
+Geburtsname (sofern abweichend)	Wenn sich Ihr Name geändert hat: Dann schreiben Sie auch Ihren Geburtsnamen dazu.
+
+Geburtsort	In welchem Land sind Sie geboren?
+
+Geburtsdatum	Wann sind Sie geboren?
+
+Geburtsland	In welchem Land sind Sie geboren?
+
+Staatsangehörigkeit	Staatsangehörigkeit (Von welchem Land haben Sie einen Pass?)
+
+Rentenversicherungsnummer	Nummer von der Rentenversicherung.
+
+Rentenversicherungsnummer ist noch nicht vorhanden und wurde beantragt	Wenn Sie noch keine Nummer von der Rentenversicherung haben: Haben Sie beim Amt eine Nummer beantragt?
+
+Straße	Straße.
+
+Hausnummer	Nummer des Hauses.
+
+ggf. wohnhaft bei	Wohnen Sie bei einer anderen Person in der Wohnung? Wenn ja, wie heißt diese Person?
+
+Postleitzahl	Postleitzahl (die Nummer vor der Stadt. Sie besteht aus fünf Zahlen).
+
+Wohnort	Stadt oder Dorf, wo man wohnt.
+
+Die Angaben zur Telefonnummer und zur E-Mail-Adresse sind freiwillig.	Sie können Ihre Telefonnummer und Ihre E-Mail-Adresse aufschreiben. Sie müssen das aber nicht tun.
+
+Telefonnummer	Die Nummer Ihres Telefons.
+
+E-Mail-Adresse	Die Adresse von Ihrer E-Mail.
+
+Ihr Familienstand	Ihre aktuelle Familiensituation.
+
+Mein Familienstand:	In was für eine Beziehung sind Sie im Moment.
+
+ledig	Sie sind nicht verheiratet und waren auch noch nie verheiratet.
+
+verheiratet	Sie haben eine Frau geheiratet.
+
+geschieden seit	Sie habe sich von ihrer Frau getrennt und sind geschieden.
+
+verwitwet	Ihr Partner/Ihre Partnerin ist gestorben.
+
+Meine Bankverbindung	Informationen zu Ihrem Bankkonto.
+
+Leistungen nach dem SGB II werden in der Regel auf ein Konto überwiesen.	"Das Jobcenter überweist Ihnen das ""Hartz IV""-Geld normalerweise auf ein Konto."
+
+Kontoinhaberin/Kontoinhaber	Wem gehört das Konto?
+
+Bank	Bank.
+
+IBAN	IBAN (Die Nummer finden Sie auf Ihrer EC-Karte.).
+
+Die IBAN finden Sie in der Regel auf Ihrem Kontoauszug.	Die IBAN-Nummer finden Sie auch auf Ihren Kontoinformationen.
+
+Ich habe für den Monat der Antragstellung bereits Leistungen bei einem anderen Jobcenter beantragt oder von diesem bezogen.	Sie stellen diesen Antrag in einem Monat. Haben Sie für denselben Monat schon bei einem anderen Jobcenter einen Antrag gestellt? Oder haben Sie von einem anderen Jobcenter in diesem Monat finanzielle Hilfen bekommen?
+
+Falls ja, legen Sie bitte entsprechende Nachweise vor oder geben Sie das andere Jobcenter an.	Wenn ja: Legen Sie bitte das Papier vom Jobcenter dazu, wo steht, dass Sie finanzielle Hilfen bekommen.
+
+Ich fühle mich gesundheitlich in der Lage, eine Tätigkeit von mindestens drei Stunden täglich auszuüben.	Sie denken, dass Sie so gesund sind, dass Sie mindestens drei Stunden jeden Tag arbeiten können.
+
+Ich bin Berechtigte/Berechtigter nach dem Asylbewerberleistungsgesetz.	Sie haben ein Recht auf finanzielle Hilfen nach dem Asylbewerberleistungsgesetz.
+
+Legen Sie bitte entsprechende Nachweise (z. B. Aufenthaltserlaubnis, Aufenthaltsgestattung, Duldung, Bescheid des Bundesamtes für Migration und Flüchtlinge (BAMF)) vor.	"Legen Sie das Papier vom Amt dazu. Zum Beispiel: ""Aufenthaltserlaubnis"", ""Aufenthaltsgestattung"", ""Duldung"", ""Bescheid"" vom Bundesamt für Migration und Flüchtlinge."
+
+Ich bin Schülerin/Schüler, Studentin/Student oder Auszubildende/Auszubildender.	Sie sind Schülerin/Schüler, oder Studentin/Student, der Auszubildende/Auszubildender.
+
+Bitte legen Sie entsprechende Nachweise vor.	Legen Sie bitte ein Papier, wo steht, dass stimmt, was Sie schreiben.
+
+Legen Sie bitte den Bescheid oder Ablehnungsbescheid für BAB oder BAföG vor, wenn vorhanden.	Legen Sie bitte ein Papier von dem BAföG-Amt dazu, wo steht, dass Sie einen Antrag gestellt haben. Wenn das BAföG-Amt bereits über Ihren Antrag entschieden hat: Dann legen Sie bitte den Brief dazu, wo steht, dass das BAföG-Amt Ihren Antrag angenommen oder abgelehnt hat.
+
+Während der Ausbildung bin ich in einem Wohnheim, Internat, einer besonderen Einrichtung für Menschen mit Behinderung oder beim Ausbilder mit voller Verpflegung oder anderweitig mit Kostenerstattung für Unterkunft und Verpflegung untergebracht.	Als Sie Ihre Ausbildung gemacht haben, haben Sie in einem Wohnheim, in einem Internat oder bei einem Ausbilder oder an einem anderen Ort gelebt. Sie mussten dort nichts für das Wohnen und das Essen bezahlen.
+
+Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt).	Sie leben jetzt oder bald in einer stationären Einrichtung: zum Beispiel in einem Hospital, in einem Altenheim, in einem Gefängnis.
+
+Justizvollzugsanstalt	Gefängnis.
+
+Dauer der Unterbringung von – bis	Sie werden dort von - bis leben.
+
+Art der stationären Einrichtung	Art der Einrichtung.
+
+Ich befinde mich derzeit oder demnächst in einer stationären Einrichtung (z. B. Krankenhaus, Altenheim, Justizvollzugsanstalt). Bitte legen Sie entsprechende Nachweise vor.	Sie leben jetzt oder bald in einer stationären Einrichtung: zum Beispiel in einem Hospital, in einem Altenheim, in einem Gefängnis. Wenn ja: Legen Sie bitte ein Papier dazu, wo steht: Wo Sie gelebt haben? Wie lange sie dort gelebt haben?
+
+Leben Sie allein, sind unter 2. keine weiteren Angaben erforderlich. Bitte weiter bei Abschnitt 3.	Wenn Sie allein leben, müssen Sie hier (Nummer 2) nichts mehr schreiben. Schreiben Sie bitte bei Nummer 3 weiter.
+
+Meine Wohnsituation	"Personen, mit denen Sie zusammenleben. Diese Personen sind Ihre Partnerin/Ihr Partner und/oder Verwandte von Ihnen (""Bedarfsgemeinschaft"")."
+
+Hier sind Mehrfachnennungen möglich.	Sie können auch zwei oder mehr Kreuze machen.
+
+Da Sie die Leistungen beantragen, wird davon ausgegangen, dass Sie auch die Vertretung Ihrer Bedarfsgemeinschaft übernommen haben. Dies gilt nicht, wenn über 15-jährige Mitglieder Ihrer Bedarfsgemeinschaft gegenüber dem Jobcenter erklären, dass sie ihre Interessen selbst wahrnehmen wollen, z. B. durch eine eigene Antragstellung (§ 38 SGB II). Zu den nicht vertretenen Personen sind hier keine Angaben erforderlich.	"Hier müssen Sie die Personen nennen, die zu Ihrer ""Bedarfsgemeinschaft"" gehören. Sie stellen den Antrag auf finanzielle Hilfe. Das Amt nimmt daher an, dass Sie auch für die anderen aus Ihrer ""Bedarfsgemeinschaft"" sprechen. Wenn eine Person aus Ihrer ""Bedarfsgemeinschaft"" älter als 15 Jahre ist, kann diese Person selbst einen Antrag stellen (nach dem Gesetz: § 38 SGB II). In diesem Fall brauchen Sie zu dieser Person hier keine Informationen geben."
+
+meiner Ehegattin/meinem Ehegatten	Sie leben zusammen mit Ihrer Ehefrau/Ihrem Ehemann. Sie leben nicht dauernd getrennt.
+
+meiner eingetragenen Lebenspartnerin/meinem eingetragenen Lebenspartner	Sie leben zusammen mit Ihrer eingetragenen gleichgeschlechtlichen Lebenspartnerin (eine Frau wie Sie)/Ihrem eingetragenen gleichgeschlechtlichen Lebenspartner (ein Mann wie Sie). Sie leben nicht dauernd getrennt.
+
+meiner Partnerin/meinem Partner in einer Verantwortungs- und Einstehensgemeinschaft („eheähnliche Gemeinschaft“)	"Sie leben mit Ihrer Partnerin/Ihrem Partner zusammen und sind nicht verheiratet. Sie leben aber zusammen wie ein Ehepaar (""eheähnliche Gemeinschaft"")."
+
+unverheirateten Kind(ern) zwischen 15 Jahren und 24 Jahren	Sie leben mit Ihrem Kind oder mit Ihren Kindern zusammen. Das Kind oder die Kinder ist/sind nicht verheiratet und jünger als 25 Jahre alt.
+
+meinen Eltern bzw. einem Elternteil. Sind Sie als Antragstellerin bzw. als Antragsteller unter 25 Jahre alt, füllen Sie bitte für Ihre Eltern jeweils eine Anlage WEP aus.	Sie sind jünger als 25 Jahre und leben mit Ihren Eltern oder nur mit Ihrer Mutter oder Ihrem Vater zusammen.
+
+sonstigen Verwandten oder Verschwägerten (zum Beispiel Großeltern, Geschwister über 25 Jahre, verheiratete Kinder, Tanten oder Onkel)	"In Ihrer Wohnung leben noch ... (Zahl) weitere Personen, die Sie nicht unter Nummer 2 genannt haben. Diese Personen gehören nicht zu Ihrer ""Bedarfgemeinschaft"". Wenn darunter Personen sind, die zu Ihrer weiteren Familie gehören (zum Beispiel Ihre Tante oder der Bruder Ihrer Frau), füllen Sie bitte das Formular Anlage HG aus."
+
+Prüfung eines Mehrbedarfs	Wenn Sie aus bestimmten Gründen mehr Geld brauchen: Hier können Sie weitere finanzielle Hilfen beantragen,
+
+Die Angaben sind freiwillig und nur erforderlich, wenn Sie einen Mehrbedarf beantragen möchten.	Sie müssen diese Informationen nur dann geben, wenn Sie das wollen und wenn Sie weitere finanzielle Hilfe haben möchten.
+
+Ich bin alleinerziehend.	Sie erziehen Ihr Kind/Ihre Kinder allein.
+
+Ich bin schwanger.	Sie sind schwanger.
+
+Bitte legen Sie einen Nachweis vor, aus dem der voraussichtliche Entbindungstermin hervorgeht.	Bitte legen Sie ein Papier vom Arzt dazu, wo steht, wann das Baby wahrscheinlich auf die Welt kommt.
+
+Ich erzeuge mein Warmwasser dezentral (z. B. Boiler, Durchlauferhitzer) und habe deshalb einen Mehrbedarf.	Ihr warmes Wasser wird in Ihrer Wohnung durch elektrischen Boiler oder mit Gas heiß gemacht.
+
+Ich benötige aus medizinischen Gründen eine kostenaufwändige Ernährung.	Sie sind krank und müssen deshalb besonderes Essen kaufen, das mehr kostet.
+
+Bitte füllen Sie die Anlage MEB aus.	Bitte füllen Sie das Formular Anlage MEB aus.
+
+Ich habe eine Behinderung und erhalte: Leistungen zur Teilhabe am Arbeitsleben nach § 49 Neuntes Buch Sozialgesetzbuch (SGB IX) oder sonstige Hilfen zur Erlangung eines geeigneten Arbeitsplatzes oder Eingliederungshilfen nach § 112 SGB IX.	Sie haben eine Behinderung und bekommen: finanzielle Hilfen, um arbeiten zu können (nach dem Gesetz: §349 Neuntes Buch Sozialgesetzbuch (SGB IX)) oder andere Hilfen, damit Sie eine Arbeit finden, oder finanzielle und andere Hilfen (nach dem Gesetz: § 54 Abs. 1 Satz 1 Nr. 1-3 SGB XII).
+
+Bitte legen Sie einen aktuellen Bescheid vor.	Bitte legen Sie ein Papier vom Amt dazu, wo steht, dass es richtig ist, was Sie schreiben.
+
+Ich bin nicht erwerbsfähig 9 und Inhaberin/Inhaber eines Ausweises nach § 152 Abs. 5 SGB IX mit dem Merkzeichen G oder aG.	Sie können nicht arbeiten, weil Sie eine schwere Behinderung haben. Sie haben einen Ausweis mit dem Merkzeichen G oder aG (nach dem Gesetz: § 152 Abs. 5 SGB IX). Das ist ein Ausweis für Schwerbehinderte.
+
+Bitte legen Sie einen aktuellen Nachweis (z. B. Schwerbehindertenausweis) vor.	Bitte legen Sie ein Papier dazu, wo steht, dass richtig ist, was Sie schreiben.
+
+Ich und/oder ein anderes Mitglied der Bedarfsgemeinschaft hat Einkommen.	"Einkommen (Was Sie und Ihre ""Bedarfsgemeinschaft"" (siehe Nummer 2) jeden Monat an Geld haben.)."
+
+Zur Prüfung der Einkommensverhältnisse muss jedes Mitglied der Bedarfsgemeinschaft ab dem vollendeten 15. Lebensjahr bei vorhandenem Einkommen die Anlage EK ausfüllen	"Wenn ja: Füllen Sie bitte für sich und für jede Person aus Ihrer ""Bedarfsgemeinschaft"", die 15 Jahre oder älter ist, das Formular Anlage EK aus."
+
+Vermögen	Geld, was Sie haben, oder andere Dinge, wie ein Auto, die Geld kosten.
+
+Meine Bedarfsgemeinschaft verfügt über erhebliches Vermögen.	Sie haben gespartes Geld oder andere wertvolle Dinge wie ein Auto.
+
+Sollte bei Ihnen erhebliches Vermögen vorliegen, füllen Sie bitte die Anlage VM aus.	"Füllen Sie bitte das Formular Anlage VM aus. Dort schreiben Sie für jede Person aus Ihrer ""Bedarfsgemeinschaft"", welches Vermögen diese Person hat."
+
+Bitte legen Sie den Bescheid/die Bescheide vor, sofern über den Antrag/die Anträge schon entschieden wurde.	Wenn Sie schon wissen, dass Sie finanzielle Hilfe bekommen: Legen Sie bitte das Papier vom Amt vor, wo steht, dass Sie finanzielle Hilfe bekommen.
+
+Ich habe (mögliche) Ansprüche auf andere (Sozial-)Leistungen (z. B. Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld).	Sie haben schon andere finanzielle Hilfen (zum Beispiel Kindergeld, Kinderzuschlag, Unterhaltsvorschuss, Arbeitslosengeld, Renten, Wohngeld, Ausbildungsförderung, Elterngeld, Mutterschaftsgeld nach dem Gesetz: Drittes Sozialgesetzbuch (SGB III)) beantragt. Oder Sie wollen das bald tun.
+
+Vorrangige Leistungen	Haben Sie ein Recht, finanzielle Hilfen von anderen Institutionen zu bekommen?
+
+Ich bin gerade dabei, mir einen Kaffee zu machen.	Ich mache mir einen Kaffe
+
+Wir haben beschlossen, morgen in die Stadt zu gehen.	Wir wollen morgen in die Stadt gehen.
+
+Er hat sich entschieden, nicht mit uns zu kommen.	Er wollte nicht kommen.
+
+Sie ist die beste Freundin, die ich je hatte.	Sie ist meine beste Freundin.
+
+Er ist sehr nett, aber ich kann ihn nicht ausstehen.	Er ist sehr nett, aber ich mag ihn nicht.
+
+Ich verstehe nicht, warum du so wütend bist.	Ich weiß nicht, warum du so verärgert bist
+
+Ich bin gerne hier. Es ist schön, die Natur zu sehen und die frische Luft einzuatmen. Ich fühle mich frei und entspannt.	Ich mag hier zu sein. Die Natur ist sehr schön und die Luft ist sehr frisch. Ich fühle keine Probleme hier. Ich fühle mich auch frei.
+
+Er betätigte sich auch auf dem Gebiet der Theologie und trat mit einem unkonventionellen theologischen Konzept hervor.	Er interessierte sich für Theologie und erstellte einen neuen geistlichen Konzept.
+
+Nach dem Tod seiner ersten Frau heiratete er im Jahre 1856 die Schriftstellerin und Journalistin Ernestine von le Fort. Aus dieser Ehe gingen zwei Söhne hervor.	Nach dem Tod seiner ersten Frau heiratete er die Schriftstellerin und Journalistin Ernestine von le Fort im Jahr 1856. Sie hatten zwei Söhne.
+
+1864 zog er mit seiner Familie nach Berlin, wo er bis zu seinem Tod wohnte.	Er wohnte seit 1864 mit seiner Familie in Berlin. Da ist er gestorben.
+
+Dort arbeitete er als Journalist und Herausgeber verschiedener Zeitschriften, unter anderem der „Gartenlaube“.	Er war ein Journalist und Editor für viele Zeitschriften. Er arbeitete für die Zeitschrift “Gartenlaube”
+
+Ernst Theodor Amadeus Hoffmann starb am 25. Juni 1822 in Berlin an einem Schlaganfall.	Ernst Theodor Amadeus Hoffmann wurde am 25. Juni 1822 in Berlin bis zum Tod geschlagen.
+
+Als Steuer (früher auch Taxe) wird eine Geldleistung ohne Anspruch auf individuelle Gegenleistung bezeichnet, die von einer öffentlichen oder privaten Institution erhoben wird.	Steuern sind Geld, das einer Institution gezahlt werden, ohne dass man etwas dafür erwartet.
+
+Die Steuer ist eine Abgabe, die vom Staat zur Finanzierung seiner Aufgaben erhoben wird. Die Steuerpflichtigen sind verpflichtet, die Steuer zu entrichten.	Die Steuer ist Geld, das man für Aufgaben des Staates zahlt. Die Personen die Arbeiten müssen Steuern zahlen.
+
+Steuern werden in Deutschland aufgrund des Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UStG) sowie weiterer steuerrechtlicher Vorschriften erhoben. 	Die Steuern die man zahlt, hängen von Grunderwerbsteuergesetzes (GrEStG), des Erbschaftsteuer- und Schenkungssteuergesetzes (ErbStG), des Gewerbesteuergesetzes (GewStG), des Umsatzsteuergesetzes (UstG) und weitere Regeln.
+
+Nach dem Steuerrecht in Deutschland ist eine Steuer eine Abgabe, die von Inländern oder ausländischen Personen erhoben wird. Sie dient der Erzielung von Einnahmen zur Finanzierung öffentlicher Aufgaben.	Eine Steuer ist eine Gebühr, die von Menschen verlangt wird, die in einem bestimmten Land leben oder von Ausländern. Sie wird verwendet, um Geld für öffentliche Aufgaben zu sammeln.
+
+Steuern werden im allgemeinen Sprachgebrauch auch als „Abgaben“ bezeichnet.	"In allgemeinen, Menschen nennen Steuern ""Gebühren"" oder ""Kosten."""
+
+Der Name des Sterns ist auch in der Astronomie, wie in der Umgangssprache, einfach Sonne, üblicherweise mit dem bestimmten Artikel, im Englischen Sun (korrekterweise mit großem Anfangsbuchstaben, da es sich um einen Eigennamen handelt).	Der Name des Sterns ist auch in Astronomie, wie im Volksmund, einfach die Sonne, meist mit dem bestimmten Artikel, in Englisch Sun (korrekt mit einer Großbuchstaben, da es ein echter Name ist).
+
+Die Sonne übertrifft 700-fach die Gesamtmasse aller acht Planeten des Sonnensystems und 330.000-fach jene der Erde, die im Durchmesser 109-mal hineinpasst, im Volumen rund 1,3 Millionen Mal. Mit einer Energieabstrahlung, die pro Sekunde das 20.000-Fache der Primärenergieumwandlung seit Beginn der Industrialisierung ausmacht, fällt sie in die Leuchtkraftklasse V.	Die Sonne ist sehr viel größer als alle acht Planeten im Sonnensystem zusammen. Sie ist auch 330.000-mal größer als die Erde. Die Sonne strahlt pro Sekunde so viel Energie ab, wie die gesamte Industrie in einem Jahr verbraucht.
+
+Initializing from scratch!
+(1, 128)
+tf.Tensor(
+[[8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855 8855
+  8855 8855]], shape=(1, 128), dtype=int64)
+tf.Tensor([0], shape=(1,), dtype=int64)
+[ P A D ]
+Model: "nmt_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ tf_bert_model (TFBertModel)  multiple                 109081344 
+                                                                 
+ embedding (Embedding)       multiple                  0 (unused)
+                                                                 
+ nmt_encoder_layer (NMTEncod  multiple                 6300928   
+ erLayer)                                                        
+                                                                 
+ nmt_encoder_layer_1 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_2 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_3 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_4 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_5 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_6 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_7 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_8 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_9 (NMTEnc  multiple                 6300928   
+ oderLayer)                                                      
+                                                                 
+ nmt_encoder_layer_10 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ nmt_encoder_layer_11 (NMTEn  multiple                 6300928   
+ coderLayer)                                                     
+                                                                 
+ embedding_1 (Embedding)     multiple                  23040000  
+                                                                 
+ nmt_decoder_layer (NMTDecod  multiple                 8666368   
+ erLayer)                                                        
+                                                                 
+ nmt_decoder_layer_1 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_2 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_3 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_4 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_5 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_6 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_7 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_8 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_9 (NMTDec  multiple                 8666368   
+ oderLayer)                                                      
+                                                                 
+ nmt_decoder_layer_10 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ nmt_decoder_layer_11 (NMTDe  multiple                 8666368   
+ coderLayer)                                                     
+                                                                 
+ dense_288 (Dense)           multiple                  23070000  
+                                                                 
+ softmax (Softmax)           multiple                  0         
+                                                                 
+=================================================================
+Total params: 334,798,896
+Trainable params: 334,798,896
+Non-trainable params: 0
+_________________________________________________________________
+tf.Tensor(
+[[    3  1964   309   946 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 0: 10.4414
+Seen so far: 1 samples
+tf.Tensor(
+[[    3   311  7980 26914     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2409  7980 26914     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2111   144  1673  3504  6585   193 26964  3790  8863   371   194
+  13754  9563  6138  1425 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   173  7375   414   287   371  2626 26972     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 15209   287   371  2626 26972     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   173  7375   414   287   371  2626 26972     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 11089  7483 26954  1073  7375   414   474   371   303  3440 26972
+  26955     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  6316    88    21  4572  4025 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2111   371   357   668  6316    88    21  4572  4025   474 26964
+  18630   371   785  1269   155  6316  3614 26972     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2402 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  6316    91  8257 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 20529   371   178   225   847  1086    50    21  4416 26972  2111
+   3278 26918   246  2018   620  1086 26972     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  3534  6909   904 26954    30  6316   200    21   560 26914   371
+   1799   147  1351  5846 26955 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   560   309  2506 26918   743   478 16052 26914     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  6316  3303 26902  7513 26902 26914     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  3303  8974  2409 15441 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   173   961   142   155  7360   287   371   106  7505 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   287   149  5025    42   636   194   357  1580  5025 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   474   155   946 22843 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   555   144    88   811   946  8192    42   287 18608 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 20: 1.1334
+Seen so far: 21 samples
+tf.Tensor(
+[[    3  4473    81 22008  2565 17815 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944   295  6323 21070  7842   607  9830    93 26944 26944 18155
+   5049 26944 26944 26935  1761 15974   115    39 10909 26914 26944     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1433 26911  1854    93 10909 26972     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2565 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   103  6770 26947 26954   125  6316  2239   371   115 17805 16145
+  26935 10872 26914 26955 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125   103  6770 26947 26935  6316  2239   371   194   115 13754
+  10909 24457 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  3392  1377   846    50   297  5112 26914 18630   371   142
+  17260  5112   764   178   297   847  6323 21070   303   846  3047 26972
+   7774   474   371    88   297   847  6323 21070    50   798  5112 10162
+  24424  4531 26972     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2111  3278 26964 12599   371 18976    93  7918   275  6323 21070
+   1425 26918   743  1302 26918   221   371 10162 24424  4531 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371 11081 26918   221   371   181  6543   287 26918   221   371
+   3451   678  3168  2204  1419  4526   718 26914     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   474    39   472   115 10162 24424   188   128 11975  9992
+   1412 26914     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   287  3594    14 26966  3594 26918   309 13657    14 26966
+  13657 26918    21 20427    57 26966 20427    66 26914     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 12599   371 18976    39  7918 26918   743  1302 26918   221 14341
+  26918   961   371  8863 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 12599   371 18976    39  7918    88   128 24010 26935  1269  1425
+  26918   743  1302 26918   221   371   303   846  3047   474 26914  2111
+     93 24010 26935  1269   777   204 13754   846  4199   193 26964  3790
+   8482   371 18976    86  5658  1425 26918   743  1302 26918   221    93
+  24010 26935  1269 13754   846  5008   309  6549   193 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   892   371  3303  3769  2119   474 26918   474   371    50   297
+   1292  1156 26918    50   297  1558    43   309   178   297 25255     6
+    309   104   297   847   874 17047 26914   371  4657   896  2013   142
+     93 20529    42    93  6346 11806 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  2564  1868   309  4032    50   225 23715  6193 26964   260
+   2249    50   297 19967 26918    50   297  5738  1156 26918    50   297
+   7243 26914     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  7243 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   266   896    88 26935   255  2564 26914     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   750    21  6193 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  2564  1868   309  4032    50   225 23715  6193 26964   260
+   2249    50   297 19967 26918    50   297  5738  1156 26918    50   297
+   7243 26914  2111  3278 26964 12599   371 18976    39  7918  1425 26918
+    743  1302 26964  3891   371 17047   474 26972  1316  2197   213   896
+  17047   474 26972     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2111   371  2214  2564 26918  1475   371   702 26954  6316    99
+  26955  2013   380  8863 26914  3294   371 18976   178  6316   294   424
+  26914     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 40: 2.1331
+Seen so far: 41 samples
+tf.Tensor(
+[[    3 26944  2052 26918   114  1304   371  1037  2582 26914  1008  2052
+    287  3303  4550    14 26966  1673  4550    42 26966   309  8722    26
+     88  9830 26954 26944 26944 15133  4467 26944 26944 26955 26914 26944
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   718   194   382   309   380  3332 26897  1788 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944  1731  1475   371    30  2052  8577 26918    30    81 17805
+  26944 26944 15133  4467 26944 26944  2923 26914   371  3392    86   846
+    115 10162  3228 26914   295  1269  3906  1913   104 26918   221   371
+    194   142    30   847   147 17805 26944 26944 15133  4467 26944 26944
+   5117 26914  2111   155  1086   147 17805 26944 26944 15133  4467 26944
+  26944  4108   153   659   573   127 26918   479   620  1086   782   303
+    846  3392 26954   188   128  1472 26964 26967  4647  3117  1260 26955
+  26914   173   798  1000 10044   371    81   534  1086   702   668  4473
+   2938 26914 26944     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  2564  1037   114 17805  5542 26966 22008  8147 26914   371
+   2564   149  9690 26904  8192 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  2564  1037   114 17805  8387     7   911 12604   248  1427
+  10060    14 26954   155   946   246   371 26955 26966 22008  8387     7
+    911 12604   248  1427 10060 26954    39   980   246   371 26955 26914
+    371  2564   149  9690 26904  8192 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944   371  2564   114 17805  4550    14 26966 22008  4550  1037
+     42   287   149  5025 26914   371  2564   386  1037   246    39 15659
+  26954 26944 26944  6838 25286  7501 26944 26944 26955 26914 26944     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  2564   114 22008  2383   309   114 13754  4833  1037 26914
+    295  2383   309    30  1068   127 26966   287   149  5025    42  5897
+    153  1194   573  3778 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   287  5897   153  1194   573    42  2564   114 13754  2579
+    309   356   114 17805  2269   309 22008  2230  1037 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944   173 17805  4416  2564   357 26914 26914 26914 26954  1411
+  26955  1344  2052 26918    30   371   149   267  6316    99  2477   474
+  26914  1008  2052  2923   149    81 17805 26944 26944  8010  4467 26944
+  26944 26914  2111  3237  2052   287 26918    30    81 17805  1676  1786
+   2923 26954   260  2249  3303 23908   309    21  3969 17805   946 26955
+  26918  9437   795   371 18976    93 22457    33  2903    84 26930   147
+  26914 26944     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2111   371   147  4450  3487   380  1761 10044 26964  1731   718
+    371  1344 10162 24424 14921 26918     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  1475   620  4473   356   670  2938 26918   557   371    93
+   2376    42   557   371  1344 10162  3228   474 16368 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  1892 10263     7  1673  2383 26966  3303  1068  2214 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   287 21435 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 14917  8482   371    39  7918   275  5177  1425 26918   743  1302
+  26918 10118    93 13588  5498   115    30   728  1471 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1673 23333    16  1400   292    50 17805  4416   261 17584  1035
+  17908   309   114  5551  1940  2119 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   287 12046    42  1475  1881 17053  6346 10630 26918    93
+    380 12396 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   474   155 14130    42  4531 26964 10162 24424 26918   259
+   4526    81   718 26954   188   128  1472 26964 26967  4563 26942 12740
+   9432  1426  2091 12951 26954  3117 10406 26955 26955   309  1355 24424
+  26918   850   371   155   944  2239 26918   309 10162    42  1355 24424
+  26954   188   128  1472 26964 26967  8794   423 26914    62  1102    62
+   1247 26914    62 26935   294  3117 11213 26955 26914     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 14917  8482   371    39  7918   275  1269  1425 26918   743  1302
+  26918   221   229  5367   127 26918   961   371  8863 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   718   149  4526 26918   982   371   155  7940 14130   474
+  26914   371   474   303 22736   114   128  3128  4000    61   309    18
+  26930 26954   188   128  1472 26964 26967 26517   423 26914   435  3117
+  10406 26955 26914   295   127    39 22736   142  3473 13614    26 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 14917  8482   371    39  7918  1425 26918   743  1302 26918   221
+   5367   127 26918   961   371  8863 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 60: 1.2978
+Seen so far: 61 samples
+tf.Tensor(
+[[    3 26944  3919 26954  2019   371    42  3303 26944 26944 15133  4467
+  26944 26944 26954 12521  6316    99 26955  2204  5112   104  1761   474
+  26914 26955 26914 26944     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944  2111  3278 26964 10360   795   371 18976   142   144    42
+    142  4434  1086   147 17805 26944 26944 15133  4467 26944 26944 26918
+     30   659   573   309  4108   127 26918    93 22457    33  2903    55
+  26932   147 26914 26944     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1761 26918   961   371   474 26918   309  1355  7760 26918   246
+     39  3512 26918    30  1761  5482 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   474  3853  4274 26902  1761   309  1355 25576  7760   246
+     39  3512 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944 10360   795   371 18976    93 22457    33  2903    74 26929
+    147 26914  2051  8863   371   142  4434  1086   147 17805 26944 26944
+  15133  4467 26944 26944 26918  4218  4005   620  1086   193 26914 26944
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2111   371   764  5029 26918   221   371 10162  3228  4531 26964
+  12599   371 18976    93  7918   275  1269   200 26918   743  1302 26918
+    221   371 10162  3228  4531 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   474   764  1355 10162 24424 26954   260  2249 13539 26918
+   1068 17288 26918 14261   511  2534 26918 10195  2739 26918  4572 26918
+   1292  2739 26918  7488 11384 26918  2579  2739 26918  2269  2778  2739
+    188   128  1472 26964 12387 26902  2091 12951 26954  3117  3823 26955
+  26955  3614 26914  7774   371  2376    93  4032  4013 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 18630   371    39   472 26918 10162 24424    88   847 12987    81
+   4531 26972     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1316  2689   826    50  3524   127 26918  2997   232  1868 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[   3  346 7505 2265  232    4    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[   3 2183  142  987    4    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2252 26918    21  1522  7336   479     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1761   142    30  5440 11097     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[   3 3497   42 6764    4    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[   3 7689 1380    4    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 25949  2472     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   975 26935  9593   142    30  3524     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  3070   383    86  6914 26935 16293     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[   3 9251 4913 3524    4    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  2183 26918    50    21   987  1522  7515  2564     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 80: 0.9003
+Seen so far: 81 samples
+tf.Tensor(
+[[    3 25949  2472    50    21   728     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376   620  7760  4017 26914  7774   357  2633  1788 26914
+   6588   474   232  2689  1401 26935  3966  5638 26914   482   193    86
+   1646  3524 26902 26935  3966 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26330 19801 26907 26916  1279    50    86  3380   605    30  2154
+     88   832 10706 26914   177  1279   153   578 26935  6880    21  3913
+     88    21  2154   167 26914  1356  1480  7760   147   128  3524 26902
+  26935  3966  8452  3735 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   864  2099  4687  2023   155  1234   417 26914   233   565  1760
+    127   149   356    30  6471  4045 26935  5402   492    12 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1008  8144   893   229    50  1983  2122  4422   115    21   728
+  26914     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   831    21  6914 26935  2045   292  2689   826  2047 14745 26914
+    482   292   144  7760  7253 26918   246   260  2249 26918   246   232
+   6712  3279 24213 26918   246   232  6411 24213 26918   246   232  6411
+  18240 26914     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   831  6712  1068    42 12089  1922   878    39 12178   826   474
+  26914  1356   254  7634  1761 14071   718 26914   371  1922   194 13641
+     68   114   847  1075  1037  2564   718 26914  1356   213  1922  6543
+   2564   718 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   233   578 26935  1419   127   155  1856  2509    88  1895    42
+   9712 26918    30 13492 11619 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371  1922   194 13641    68   114   847  1075  1037  2564   718
+  26914  1356   213  1922  6543  2564   718 26914     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   832   459    39 11400  2810 26935  5743   114  5569  9593 26918
+    743   478  4526   479 26918  3143 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  6588 10044   232  4493  8403  1443    42  8403 26914  1008  2038
+  26935  5125  1475   232   357  2633 23318 20080 26914   125  8403  1443
+     42  8403  2928  3308   922   525 10304  5798 26914   125  5798   479
+   2099    30   944 11821  1788 26914  1356  2099   194 11306   106   826
+   7336 26914  1356   620 10304  5798 10044   194  1355  3581     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376    30 11193  3873  1522  6340 26914   295  2018 26964
+    304    21 11193  3873   459  2689   826 15477   266 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376   142    39 12178  4767 26935  2812  9103 26914  3939
+   1507  1443    42  1507  1475   155  4493 13721  5564  4531 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1008  8922   287  6136 26914   371  5482   386   194   870  1761
+  26914   655  1475    93  1761  1760   386  5715     7 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  8922  1922   386   149  1075   114  2210  1761 11806 26914
+   1008  1075  1922  2215  2343  9005  4886  1475 26914  1566   213 11806
+    764  6387   142    30  2183 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   295  2734 26897  1761  1922 17994  1075 11806 26914  1566   213
+    474  1760  6387  1761 26914  1356   718   380  9005  4886 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655 11081 26964  1126  1080   987  3699  1037  9460     8  6145
+  26914   233   565  1760   127 26964   125  2787  3699 14007  1037 26914
+   3459   181   479   478  4899  4493 16060  2239 26914 26330 19801 26907
+  26916   292  4493 16060  2239 26914 10983   287   232  9089 26914 26330
+  19801 26907 26916   127  2689  6880 26935 12717 26914     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  6733   564   127    39  5386  2688   142 26964  1073   297   874
+     81   297   847  1561 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  3939  1075  1922  2615    42  2386    88   297   874   260   847
+   1561 26914     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376   380    42 10245  8159 26935  7857    50   832 26914
+   6588 11922   232    30  2503    88  8159 26935  7857 26914   198  8159
+  26935  3512  7176  1011 19926   260 26718 26914   482  9755   114  4532
+    147   225 26102 26914  1962   148  2282  1922  3451   659  1483  8159
+  26935  7857    50   832  7452 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 100: 4.7754
+Seen so far: 101 samples
+tf.Tensor(
+[[    3  6588  1788   232   303  6733  6825 26935  2049 26914   655  8577
+    716  6733  6825 26935  2049   148  2282 26914   125  7874   147   128
+   2049  2376   232   255   148  2282  4017 26914   655  2376    86  3149
+   6510 26935  2132  2633  1788   295  2018 26964  1972  1075  1922   114
+    128  2332   309   128  3705  7452 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376    86 14499 26935  2132  2633  1788   295  2018 26964
+   1126   459  2633   114   128  2332 10151    50  2472   461   775   718
+  26914  1356    30  8127  1760  1922   194 26379   266 26914   655  2376
+  26964   125  1075  1922  9480   114   128  2332  7452   153 25167 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 10271  2164   127 26964  1962   260   203   148  3449   459    21
+  16777  4532    88 15818  2166 19869  1561 26914 15818  2610  3279   127
+    260  2249  4532 26918    21   147  3995  2119   292 26914  7774  4532
+  26918    21   147  1400  2119   292 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1962   260   203   148  4389   459   832   714  3988   175   105
+   1919   167 26914  6914   175   105  1919  2018 26964   295  6914 24333
+   2235   144   149   261  5337 13451 26902 26918   961    30  1075  4013
+  26914  7920   191   142    93  6914   127   260  2249    93 26964  4532
+  26918    21   147 12015  2119   292 26914  5372   292   229   114  2099
+    380 15818  2610 19869  2938 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1356   194    30 11193  3873   275  4532 26935  3552  2376   232
+   2633  1788 26914   295  4532 26935  3552   287    30 14985 26918    30
+     86  4532 10151   461  2707 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   233  4532   459   194  2633 25216   266   718 26914  2147  2249
+    142  2908 26918   104  1304  1011  3995 12412   333 26914  7774   668
+   9047  4986 26914  6588   266   232  1234 16060  6123 26914   655  2376
+    194    30  7499    88  1400 26935  8697  2633  1788 26914   831   114
+   1400 26935  8697   479   478  4532  1788 26914  1356    30  3931   292
+   1340   149  6192     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1116    30 18663  2166 19869   893   229   194  1234   975 26935
+   9593 26914  1356    30   975 26935  9593   287  1522 11732 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 11193 26897  9809   142   832    42  2472     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125 11193  3873    50   832  1080  2633   266 26914   655  2376
+  26964   832   459   178    21 11193  3873    50    21   728  1346 10330
+    167 26914   295  2376   232   255   260   203   148  2282  4017 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  5228   459  1346 17595   266 26914  5228  4835   260  2249
+  26964  3939 13805    42  4708 26914   295  2018 26964  1126   459   178
+     86 13805 26898  2368    88    81  5956   147  1788   718 26914  1126
+    459  2368   204    93  3213  1788   718 26914     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  3939  1075  1922   155 16164    42 18750  3213 26935  3621   474
+  26914   295   459   142   213   194   149   870  1761  5482 26914  3939
+   1922   935  5034    93  3213 18240   718 26914   655  8577  2689  2164
+  22373   228    38 26935  2183 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655   266   155  1110 11372   262  1507 26935 11959  5628  2727
+  26914   295  2018 26964  3939  1075   266   911  1522  7107 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  5032   995   306    42  5032 26900  1922   303 12811  6896  4531
+  26914     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  9394    39  5099   149   181   870  1761 26972  1356  7176   386
+   5032 26972  3790   459    67  1760   149    81   870 11806  1475 26914
+   6588   266   232    39  1472  1788 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   944  1080   144   194  9087  2830 26918   557   478  4108   127
+  26914  2573  9685   232    30   417 26918   557   478  8934  7449 26914
+   1356   149   380  4526  1080 26914  9394    39  5099   922  8650 26972
+   3790   459    67   144   194    50    21  8934  2368  7180   718 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655   266   194    93  4572 26935  2863   149 11038 26914  4572
+  26935  2863  2018 26964   226   798  2863  1080   478   149   380  4526
+     42  7449  8934 26914  3598  2863   292   114  2099   149  6307 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  1075    50    21  2183 16817   458   144   194 26914   295
+   2018   260  2249 26964   371  2860  1522  7515   259 26914  1356   213
+   3513    30  7048    88  4704  1075  5744 26914  8854  5099   127   911
+    870  7327    42   459   702   181  2564  2120 26918   246    67  1279
+  26914  1356   240  3602   127   459  8782  1875 12808   474     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  8854  5099   459    88   471   944  1522  2564   718 26914     4
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  8854  5099   459   155  4416  2239   718 26914  1356    30 18255
+   1760 11806   718 26914   831 26918   557    67   149   181   870  1761
+    193 26914     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  9394   478   922  8650 26972  3790   459   478   155  8934  4531
+  26914  1356   478   459   114   128  1761  1522  2564   718     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 120: 1.5368
+Seen so far: 121 samples
+tf.Tensor(
+[[    3  2675   856    39  5099  5032 26972  3790  1080    67   213   194
+   4531   718 26914  1356  1080   213   194 11806   718 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   198  5099   292 11025  7107   153    39  3986  5099 26914  5663
+    229 22511   127 26914     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   944   127   142  1480  1075  1120  2945 26914  1356   213   287
+  15404   115   682   944 26914     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1126  1080    88   128  1761  2564   718 26914 10857    54 26918
+    961   478   142   155   944  2241     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1126  1080    88   128  1761  2564   718 26914 10857    54 26918
+    961   478   142   155   944  2241     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  8854  5099   459   303  1127 10881   718 26918    21   787 19236
+  26914  1356    30  3240   474 26918    50   813  1127  2633    81   266
+  26914     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  8854  5099   193    93   472   115   155  4416 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   233  2252  1080   380  8280  9695 26914   295  2038 26935  2688
+    142  2264  8280   127  2091 26935  8280 26914   655   266  5213   203
+   2171 26935 25029  2091 26935  8280  9695 26914  1356   232   266  5213
+    203   357  5245 26935 25029     4     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125 25453  4030   149   181  2615 18896   266 26914  6588   266
+    232  1234 11774  1788 26914   295   266   232   896  1788 26918   743
+  25453  2406  2615 18896   266 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376 26964  3939  1075  1922    30  3502  8801    42  7328
+    474 26914  1356    30  2183   459  1451    42  6141   167 26914   295
+   2018 26964  3939  1075  1922  1522  7515 18978 26914 18977   459  6171
+    266 26918   982    67  3602   127 26914   311  1208  3083  1011  5099
+   8782 11025  7107   266 26918   982    67  3602   127 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  7593  8839  2376   232  2264 10074 26918 10418    42  3924 26918
+     30   144   383 25209    42   748 26935 12830  1500 17075 26914 25209
+   2018 26964  1075 11138  1355  1075  6975 26914  1356   312  9781   213
+   2215 26914   748 26935 12830  1500   127   181  5677   246 25209 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   304  1611   204  7760    81  5117 26914     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  1788    50  2472  1480  7760  5367 26914  1882  1480  3699
+    287   194   142    30  4819   728  2945 26914   831   620  3699  1475
+    232  1037 11948 26914     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   655  2376  8055    50    30   560  2860 26914     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   177  2664   149  1561 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   371   127  6667  4078  9742 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   177   127  1120  2055  2636 26918   386  1169  5186   716   149
+  26914     4     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  1671  3275   149 26918  6024  4547   181   120   345  5790 23267
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   177 23262   144   142  8902    42 20686   303  1280  7523   248
+   3180 26914     4     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   326   128  1784   471   781   946  5409    67    30  6425    14
+     42 20844 24142   927    88   569  2693   106   203 16879 26914   371
+   1520   382  8118 26914     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Training loss (for one batch) at step 140: 2.6492
+Seen so far: 141 samples
+tf.Tensor(
+[[    3   177 17121   602 15805   114   471  1786    50   715 26914   746
+    127    67  9445 26914     4     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   177   185    39 10486    42  3081 10506   142  1480 12728 26914
+    177  2525   142    30  6449     2  5383  9584     2     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  4698 10692   570   983    51 15739   192   235  1194 26914  1140
+  22508    50   715   255   260  1784  9919 26914     4     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3  9005   287  1761 26918    93   225 17401 11196   266 26918   935
+    221   478  1835  1760  6303 26914     4     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  1951   127  1761 26918    93   478   142  3699    91  9254
+  17166 26914   125  2052    30  4371  1475  9005  4886 26914     4     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  9005    30   478 17166 26918 14007    88  7910 26900 13625
+   2607  5084 26954  4425 13912 26901 26930 26955 26918    91 25184  1609
+  26935    42 22919  1249  2607  5084 26954  5697  3878 26955 26918    91
+  18091  5084 26954  1420  3878 26955 26918    91 11096  5084 26954 23515
+  26901 26930 26955    42  1344  7338 26914     4     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   917  1951   127   155 12098 26918    30    88  1075  7116   292
+  26918    30    50   297  4450   414  2564   309    88  7322 26898 26914
+    371   292  2974 26918   259  1761   142  5440  3699    81 15988 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3 26944   173  5067 26918  1075  8577  9005 26944 26944  7408 26944
+  26944   309 26944 26944  1314 26914 26944 26944 26944     4     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   233  3504    91  6216 26902   127   194    50 11255  6286 26918
+    246   106  2238  4401 26918  2774    30  9047 26918  2734   114   128
+   4450  5171 26918    50 11050 16401 26954 20033   114   225  1370  2046
+   4358     7 26918   348   229    39 15409 26900  3504   127 26955 26914
+      4     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+tf.Tensor(
+[[    3   125  9047   127  1120   870  5625   153   987  2531 15995   106
+   6827  3059  1037 26914   371   127   194 24439 26914  4847 26935  2723
+   5625   153    30  7014 26914   125  9047 24178 26901  1017 18758   181
+    870  3279   281 26918   246    30  4435  4121    50   297   203  6360
+   4174 26901 26914     4     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0     0     0     0     0
+      0     0     0     0     0     0     0     0]], shape=(1, 128), dtype=int32)
+Epoch #1
+Execution time was 861 s
+Execution time was 861 s
