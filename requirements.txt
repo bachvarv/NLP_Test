@@ -249,7 +249,7 @@ unittest2==1.1.0
 uritemplate==3.0.1
 urllib3==1.26.5
 vine==5.0.0
-waitress==2.1.1
+waitress==2.1.2
 wcwidth==0.2.5
 webencodings==0.5.1
 WebOb==1.8.7
