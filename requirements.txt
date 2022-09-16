@@ -124,7 +124,7 @@ oslo.log==4.5.0
 oslo.middleware==4.2.0
 oslo.policy==3.8.1
 oslo.serialization==4.1.0
-oslo.utils==4.9.1
+oslo.utils==4.10.1
 packaging==20.9
 pandas==1.2.5
 pandocfilters==1.4.3
